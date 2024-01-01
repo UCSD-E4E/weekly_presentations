@@ -20,10 +20,11 @@ jobs:
           cp presentation.pdf `date +e4e_weekly_presentation_%Y-%m-%dT%H-%M-%S.pdf`
           mkdir out
           cp presentation.pdf out/e4e_weekly_presentation.pdf
+          ls -al
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          path: e4e_weekly_presentations*
+          path: e4e_weekly_presentation*
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
