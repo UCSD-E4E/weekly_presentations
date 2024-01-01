@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      upload_name: 
+      upload_name: presentation.pdf
     steps:
       - name: Set Upload Artifact Name
         run: |
