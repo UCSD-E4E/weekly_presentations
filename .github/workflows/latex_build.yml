@@ -39,6 +39,7 @@ jobs:
           echo "today_date=$(date -I)" >> $GITHUB_ENV
       - name: Create Release
         uses: marvinpinto/action-automatic-releases@v1.2.1
+        if: ${{ github.event_name == 'schedule' }}
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: ${{ env.today_date }}
