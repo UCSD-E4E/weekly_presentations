@@ -5,8 +5,6 @@ on:
     - cron: '30 14 * * 3'
   workflow_dispatch: 
   push: 
-    branches: 
-      - 'main'
 
 jobs:
   build:
@@ -36,6 +34,7 @@ jobs:
           path: e4e_weekly_presentation*
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
+        if: ${{ github.ref == 'ref/head/master' }}
         with:
           branch: gh-pages
           clean: true
@@ -49,7 +48,7 @@ jobs:
           echo "today_date=$(date -I)" >> $GITHUB_ENV
       - name: Create Release
         uses: marvinpinto/action-automatic-releases@v1.2.1
-        if: ${{ github.event_name == 'schedule' }}
+        if: ${{ github.event_name == 'schedule' }} && ${{ github.ref == 'ref/head/master' }}
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: ${{ env.today_date }}
