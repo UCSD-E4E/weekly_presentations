@@ -1,0 +1,57 @@
+projects:
+  mangrove_monitoring:
+    name: Mangrove Monitoring
+    latex: project_mm
+    branch: mangrove_monitoring
+    assignees:
+      - Jasonnyang
+  acoustic_species_id:
+    name: Acoustic Species ID
+    latex: project_aid
+    branch: acoustic_species_id
+    assignees:
+      - Sean1572
+      - sprestrelski
+  baboons_on_the_move:
+    name: Baboons on the Move
+    latex: project_bom
+    branch: baboons_on_the_move
+    assignees:
+      - ccrutchf
+      - TylerFlar
+  fishsense:
+    name: FishSense
+    latex: project_fs
+    branch: fishsense
+    assignees:
+      - ccrutchf
+      - falafel72
+  radio_telemetry_tracker:
+    name: Radio Telemetry Tracker
+    latex: project_rtt
+    branch: radio_telemetry_tracker
+    assignees:
+      - TylerFlar
+  smartfin:
+    name: Smartfin
+    latex: project_sf
+    branch: smartfin
+    assignees:
+      - ntlhui
+  hardware:
+    name: Hardware Development Group
+    latex: project_hw
+    branch: hardware
+    assignees:
+      - ntlhui
+schedule:
+  # Keyed by ISO Week Number of presentation
+  2: [smartfin, hardware]
+  3: [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 2
+  4: [fishsense, radio_telemetry_tracker, smartfin] # WI24 3
+  5: [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 4
+  6: [fishsense, radio_telemetry_tracker, smartfin] # WI24 5
+  7: [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 6
+  8: [fishsense, radio_telemetry_tracker, smartfin] # WI24 7
+  9: [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 8
+  10: [fishsense, radio_telemetry_tracker, smartfin] # WI24 9
