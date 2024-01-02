@@ -51,3 +51,8 @@ Below are some slide examples:
 \end{frame}
 ```
 For the centered image, ensure that the image is one of the following formats: EPS, PDF, PNG, JPG.
+
+3. VS Code should automatically compile the LaTeX document.  If not, open VS Code's Command Palatte and run `LaTeX Workshop: Build LaTeX project`.
+
+# Viewing the final presentation
+`.github/workflows/latex_build.yml` will automatically build and release each week's presentation.  The timing is controlled by the `on.schedule[0].cron` field.  The build artifact is a timestamped PDF build.  The GitHub release will always be the current date.  The presentation will also be deployed to GitHub pages at https://ucsd-e4e.github.io/weekly_presentations/e4e_weekly_presentation.pdf.
