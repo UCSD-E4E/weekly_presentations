@@ -75,6 +75,12 @@ def __create_branches(current_projects: List[str],
                       calendar_tuple: Tuple):
     current_year = calendar_tuple[0]
     next_weeknum = calendar_tuple[1] + 1
+    subprocess.check_call(
+        ['git', 'config', 'user.email', 'e4e@ucsd.edu']
+    )
+    subprocess.check_call(
+        ['git', 'config', 'user.name', 'E4E GitHub Actions']
+    )
     for project in current_projects:
         project_params = projects[project]
         branch_name = f'{project_params["branch"]}_{current_year}_{next_weeknum}'
