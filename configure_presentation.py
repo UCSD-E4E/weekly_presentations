@@ -2,12 +2,11 @@
 '''
 import datetime as dt
 import subprocess
-from typing import Dict, Set, List
+from typing import Dict, List, Set, Tuple
 
 import pytz
 import schema
 import yaml
-
 
 config_schema = schema.Schema(
     {
@@ -33,7 +32,6 @@ def main():
     exec_timestamp = dt.datetime.now(timezone)
     calendar_tuple = exec_timestamp.isocalendar()
     next_weeknum = calendar_tuple[1] + 1
-    current_year = calendar_tuple[0]
 
     # Read schedule from schedule.yml
     with open('config.yml', 'r', encoding='utf-8') as handle:
@@ -74,7 +72,7 @@ def __update_latex(current_projects: List[str], projects: Dict, all_call_project
 
 def __create_branches(current_projects: List[str],
                       projects: Dict,
-                      calendar_tuple: dt._IsoCalendarDate):
+                      calendar_tuple: Tuple):
     current_year = calendar_tuple[0]
     next_weeknum = calendar_tuple[1] + 1
     for project in current_projects:
