@@ -48,6 +48,12 @@ def main():
     all_call_projects: Set[str] = set(
         projects.keys()).difference(current_projects)
     print(all_call_projects)
+    subprocess.check_call(
+        ['git', 'config', 'user.email', 'e4e@ucsd.edu']
+    )
+    subprocess.check_call(
+        ['git', 'config', 'user.name', 'E4E GitHub Actions']
+    )
 
     __update_latex(current_projects, projects, all_call_projects)
 
@@ -69,21 +75,35 @@ def __update_latex(current_projects: List[str], projects: Dict, all_call_project
             handle.write(f'\\section{{{projects[project]["name"]}}}\n')
             handle.write(f'\\include{{{projects[project]["latex"]}}}\n')
 
+    subprocess.check_call(
+        [
+            'git', 'add',
+            'active_all_call.tex',
+            'active_order.tex',
+            'active_sections.tex'
+        ]
+    )
+    subprocess.check_call([
+        'git', 'commit',
+        '-m', f'feat!: Configures presentation for {current_projects}'
+    ])
+    subprocess.check_call([
+        'git', 'push'
+    ])
+
 
 def __create_branches(current_projects: List[str],
                       projects: Dict,
                       calendar_tuple: Tuple):
     current_year = calendar_tuple[0]
     next_weeknum = calendar_tuple[1] + 1
-    subprocess.check_call(
-        ['git', 'config', 'user.email', 'e4e@ucsd.edu']
-    )
-    subprocess.check_call(
-        ['git', 'config', 'user.name', 'E4E GitHub Actions']
-    )
+
     for project in current_projects:
         project_params = projects[project]
         branch_name = f'{project_params["branch"]}_{current_year}_{next_weeknum}'
+        subprocess.check_call(
+            ['git', 'checkout', 'main']
+        )
         subprocess.check_call(
             ['git', 'checkout', '-b', branch_name]
         )
