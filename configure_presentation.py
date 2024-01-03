@@ -19,7 +19,7 @@ config_schema = schema.Schema(
             }
         },
         'schedule': {
-            int: [str]
+            str: [str]
         }
     }
 )
@@ -30,8 +30,6 @@ def main():
     """
     timezone = pytz.timezone('America/Los_Angeles')
     exec_timestamp = dt.datetime.now(timezone)
-    calendar_tuple = exec_timestamp.isocalendar()
-    next_weeknum = calendar_tuple[1] + 1
 
     # Read schedule from schedule.yml
     with open('config.yml', 'r', encoding='utf-8') as handle:
@@ -39,10 +37,16 @@ def main():
     config = config_schema.validate(data)
 
     # allow assert - we want the action to fail if the current week is not supported
-    schedule = config['schedule']
-    assert next_weeknum in schedule
+    raw_schedule: Dict[str, List[str]] = config['schedule']
+    full_schedule = {dt.date.fromisoformat(
+        key): value for key, value in raw_schedule.items()}
+    future_schedule = {date: sequence
+                       for date, sequence in full_schedule.items()
+                       if date > exec_timestamp}
+    assert len(future_schedule) > 0
+    next_date = min(future_schedule.keys())
 
-    current_projects: List[str] = schedule[next_weeknum]
+    current_projects: List[str] = future_schedule[next_date]
     print(current_projects)
     projects: Dict = config['projects']
     all_call_projects: Set[str] = set(
@@ -58,7 +62,7 @@ def main():
     __update_latex(current_projects, projects, all_call_projects)
 
     # Create the appropriate branches
-    __create_branches(current_projects, projects, calendar_tuple)
+    __create_branches(current_projects, projects, next_date.isocalendar())
 
 
 def __update_latex(current_projects: List[str], projects: Dict, all_call_projects: Set[str]):
