@@ -102,6 +102,9 @@ def __create_branches(current_projects: List[str],
         project_params = projects[project]
         branch_name = f'{project_params["branch"]}_{current_year}_{next_weeknum}'
         subprocess.check_call(
+            ['git', 'checkout', 'main']
+        )
+        subprocess.check_call(
             ['git', 'checkout', '-b', branch_name]
         )
         # Reset the slides
