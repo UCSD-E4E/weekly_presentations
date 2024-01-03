@@ -47,11 +47,11 @@ projects:
 schedule:
   # Keyed by ISO Week Number of presentation
   '2024-01-10': [smartfin, hardware]
-  '2024-01-17': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 2
-  '2024-01-24': [fishsense, radio_telemetry_tracker, smartfin] # WI24 3
-  '2024-01-31': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 4
-  '2024-02-07': [fishsense, radio_telemetry_tracker, smartfin] # WI24 5
-  '2024-02-14': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 6
-  '2024-02-21': [fishsense, radio_telemetry_tracker, smartfin] # WI24 7
-  '2024-02-28': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 8
-  '2024-03-06': [fishsense, radio_telemetry_tracker, smartfin] # WI24 9
+  '2024-01-17': [fishsense, radio_telemetry_tracker, smartfin] # WI24 2
+  '2024-01-24': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 3
+  '2024-01-31': [fishsense, radio_telemetry_tracker, smartfin] # WI24 4
+  '2024-02-07': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 5
+  '2024-02-14': [fishsense, radio_telemetry_tracker, smartfin] # WI24 6
+  '2024-02-21': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 7
+  '2024-02-28': [fishsense, radio_telemetry_tracker, smartfin] # WI24 8
+  '2024-03-06': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 9
