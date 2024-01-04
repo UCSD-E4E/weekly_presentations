@@ -74,7 +74,7 @@ def __clear_announcements():
         handle.write(
             '% \\begin{frame}{Announcements}\n'
             '%     \\begin{itemize}\n'
-            '%         \item\n'
+            '%         \\item\n'
             '%     \\end{itemize}\n'
             '% \\end{frame}\n'
         )
