@@ -61,10 +61,29 @@ def main():
         ['git', 'config', 'user.name', 'E4E GitHub Actions']
     )
 
+    __clear_announcements()
+
     __update_latex(current_projects, projects, all_call_projects)
 
     # Create the appropriate branches
     __create_branches(current_projects, projects, next_date)
+
+
+def __clear_announcements():
+    with open('announcements.tex', 'w', encoding='utf-8') as handle:
+        handle.write(
+            '% \\begin{frame}{Announcements}\n'
+            '%     \\begin{itemize}\n'
+            '%         \item\n'
+            '%     \\end{itemize}\n'
+            '% \\end{frame}\n'
+        )
+    _exec_cmd(
+        ['git', 'add', 'announcements.tex']
+    )
+    _exec_cmd(
+        ['git', 'commit', '-m', 'fix: Clears announcements']
+    )
 
 
 def __update_latex(current_projects: List[str], projects: Dict, all_call_projects: Set[str]):
