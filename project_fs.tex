@@ -39,3 +39,27 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+\tikzstyle{task} = [rectangle, rounded corners, 
+minimum width=3cm, 
+minimum height=1cm,
+text centered, 
+draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\begin{frame}
+\frametitle{\textbf{Angle Estimation - Kunal and Avik}}
+\begin{figure}
+    \includegraphics[width=0.5\linewidth]{fishswimming.png}
+    \label{fig:fishswimming}
+\end{figure}
+\begin{tikzpicture}[node distance=2cm]
+
+\node (task1) [task] {Literature};
+\node (task2) [task, right of=task1, xshift=2cm] {Data Generation};
+\node (task3) [task, right of=task2, xshift=2cm] {Model Training};
+
+\draw [arrow] (task1) -- (task2);
+\draw [arrow] (task2) -- (task3);
+
+\end{tikzpicture}
+\end{frame}
