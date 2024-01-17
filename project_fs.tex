@@ -40,6 +40,31 @@
 %     \end{columns}
 % \end{frame}
 
+\begin{frame}{Paper}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{fishsense_paper.png}
+\end{frame}
+
+\begin{frame}{Data Processing Results}
+    Head/Tail stricter than necessary
+
+    \begin{table}{ c | c | c | c }
+        Topic & TP & TN & FP & FN\\
+        \hline
+        Overall & 12 & 43 & 37 & 18\\
+        Laser & 78 & 16 & 9 & 7\\
+        Head & 15 & 43 & 34 & 18\\
+        Tail & 37 & 43 & 12 & 18
+    \end{table}
+\end{frame}
+
+\begin{frame}{Scalability}
+    \begin{itemize}
+        \item Run on AWS
+        \item Label party
+    \end{itemize}
+\end{frame}
+
 \tikzstyle{task} = [rectangle, rounded corners, 
 minimum width=3cm, 
 minimum height=1cm,
@@ -62,4 +87,9 @@ draw=black]
 \draw [arrow] (task2) -- (task3);
 
 \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Android/iOS App - CSE 145}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{fishsense_ios_measure.jpg}
 \end{frame}
