@@ -61,7 +61,7 @@ def main():
         ['git', 'config', 'user.name', 'E4E GitHub Actions']
     )
 
-    __clear_announcements()
+    __clear_announcements(next_date)
 
     __update_latex(current_projects, projects, all_call_projects)
 
@@ -69,9 +69,10 @@ def main():
     __create_branches(current_projects, projects, next_date)
 
 
-def __clear_announcements():
+def __clear_announcements(presentation_date: dt.date):
     with open('announcements.tex', 'w', encoding='utf-8') as handle:
         handle.write(
+            f'% Announcements for {presentation_date.isoformat()}\n'
             '% \\begin{frame}{Announcements}\n'
             '%     \\begin{itemize}\n'
             '%         \\item\n'
@@ -164,12 +165,11 @@ def __create_branches(current_projects: List[str],
 
 def _exec_cmd(cmd: Sequence[str]):
     # only exec if GH_TOKEN is defined, i.e. in GitHub Actions
+    print(shlex.join(cmd))
     if 'GH_TOKEN' in os.environ:
         subprocess.check_call(
             args=cmd
         )
-    else:
-        print(shlex.join(cmd))
 
 
 if __name__ == '__main__':
