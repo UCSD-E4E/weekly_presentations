@@ -5,6 +5,7 @@ projects:
     branch: mangrove_monitoring
     assignees:
       - Jasonnyang
+      - zclawr
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
