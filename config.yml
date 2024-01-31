@@ -6,6 +6,8 @@ projects:
     assignees:
       - Jasonnyang
       - zclawr
+      # 199/299
+      - HughieH
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
@@ -13,6 +15,9 @@ projects:
     assignees:
       - Sean1572
       - sprestrelski
+      # 199/299
+      - jgayers
+      - dylstockard
   baboons_on_the_move:
     name: Baboons on the Move
     latex: project_bom
@@ -27,6 +32,9 @@ projects:
     assignees:
       - ccrutchf
       - falafel72
+      - AvacadoGoatcheese
+      # 199/299
+      - kunalb123
   radio_telemetry_tracker:
     name: Radio Telemetry Tracker
     latex: project_rtt
