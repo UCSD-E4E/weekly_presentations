@@ -1,3 +1,4 @@
+% Slides for 2024-02-07
 % To create a slide, use the following:
 % \begin{frame}{TITLE}
 %     BODY
@@ -38,47 +39,38 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
-\begin{frame}{WebSocket Progress}
-    Frontend WebSockets integrated with callbacks
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm_1-24_callbacks.png}
+
+\begin{frame}{Docker Compose for Entire App}
 \end{frame}
 
-\begin{frame}{GeoJSON Rendering}
-    Add/remove GeoJSON layers from map
+\begin{frame}{NDVI-Normalized Difference Vegetation Index change between 2015-2021}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/ndvi.png}
 \end{frame}
 
-\begin{frame}{Image Chunking and S3 Buckets}
-    \begin{enumerate}
-        \item Image chunking
-        \item S3 Bucket Request
-    \end{enumerate}
+\begin{frame}{Georeferenced Model Output}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/tiffs.png}
 \end{frame}
 
-\begin{frame}{Fixed Dockerfiles using Poetry}
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/Screenshot 2024-01-24 at 1.33.57 PM.png}
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/Screenshot 2024-01-24 at 1.35.48 PM.png}
+\begin{frame}{Image Processing with Satellite Imagery}
+    Encoding channels into xarray.Dataset?  
+\end{frame}
+
+\begin{frame}{Copernicus Satellite Data}
+    \begin{itemize}
+        \item Request band data
+        \item Calculate features
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{User Upload Pipeline}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/geojson-colors.png}
 \end{frame}
 
 \begin{frame}{Misc. Frontend}
-    \begin{enumerate}
-        \item Map fullscreen
-        \item Multiple GeoJSON toggle
-    \end{enumerate}
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm_1-24_fullscreen.png}
-\end{frame}
-
-\begin{frame}{No Drone Imagery Accuracy}
+    Reworked state for selecting color
     \centering
-    98.13\% Accuracy, 98.22\% with Drone
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/AvgAcc.png}
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/AvgLoss.png}
-\end{frame}
-
-\begin{frame}{Trouble Predicting Satellite Imagery}
-    \centering
-    Model Not 0-1
-    ModelOutput
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/ModelOutput.png}
-    Logits
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/Logits.png}
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{mm-images/mongo-in-components.png}
 \end{frame}
