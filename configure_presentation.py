@@ -4,6 +4,7 @@ import datetime as dt
 import os
 import shlex
 import subprocess
+from pathlib import Path
 from typing import Dict, List, Sequence, Set
 
 import pytz
@@ -141,6 +142,20 @@ def __create_branches(current_projects: List[str],
         _exec_cmd(
             ['git', 'add', project_params['latex'] + '.tex']
         )
+
+        path_to_rm: List[Path] = []
+        for img in Path('images').rglob('*'):
+            if not img.is_file():
+                continue
+            if img.name == 'README.md':
+                continue
+            path_to_rm.append(img)
+
+        for path in path_to_rm:
+            _exec_cmd(
+                ['git', 'rm', path.as_posix()]
+            )
+
         _exec_cmd(
             ['git', 'commit', '-m', 'fix: Resetting slides']
         )
