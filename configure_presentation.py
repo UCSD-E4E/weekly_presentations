@@ -123,15 +123,21 @@ def __create_branches(current_projects: List[str],
                       projects: Dict,
                       presentation_date: dt.date):
 
+    path_to_rm: List[Path] = []
+    for img in Path('images').rglob('*'):
+        if not img.is_file():
+            continue
+        if img.name == 'README.md':
+            continue
+        path_to_rm.append(img)
+
+    for path in path_to_rm:
+        _exec_cmd(
+            ['git', 'rm', path.as_posix()]
+        )
+
     for project in current_projects:
         project_params = projects[project]
-        branch_name = f'{project_params["branch"]}_{presentation_date.isoformat()}'
-        _exec_cmd(
-            ['git', 'checkout', 'main']
-        )
-        _exec_cmd(
-            ['git', 'checkout', '-b', branch_name]
-        )
         # Reset the slides
         with open('base_project.tex', 'r', encoding='utf-8') as reference_handle, \
                 open(project_params['latex'] + '.tex', 'w', encoding='utf-8') as target_handle:
@@ -143,25 +149,23 @@ def __create_branches(current_projects: List[str],
             ['git', 'add', project_params['latex'] + '.tex']
         )
 
-        path_to_rm: List[Path] = []
-        for img in Path('images').rglob('*'):
-            if not img.is_file():
-                continue
-            if img.name == 'README.md':
-                continue
-            path_to_rm.append(img)
+    _exec_cmd(
+        ['git', 'commit', '-m', 'fix: Resetting slides']
+    )
+    _exec_cmd(
+        ['git', 'push']
+    )
 
-        for path in path_to_rm:
-            _exec_cmd(
-                ['git', 'rm', path.as_posix()]
-            )
-
+    for project in current_projects:
+        project_params = projects[project]
+        branch_name = f'{project_params["branch"]}_{presentation_date.isoformat()}'
         _exec_cmd(
-            ['git', 'commit', '-m', 'fix: Resetting slides']
+            ['git', 'checkout', 'main']
         )
         _exec_cmd(
-            ['git', 'push', '--set-upstream', 'origin', branch_name]
+            ['git', 'checkout', '-b', branch_name]
         )
+
         command = [
             'gh', 'pr', 'create',
             '-B', 'main',
