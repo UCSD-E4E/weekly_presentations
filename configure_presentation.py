@@ -126,6 +126,9 @@ def __update_latex(current_projects: List[str], projects: Dict, all_call_project
     _exec_cmd([
         'git', 'push'
     ])
+    _exec_cmd([
+        'git', 'pull'
+    ])
 
 
 def __create_branches(current_projects: List[str],
@@ -165,6 +168,9 @@ def __create_branches(current_projects: List[str],
     _exec_cmd(
         ['git', 'push']
     )
+    _exec_cmd(
+        ['git', 'pull']
+    )
 
     for project in current_projects:
         project_params = projects[project]
@@ -195,6 +201,9 @@ def __create_branches(current_projects: List[str],
         _exec_cmd(
             ['git', 'push', '--set-upstream', 'origin', branch_name]
         )
+        _exec_cmd([
+            'git', 'push'
+        ])
 
         command = [
             'gh', 'pr', 'create',
