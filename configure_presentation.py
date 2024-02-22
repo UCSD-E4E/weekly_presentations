@@ -10,6 +10,7 @@ from typing import Dict, List, Sequence, Set
 import pytz
 import schema
 import yaml
+from git import Repo
 
 config_schema = schema.Schema(
     {
@@ -80,9 +81,14 @@ def __clear_announcements(presentation_date: dt.date):
             '%     \\end{itemize}\n'
             '% \\end{frame}\n'
         )
+    repo = Repo('.')
+    if len(repo.index.diff(None)) == 0:
+        return
+
     _exec_cmd(
         ['git', 'add', 'announcements.tex']
     )
+
     _exec_cmd(
         ['git', 'commit', '-m', 'fix: Clears announcements']
     )
@@ -110,6 +116,9 @@ def __update_latex(current_projects: List[str], projects: Dict, all_call_project
             'active_sections.tex'
         ]
     )
+    repo = Repo('.')
+    if len(repo.index.diff(None)) == 0:
+        return
     _exec_cmd([
         'git', 'commit',
         '-m', f'feat!: Configures presentation for {", ".join(current_projects)}'
@@ -149,6 +158,9 @@ def __create_branches(current_projects: List[str],
             ['git', 'add', project_params['latex'] + '.tex']
         )
 
+    repo = Repo('.')
+    if len(repo.index.diff(repo.head.commit)) == 0:
+        return
     _exec_cmd(
         ['git', 'commit', '-m', 'fix: Resetting slides']
     )
