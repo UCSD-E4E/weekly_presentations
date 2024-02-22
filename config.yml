@@ -34,7 +34,7 @@ projects:
       - falafel72
       - AvacadoGoatcheese
       # 199/299
-      - kunalb123
+      # - kunalb123
   radio_telemetry_tracker:
     name: Radio Telemetry Tracker
     latex: project_rtt
