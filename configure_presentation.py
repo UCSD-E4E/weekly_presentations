@@ -150,8 +150,6 @@ def __create_branches(current_projects: List[str],
         # Reset the slides
         with open('base_project.tex', 'r', encoding='utf-8') as reference_handle, \
                 open(project_params['latex'] + '.tex', 'w', encoding='utf-8') as target_handle:
-            target_handle.write(
-                f'% Slides for {presentation_date.isoformat()}\n')
             for line in reference_handle:
                 target_handle.write(line)
         _exec_cmd(
@@ -176,6 +174,22 @@ def __create_branches(current_projects: List[str],
         )
         _exec_cmd(
             ['git', 'checkout', '-b', branch_name]
+        )
+
+        # Reset the slides
+        with open('base_project.tex', 'r', encoding='utf-8') as reference_handle, \
+                open(project_params['latex'] + '.tex', 'w', encoding='utf-8') as target_handle:
+            target_handle.write(
+                f'% Slides for {presentation_date.isoformat()}\n')
+            for line in reference_handle:
+                target_handle.write(line)
+        _exec_cmd(
+            ['git', 'add', project_params['latex'] + '.tex']
+        )
+        if len(repo.index.diff(repo.head.commit)) == 0:
+            return
+        _exec_cmd(
+            ['git', 'commit', '-m', 'fix: Adds date']
         )
 
         _exec_cmd(
