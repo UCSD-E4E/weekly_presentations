@@ -166,6 +166,10 @@ def __create_branches(current_projects: List[str],
             ['git', 'checkout', '-b', branch_name]
         )
 
+        _exec_cmd(
+            ['git', 'push', '--set-upstream', 'origin', branch_name]
+        )
+
         command = [
             'gh', 'pr', 'create',
             '-B', 'main',
