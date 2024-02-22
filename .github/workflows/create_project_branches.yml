@@ -18,7 +18,7 @@ jobs:
           timezoneMacos: "America/Los_Angeles"
           timezoneWindows: "Pacific Standard Time"
       - name: Set Up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
       - name: Set up Dependencies
