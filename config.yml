@@ -7,7 +7,6 @@ projects:
       - Jasonnyang
       - zclawr
       # 199/299
-      - HughieH
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
@@ -16,8 +15,6 @@ projects:
       - Sean1572
       - sprestrelski
       # 199/299
-      - JacobGlennAyers
-      - dylstockard
   baboons_on_the_move:
     name: Baboons on the Move
     latex: project_bom
@@ -34,7 +31,6 @@ projects:
       - falafel72
       - AvacadoGoatcheese
       # 199/299
-      # - kunalb123
   radio_telemetry_tracker:
     name: Radio Telemetry Tracker
     latex: project_rtt
@@ -54,13 +50,13 @@ projects:
     assignees:
       - ntlhui
 schedule:
-  # Keyed by ISO Week Number of presentation
-  '2024-01-10': [smartfin, hardware]
-  '2024-01-17': [fishsense, radio_telemetry_tracker, smartfin] # WI24 2
-  '2024-01-24': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 3
-  '2024-01-31': [fishsense, radio_telemetry_tracker, smartfin] # WI24 4
-  '2024-02-07': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 5
-  '2024-02-14': [fishsense, radio_telemetry_tracker, smartfin] # WI24 6
-  '2024-02-21': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # WI24 7
-  '2024-02-28': [fishsense, radio_telemetry_tracker, smartfin] # WI24 8
-  '2024-03-06': [mangrove_monitoring, acoustic_species_id] # WI24 9
+  # Keyed by Date of presentation
+  '2024-03-01': [smartfin, hardware] # SP24 1
+  '2024-03-08': [fishsense, radio_telemetry_tracker, smartfin] # SP24 2
+  '2024-03-15': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 3
+  '2024-03-22': [fishsense, radio_telemetry_tracker, smartfin] # SP24 4
+  '2024-03-29': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 5
+  '2024-04-06': [fishsense, radio_telemetry_tracker, smartfin] # SP24 6
+  '2024-04-13': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 7
+  '2024-04-20': [fishsense, radio_telemetry_tracker, smartfin] # SP24 8
+  '2024-04-27': [mangrove_monitoring, acoustic_species_id] # SP24 9

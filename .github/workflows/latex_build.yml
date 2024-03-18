@@ -2,7 +2,7 @@ name: Weekly Build
 
 on:
   schedule:
-    - cron: '30 22 * * 3' # This in UTC, execute Wednesday at 14:30 PDT (UTC-08:00)
+    - cron: '30 20 * * 1' # This in UTC, execute Wednesday at 13:30 PST (UTC-07:00)
   workflow_dispatch: 
   push: 
 

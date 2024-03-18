@@ -2,7 +2,7 @@ name: Create Project Branches
 
 on:
   schedule:
-    - cron: '0 17 * * 4' # This in UTC, execute Thursday at 09:00 PDT (UTC-08:00)
+    - cron: '0 17 * * 2' # This in UTC, execute Tuesday at 09:00 PDT (UTC-08:00)
   workflow_dispatch:
 
 jobs:
