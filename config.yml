@@ -51,12 +51,12 @@ projects:
       - ntlhui
 schedule:
   # Keyed by Date of presentation
-  '2024-03-01': [smartfin, hardware] # SP24 1
-  '2024-03-08': [fishsense, radio_telemetry_tracker, smartfin] # SP24 2
-  '2024-03-15': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 3
-  '2024-03-22': [fishsense, radio_telemetry_tracker, smartfin] # SP24 4
-  '2024-03-29': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 5
-  '2024-04-06': [fishsense, radio_telemetry_tracker, smartfin] # SP24 6
-  '2024-04-13': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 7
-  '2024-04-20': [fishsense, radio_telemetry_tracker, smartfin] # SP24 8
-  '2024-04-27': [mangrove_monitoring, acoustic_species_id] # SP24 9
+  '2024-04-01': [smartfin, hardware] # SP24 1
+  '2024-04-08': [fishsense, radio_telemetry_tracker, smartfin] # SP24 2
+  '2024-04-15': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 3
+  '2024-04-22': [fishsense, radio_telemetry_tracker, smartfin] # SP24 4
+  '2024-04-29': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 5
+  '2024-05-06': [fishsense, radio_telemetry_tracker, smartfin] # SP24 6
+  '2024-05-13': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 7
+  '2024-05-20': [fishsense, radio_telemetry_tracker, smartfin] # SP24 8
+  '2024-05-27': [mangrove_monitoring, acoustic_species_id] # SP24 9
