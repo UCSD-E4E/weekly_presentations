@@ -53,7 +53,7 @@ schedule:
   # Keyed by Date of presentation
   '2024-04-01': [smartfin, hardware] # SP24 1
   '2024-04-08': [fishsense, radio_telemetry_tracker, smartfin] # SP24 2
-  '2024-04-15': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 3
+  '2024-04-12': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 3
   '2024-04-22': [fishsense, radio_telemetry_tracker, smartfin] # SP24 4
   '2024-04-29': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move] # SP24 5
   '2024-05-06': [fishsense, radio_telemetry_tracker, smartfin] # SP24 6
