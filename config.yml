@@ -31,6 +31,7 @@ projects:
       - falafel72
       - AvacadoGoatcheese
       # 199/299
+      - lvking123
   radio_telemetry_tracker:
     name: Radio Telemetry Tracker
     latex: project_rtt
