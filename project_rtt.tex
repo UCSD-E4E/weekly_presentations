@@ -1,40 +1,48 @@
-% To create a slide, use the following:
-% \begin{frame}{TITLE}
-%     BODY
-% \end{frame}
 
-% To create a slide with a bullet list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{itemize}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{itemize}    
-% \end{frame}
-
-% To create a slide with numbered list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{enumerate}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{enumerate}
-% \end{frame}
-
-% To create a slide with a graphic:
-% 1. Add the graphic to this folder (named picture.png)
-% 2. Use the following:
-% \begin{frame}{TITLE}
-%     \centering
-%     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
-% \end{frame}
-
-% To create a slide with two columns, use the following:
-% \begin{frame}{TITLE}
-%     \begin{columns}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 1 BODY
-%         \end{column}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 2 BODY
-%         \end{column}
-%     \end{columns}
-% \end{frame}
+\begin{frame}{Schematic Diagram}
+    \centering
+    \includegraphics[height=.8\textheight,width=.8\textwidth,keepaspectratio]{images/rtt/i2cSch.jpg}
+\end{frame}
+\begin{frame}{PCB Layout}
+    \centering
+    \includegraphics[height=.8\textheight,width=.8\textwidth,keepaspectratio]{images/rtt/pcbLayout.jpg}
+\end{frame}
+\begin{frame}{Tower Battery System}
+    \begin{itemize}
+        \item Estimated power consumption with solar
+    \end{itemize}
+    \centering
+    \includegraphics[height=.7\textheight,width=.7\textwidth,keepaspectratio]{images/rtt/towerBattery.png}
+\end{frame}
+\begin{frame}{Fleming School of Enviromental and Natural Resource Sciences}
+    \begin{itemize}
+        \item Track 20 turtles with transmitters
+        \item Comparison between drone-based and on-ground tracking
+        \item Real-time tracker not required
+    \end{itemize}
+\end{frame}
+\begin{frame}{Current System}
+    \centering
+    \includegraphics[height=.6\textheight,width=.6\textwidth,keepaspectratio]{images/rtt/oldSystem.jpg}
+    \begin{itemize}
+        \item UP Core no longer available
+        \item Requires PCB
+        \item Not ideal I/O pins
+    \end{itemize}
+\end{frame}
+\begin{frame}{New (WIP) System}
+    \centering
+    \includegraphics[height=.6\textheight,width=.6\textwidth,keepaspectratio]{images/rtt/NewSystem.jpg}
+    \begin{itemize}
+        \item Same form factor as RPi going forward
+        \item More options for GPS/Mag
+        \item No PCB
+        \item Different UP SBC options available
+    \end{itemize}
+\end{frame}
+\begin{frame}{Other To-Do's}
+    \begin{itemize}
+        \item Add localization somewhere (DSP?)
+        \item Construct hardware into housing
+    \end{itemize}
+\end{frame}
