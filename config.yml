@@ -7,6 +7,7 @@ projects:
       - Jasonnyang
       - zclawr
       # 199/299
+      - HughieH
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
@@ -15,6 +16,8 @@ projects:
       - Sean1572
       - sprestrelski
       # 199/299
+      - JacobGlennAyers
+      - Ludwigvsch
   baboons_on_the_move:
     name: Baboons on the Move
     latex: project_bom
