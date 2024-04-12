@@ -9,10 +9,43 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Jacob Slides TODO}
+\begin{frame}{Jacob's Work}
+    \centering
+    Problem:\\
+    \includegraphics[height=0.9\textheight,width=0.7\textwidth,keepaspectratio]{images/spectrogram-.png}
+\end{frame}
+
+\begin{frame}{One Approach: Aggregation}
     \begin{itemize}
-        \item ITEM 1
-        \item ITEM 2
+        \item Aggregate probabilities for chunks
+        \item Max = label
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{One Approach: Aggregation}
+    \centering
+    \includegraphics[height=0.8\textheight,width=0.7\textwidth,keepaspectratio]{images/logit_confusion_matrix.png}
+\end{frame}
+
+\begin{frame}{Multiple Instance Learning}
+    \begin{itemize}
+        \item "Bag" of labels for each clip
+    \end{itemize}
+    Analogy:\\
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/keyring_analogy.png}
+\end{frame}
+
+\begin{frame}{Multiple Instance Learning}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=1\textheight,width=0.7\textwidth,keepaspectratio]{images/best3species.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=1\textheight,width=0.7\textwidth,keepaspectratio]{images/worst3species.png}
+        \end{column}
+    \end{columns}
+    \begin{itemize}
+        \item High recall for both ends
     \end{itemize}
 \end{frame}
 
