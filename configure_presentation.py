@@ -2,10 +2,11 @@
 '''
 import datetime as dt
 import os
+import re
 import shlex
 import subprocess
 from pathlib import Path
-from typing import Dict, List, Sequence, Set
+from typing import Dict, List, Optional, Sequence, Set
 
 import pytz
 import schema
@@ -42,13 +43,22 @@ def main():
 
     # allow assert - we want the action to fail if the current week is not supported
     raw_schedule: Dict[str, List[str]] = config['schedule']
-    full_schedule = {dt.date.fromisoformat(
+    full_schedule = {dt.datetime.fromisoformat(
         key): value for key, value in raw_schedule.items()}
     future_schedule = {date: sequence
                        for date, sequence in full_schedule.items()
-                       if date > exec_timestamp.date()}
-    assert len(future_schedule) > 0
+                       if date > exec_timestamp}
+    _exec_cmd(
+        ['git', 'config', 'user.email', 'e4e@ucsd.edu']
+    )
+    _exec_cmd(
+        ['git', 'config', 'user.name', 'E4E GitHub Actions']
+    )
+    if len(future_schedule) <= 0:
+        _set_next_execute_date(None)
+        return
     next_date = min(future_schedule.keys())
+    _set_next_execute_date(next_date)
 
     current_projects: List[str] = future_schedule[next_date]
     print(current_projects)
@@ -56,12 +66,6 @@ def main():
     all_call_projects: Set[str] = set(
         projects.keys()).difference(current_projects)
     print(all_call_projects)
-    _exec_cmd(
-        ['git', 'config', 'user.email', 'e4e@ucsd.edu']
-    )
-    _exec_cmd(
-        ['git', 'config', 'user.name', 'E4E GitHub Actions']
-    )
 
     __clear_announcements(next_date)
 
@@ -69,6 +73,56 @@ def main():
 
     # Create the appropriate branches
     __create_branches(current_projects, projects, next_date)
+
+
+def _set_next_execute_date(presentation_date: Optional[dt.date]):
+    latex_build_file = Path('.github/workflows/latex_build.yml')
+    create_branch_file = Path('.github/workflows/create_project_branches.yml')
+
+    if not presentation_date:
+        build_time = None
+        next_project_create_time = None
+        commit_msg = 'ci: Disables next execution'
+    else:
+        build_time = presentation_date - dt.timedelta(minutes=30)
+        next_project_create_time = presentation_date + dt.timedelta(hours=12)
+        commit_msg = f'ci: updates next execution for {presentation_date.isoformat()}'
+
+    _set_cron_string(latex_build_file, build_time)
+    _set_cron_string(create_branch_file, next_project_create_time)
+
+    _exec_cmd(
+        ['git', 'add', latex_build_file.as_posix()]
+    )
+
+    _exec_cmd(
+        ['git', 'add', create_branch_file.as_posix()]
+    )
+
+    _exec_cmd(
+        ['git', 'commit', '-m', commit_msg]
+    )
+
+
+def _set_cron_string(file_to_modify, execute_time):
+    if not execute_time:
+        new_cron_string = '59 23 29 4 6'
+        desc = 'This is basically never'
+    else:
+        utc_dt: dt.date = execute_time.astimezone(pytz.utc)
+        new_cron_string = utc_dt.strftime('%M %H %d %m *')
+        desc = execute_time.strftime(
+            'This in UTC, execute %A %m/%d at %H:%M %Z')
+
+    with open(file_to_modify, 'r', encoding='utf-8') as handle:
+        file_contents = ''.join(handle.readlines())
+    regex = r"- cron: '(.*)' # (.*)"
+    subst = f"- cron: '{new_cron_string}' # {desc}"
+
+    result = re.sub(regex, subst, file_contents, 1)
+
+    with open(file_to_modify, 'w', encoding='utf-8') as handle:
+        handle.write(result)
 
 
 def __clear_announcements(presentation_date: dt.date):
