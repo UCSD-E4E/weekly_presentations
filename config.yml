@@ -62,12 +62,12 @@ projects:
       - Sean1572
 schedule:
   # Keyed by Date of presentation
-  '2024-04-01': [smartfin, hardware] # SP24 1
-  '2024-04-08': [fishsense, radio_telemetry_tracker, smartfin, website] # SP24 2
-  '2024-04-12': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move, website] # SP24 3
-  '2024-04-22': [fishsense, radio_telemetry_tracker, smartfin, website] # SP24 4
-  '2024-04-29': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move, website] # SP24 5
-  '2024-05-06': [fishsense, radio_telemetry_tracker, smartfin, website] # SP24 6
-  '2024-05-13': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move, website] # SP24 7
-  '2024-05-20': [fishsense, radio_telemetry_tracker, smartfin, website] # SP24 8
-  '2024-05-27': [mangrove_monitoring, acoustic_species_id, website] # SP24 9
+  '2024-04-01T14:00-07:00': [smartfin, hardware] # SP24 1
+  '2024-04-08T14:00-07:00': [fishsense, radio_telemetry_tracker, smartfin, website] # SP24 2
+  '2024-04-12T14:00-07:00': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move, website] # SP24 3
+  '2024-04-22T14:00-07:00': [fishsense, radio_telemetry_tracker, smartfin, website] # SP24 4
+  '2024-04-29T14:00-07:00': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move, website] # SP24 5
+  '2024-05-06T14:00-07:00': [fishsense, radio_telemetry_tracker, smartfin, website] # SP24 6
+  '2024-05-13T14:00-07:00': [mangrove_monitoring, acoustic_species_id, baboons_on_the_move, website] # SP24 7
+  '2024-05-24T11:00-07:00': [fishsense, radio_telemetry_tracker, smartfin, website] # SP24 8
+  '2024-05-31T11:00-07:00': [mangrove_monitoring, acoustic_species_id, website] # SP24 9
