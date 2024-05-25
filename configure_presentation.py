@@ -1,10 +1,12 @@
 ''' Presentation Configuration
 '''
 import datetime as dt
+import logging
 import os
 import re
 import shlex
 import subprocess
+import time
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Set
 
@@ -33,6 +35,19 @@ config_schema = schema.Schema(
 def main():
     """Main Presentation Configuration
     """
+    # Configure loggers
+    root_logger = logging.getLogger()
+    date_fmt = '%Y-%m-%dT%H:%M:%S'
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.DEBUG)
+
+    error_formatter = logging.Formatter('%(asctime)s.%(msecs)03d - %(name)s - %(levelname)s'
+                                        ' - %(message)s', datefmt=date_fmt)
+    console_handler.setFormatter(error_formatter)
+    root_logger.addHandler(console_handler)
+    logging.Formatter.converter = time.gmtime
+
+    # Set timezone
     timezone = pytz.timezone('America/Los_Angeles')
     exec_timestamp = dt.datetime.now(timezone)
 
@@ -286,6 +301,7 @@ def _exec_cmd(cmd: Sequence[str]):
         except subprocess.CalledProcessError as exc:
             print(exc.stdout)
             print(exc.stderr)
+            raise exc
 
 
 if __name__ == '__main__':
