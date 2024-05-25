@@ -279,9 +279,13 @@ def _exec_cmd(cmd: Sequence[str]):
     # only exec if GH_TOKEN is defined, i.e. in GitHub Actions
     print(shlex.join(cmd))
     if 'GH_TOKEN' in os.environ:
-        subprocess.check_call(
-            args=cmd
-        )
+        try:
+            subprocess.check_call(
+                args=cmd
+            )
+        except subprocess.CalledProcessError as exc:
+            print(exc.stdout)
+            print(exc.stderr)
 
 
 if __name__ == '__main__':
