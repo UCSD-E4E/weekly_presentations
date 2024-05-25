@@ -5,6 +5,9 @@ on:
     - cron: '00 06 25 05 *' # This in UTC, execute Friday 05/24 at 23:00 UTC-07:00
   workflow_dispatch:
 
+permissions:
+  actions:
+    write
 jobs:
   create_branches:
     runs-on: ubuntu-latest
