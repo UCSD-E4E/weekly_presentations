@@ -323,7 +323,7 @@ def _exec_cmd(cmd: Sequence[str]):
         try:
             subprocess.check_call(
                 args=cmd,
-                shell=True
+                env=os.environ.copy()
             )
         except subprocess.CalledProcessError as exc:
             logger.exception(exc)
