@@ -329,6 +329,7 @@ def _exec_cmd(cmd: Sequence[str]):
             logger.exception(exc)
             logger.critical(exc.stdout)
             logger.critical(exc.stderr)
+            logger.info(os.environ['GH_TOKEN'][-4:])
             raise exc
 
 
