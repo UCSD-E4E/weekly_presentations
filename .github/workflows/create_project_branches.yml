@@ -8,6 +8,7 @@ on:
 permissions:
   actions:
     write
+  contents: write
 jobs:
   create_branches:
     runs-on: ubuntu-latest
