@@ -9,6 +9,8 @@ permissions:
   actions:
     write
   contents: write
+  workflows: write
+  
 jobs:
   create_branches:
     runs-on: ubuntu-latest
