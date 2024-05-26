@@ -322,7 +322,8 @@ def _exec_cmd(cmd: Sequence[str]):
     if 'GH_TOKEN' in os.environ:
         try:
             subprocess.check_call(
-                args=cmd
+                args=cmd,
+                shell=True
             )
         except subprocess.CalledProcessError as exc:
             logger.exception(exc)
