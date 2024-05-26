@@ -1,6 +1,7 @@
 ''' Presentation Configuration
 '''
 import datetime as dt
+import json
 import logging
 import os
 import re
@@ -37,6 +38,7 @@ def main():
     """
     # Configure loggers
     root_logger = logging.getLogger()
+    root_logger.setLevel(logging.DEBUG)
     date_fmt = '%Y-%m-%dT%H:%M:%S'
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.DEBUG)
@@ -55,6 +57,7 @@ def main():
     with open('config.yml', 'r', encoding='utf-8') as handle:
         data = yaml.safe_load(handle)
     config = config_schema.validate(data)
+    root_logger.info('Using config %s', json.dumps(config))
 
     # allow assert - we want the action to fail if the current week is not supported
     raw_schedule: Dict[str, List[str]] = config['schedule']
@@ -63,12 +66,15 @@ def main():
     future_schedule = {date: sequence
                        for date, sequence in full_schedule.items()
                        if date > exec_timestamp}
+    root_logger.info('Configuring git user')
     _exec_cmd(
         ['git', 'config', 'user.email', 'e4e@ucsd.edu']
     )
     _exec_cmd(
         ['git', 'config', 'user.name', 'E4E GitHub Actions']
     )
+
+    root_logger.info('Setting next execute date')
     if len(future_schedule) <= 0:
         _set_next_execute_date(None)
         return
@@ -76,11 +82,11 @@ def main():
     _set_next_execute_date(next_date)
 
     current_projects: List[str] = future_schedule[next_date]
-    print(current_projects)
+    root_logger.info('Current Projects: %s', str(current_projects))
     projects: Dict = config['projects']
     all_call_projects: Set[str] = set(
         projects.keys()).difference(current_projects)
-    print(all_call_projects)
+    root_logger.info('All Call Projects: %s', str(all_call_projects))
 
     __clear_announcements(next_date)
 
@@ -91,6 +97,13 @@ def main():
 
 
 def _set_next_execute_date(presentation_date: Optional[dt.date]):
+    logger = logging.getLogger('_set_next_execute_date')
+    if presentation_date:
+        logger.info('Setting next execute date %s',
+                    presentation_date.isoformat())
+    else:
+        logger.info('Disabling cron')
+
     latex_build_file = Path('.github/workflows/latex_build.yml')
     create_branch_file = Path('.github/workflows/create_project_branches.yml')
 
@@ -141,6 +154,8 @@ def _set_cron_string(file_to_modify, execute_time):
 
 
 def __clear_announcements(presentation_date: dt.date):
+    logger = logging.getLogger('Clear Announcements')
+    logger.info('Clearning annoumcements')
     with open('announcements.tex', 'w', encoding='utf-8') as handle:
         handle.write(
             f'% Announcements for {presentation_date.isoformat()}\n'
@@ -164,14 +179,19 @@ def __clear_announcements(presentation_date: dt.date):
 
 
 def __update_latex(current_projects: List[str], projects: Dict, all_call_projects: Set[str]):
+    logger = logging.getLogger('Update Latex')
+    logger.info('Updating LaTex')
+    logger.info('Setting All Call Sequence')
     with open('active_all_call.tex', 'w', encoding='utf-8') as handle:
         for project in all_call_projects:
             handle.write(f'\\item {projects[project]["name"]}\n')
 
+    logger.info('Setting Active Sequence')
     with open('active_order.tex', 'w', encoding='utf-8') as handle:
         for project in current_projects:
             handle.write(f'\\item {projects[project]["name"]}\n')
 
+    logger.info('Setting Active Sections')
     with open('active_sections.tex', 'w', encoding='utf-8') as handle:
         for project in current_projects:
             handle.write(f'\\section{{{projects[project]["name"]}}}\n')
@@ -203,7 +223,10 @@ def __update_latex(current_projects: List[str], projects: Dict, all_call_project
 def __create_branches(current_projects: List[str],
                       projects: Dict,
                       presentation_date: dt.date):
+    logger = logging.getLogger('Create Branches')
+    logger.info('Creating Branches')
 
+    logger.info('Deleting Images')
     path_to_rm: List[Path] = []
     for img in Path('images').rglob('*'):
         if not img.is_file():
@@ -217,6 +240,7 @@ def __create_branches(current_projects: List[str],
             ['git', 'rm', path.as_posix()]
         )
 
+    logger.info('Writing Project Slides')
     for project in current_projects:
         project_params = projects[project]
         # Reset the slides
@@ -241,6 +265,7 @@ def __create_branches(current_projects: List[str],
         ['git', 'pull']
     )
 
+    logger.info('Creating branches and PRs')
     for project in current_projects:
         project_params = projects[project]
         branch_name = f'{project_params["branch"]}_{presentation_date.isoformat()}'
@@ -292,15 +317,17 @@ def __create_branches(current_projects: List[str],
 
 def _exec_cmd(cmd: Sequence[str]):
     # only exec if GH_TOKEN is defined, i.e. in GitHub Actions
-    print(shlex.join(cmd))
+    logger = logging.getLogger('_exec_cmd')
+    logger.info('Exec `%s`', shlex.join(cmd))
     if 'GH_TOKEN' in os.environ:
         try:
             subprocess.check_call(
                 args=cmd
             )
         except subprocess.CalledProcessError as exc:
-            print(exc.stdout)
-            print(exc.stderr)
+            logger.exception(exc)
+            logger.critical(exc.stdout)
+            logger.critical(exc.stderr)
             raise exc
 
 
