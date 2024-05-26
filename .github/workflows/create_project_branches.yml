@@ -34,5 +34,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.RELEASER }}
         run: |
+          gh auth login -s workflow
           python configure_presentation.py
           
