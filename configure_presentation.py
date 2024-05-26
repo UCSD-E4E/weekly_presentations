@@ -119,6 +119,10 @@ def _set_next_execute_date(presentation_date: Optional[dt.date]):
     _set_cron_string(latex_build_file, build_time)
     _set_cron_string(create_branch_file, next_project_create_time)
 
+    repo = Repo('.')
+    if len(repo.index.diff(None)) == 0:
+        return
+
     _exec_cmd(
         ['git', 'add', latex_build_file.as_posix()]
     )
@@ -126,7 +130,6 @@ def _set_next_execute_date(presentation_date: Optional[dt.date]):
     _exec_cmd(
         ['git', 'add', create_branch_file.as_posix()]
     )
-
     _exec_cmd(
         ['git', 'commit', '-m', commit_msg]
     )
