@@ -93,7 +93,7 @@ def main():
     __update_latex(current_projects, projects, all_call_projects)
 
     # Create the appropriate branches
-    __create_branches(current_projects, projects, next_date)
+    __create_branches(current_projects, projects, next_date.date())
 
 
 def _set_next_execute_date(presentation_date: Optional[dt.date]):
