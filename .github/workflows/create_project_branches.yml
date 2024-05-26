@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.RELEASER }}
       - name: Set Timezone
         uses: MathRobin/timezone-action@v1.1
         with:
