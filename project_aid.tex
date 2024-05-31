@@ -1,3 +1,4 @@
+% Slides for 2024-05-13
 % To create a slide, use the following:
 % \begin{frame}{TITLE}
 %     BODY
@@ -43,3 +44,92 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+\begin{frame}{Ran Model over AM-1 from 2019 Peru Data}
+    \begin{itemize}
+        \item Started labeling the top 200 clips
+        \item 164 / 200 correct
+        \item Errors caused by 1 species
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{The species in question: Tawny-bellied Screech-Owl}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=1\textheight,width=0.7\textwidth,keepaspectratio]{./images/image (6).png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=1\textheight,width=0.7\textwidth,keepaspectratio]{./images/image (7).png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{How do we verify model performance?}
+    \begin{itemize}
+        \item "When is model useful for Collaborators"
+        \item Interested more in FP than FN
+        \item select higher confidence in practice
+        \item GOAL: Verify high confidence clips
+        \item Following method allowed for labeling
+        \item Verified 522 clips, 119 species
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Verify the top X (ex: 1) clips}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{./images/clip_selection_process.png}
+\end{frame}
+
+\begin{frame}{"Confidence chart"}
+
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{./images/prop_confidence.png}
+
+\end{frame}
+
+\begin{frame}{"Confidence chart"}
+
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{./images/prop_confidence_facet.png}
+
+\end{frame}
+
+\begin{frame}{"ROC"}
+
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{./images/roc.png}
+
+\end{frame}
+
+\begin{frame}{Discussion}
+    \begin{itemize}
+        \item Doesn't account for secondary birds
+        \item Verifcation took about 6-8 hours
+        \item Concern with not random sampling
+        \item I am not an Ornithologist
+        \item Models can be useful!
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Template Matching Motivation}
+    \begin{itemize}
+        \item Big picture: one call/day
+        \item 1000 species to look at
+        \item Which ones exist in data?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Template Matching}
+    So far:
+    \begin{itemize}
+        \item Piha: 0.59 precision
+        \item Attila: running
+    \end{itemize}
+    Plan:
+    \begin{itemize}
+        \item Get human-verified tm results
+        \item Train Efficientnet, trained on XC
+        \item Compare results to Jacob's baseline
+    \end{itemize}
+\end{frame}
