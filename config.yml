@@ -92,15 +92,15 @@ projects:
 schedule:
   # Keyed by Date of presentation
   "2024-07-02T09:30-07:00": # SU24 1
-    - fishsense,
-    - grouper_moon,
-    - mangrove_monitoring,
-    - acoustic_species_id,
-    - baboons_on_the_move,
-    - smartfin,
-    - volt,
-    - mesh_simplification,
-    - RobustSciML,
+    - fishsense
+    - grouper_moon
+    - mangrove_monitoring
+    - acoustic_species_id
+    - baboons_on_the_move
+    - smartfin
+    - volt
+    - mesh_simplification
+    - RobustSciML
   "2024-07-09T09:30-07:00": # SU24 2
     - fishsense # 3
     - grouper_moon # 1
