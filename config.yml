@@ -4,13 +4,19 @@ projects:
     latex: project_rsm
     branch: robustsciml
     assignees:
-      -
+      - Cecilia7717
   volt:
     name: Vehicle for Observing Lagrangian Transport
     latex: project_volt
     branch: volt
     assignees:
-      -
+      - derickcoder44
+  mesh_simplification:
+    name: Simplification of Special Meshes
+    latex: project_sms
+    branch: mesh_simplification
+    assignees:
+      - karislew
   mangrove_monitoring:
     name: Mangrove Monitoring
     latex: project_mm
@@ -18,15 +24,20 @@ projects:
     assignees:
       # - Jasonnyang
       - zclawr
+      - Aaryanpanthi
+      - rahualrai
+      - gagewrye
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
     branch: acoustic_species_id
     assignees:
-      # - Sean1572
+      - Sean1572
       # - sprestrelski
       - Ludwigvsch
       - tqzhang04
+      - suranganaaryal123
+      - hejonathan
   baboons_on_the_move:
     name: Baboons on the Move
     latex: project_bom
@@ -40,20 +51,31 @@ projects:
     branch: fishsense
     assignees:
       - ccrutchf
+      - AelizBiz
+      - bmccalmon
       # - falafel72
       # - avikg511
-  radio_telemetry_tracker:
-    name: Radio Telemetry Tracker
-    latex: project_rtt
-    branch: radio_telemetry_tracker
+  grouper_moon:
+    name: Grouper Moon
+    latex: project_gm
+    branch: grouper_moon
     assignees:
-      # - TylerFlar
+      - cyang406
+  # radio_telemetry_tracker:
+  #   name: Radio Telemetry Tracker
+  #   latex: project_rtt
+  #   branch: radio_telemetry_tracker
+  #   assignees:
+  # - TylerFlar
   smartfin:
     name: Smartfin
     latex: project_sf
     branch: smartfin
     assignees:
-      # - ntlhui
+      - ntlhui
+      - antara-chugh
+      - MAnn223
+      - HannahCutler
   # hardware:
   #   name: Hardware Development Group
   #   latex: project_hw
@@ -69,32 +91,56 @@ projects:
   #     - Sean1572
 schedule:
   # Keyed by Date of presentation
-  "2024-07-02T09:30-07:00": [
-      fishsense,
-      radio_telemetry_tracker,
-      mangrove_monitoring,
-      acoustic_species_id,
-      baboons_on_the_move,
-      smartfin,
-      volt,
-    ] # SU24 1
-  "2024-07-09T09:30-07:00": [fishsense, radio_telemetry_tracker, smartfin] # SU24 2
-  "2024-07-16T09:30-07:00": [
-      mangrove_monitoring,
-      acoustic_species_id,
-      baboons_on_the_move,
-    ] # SU24 3
-  "2024-07-23T09:30-07:00": [fishsense, radio_telemetry_tracker, smartfin] # SU24 4
-  "2024-07-30T09:30-07:00": [
-      mangrove_monitoring,
-      acoustic_species_id,
-      baboons_on_the_move,
-    ] # SU24 5
-  "2024-08-06T09:30-07:00": [fishsense, radio_telemetry_tracker, smartfin] # SU24 6
-  "2024-08-13T09:30-07:00": [
-      mangrove_monitoring,
-      acoustic_species_id,
-      baboons_on_the_move,
-    ] # SU24 7
-  "2024-08-20T09:30-07:00": [fishsense, radio_telemetry_tracker, smartfin] # SU24 8
-  "2024-08-27T09:30-07:00": [mangrove_monitoring, acoustic_species_id] # SU24 9
+  "2024-07-02T09:30-07:00": # SU24 1
+    - fishsense,
+    - grouper_moon,
+    - mangrove_monitoring,
+    - acoustic_species_id,
+    - baboons_on_the_move,
+    - smartfin,
+    - volt,
+    - mesh_simplification,
+    - RobustSciML,
+  "2024-07-09T09:30-07:00": # SU24 2
+    - fishsense # 3
+    - grouper_moon # 1
+    - smartfin # 4
+    - volt # 1
+    - RobustSciML # 1
+  "2024-07-16T09:30-07:00": # SU24 3
+    - mangrove_monitoring # 4
+    - acoustic_species_id # 5
+    - baboons_on_the_move # 1
+    - mesh_simplification # 1
+  "2024-07-23T09:30-07:00": # SU24 4
+    - fishsense # 3
+    - grouper_moon # 1
+    - smartfin # 4
+    - volt # 1
+    - RobustSciML # 1
+  "2024-07-30T09:30-07:00": # SU24 5
+    - mangrove_monitoring # 4
+    - acoustic_species_id # 5
+    - baboons_on_the_move # 1
+    - mesh_simplification # 1
+  "2024-08-06T09:30-07:00": # SU24 6
+    - fishsense # 3
+    - grouper_moon # 1
+    - smartfin # 4
+    - volt # 1
+    - RobustSciML # 1
+  "2024-08-13T09:30-07:00": # SU24 7
+    - mangrove_monitoring # 4
+    - acoustic_species_id # 5
+    - baboons_on_the_move # 1
+    - mesh_simplification # 1
+  "2024-08-20T09:30-07:00": # SU24 8
+    - fishsense # 3
+    - grouper_moon # 1
+    - smartfin # 4
+    - volt # 1
+    - RobustSciML # 1
+  "2024-08-27T09:30-07:00": # SU24 9
+    - mangrove_monitoring # 4
+    - acoustic_species_id # 5
+    - baboons_on_the_move # 1
