@@ -186,6 +186,8 @@ def __update_latex(current_projects: List[str], projects: Dict, all_call_project
     logger.info('Updating LaTex')
     logger.info('Setting All Call Sequence')
     with open('active_all_call.tex', 'w', encoding='utf-8') as handle:
+        if len(all_call_projects) == 0:
+            handle.write(f'\\item None\n')
         for project in all_call_projects:
             handle.write(f'\\item {projects[project]["name"]}\n')
 
