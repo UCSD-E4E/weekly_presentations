@@ -1,40 +1,67 @@
-% To create a slide, use the following:
-% \begin{frame}{TITLE}
-%     BODY
-% \end{frame}
+% introduction on bird species conservation, and how aucoustic monitoring is done
+\begin{frame}{Passive Acouistic Monitoring}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/pam.jpeg}
+\end{frame}
 
-% To create a slide with a bullet list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{itemize}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{itemize}    
-% \end{frame}
 
-% To create a slide with numbered list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{enumerate}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{enumerate}
-% \end{frame}
+% Explanation on how deep learning can be applied to audio data through spectrograms (seems easy!)
+\begin{frame}{Spectrogram}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/xeno.png}
+\end{frame}
 
-% To create a slide with a graphic:
-% 1. Add the graphic to this folder (named picture.png)
-% 2. Use the following:
-% \begin{frame}{TITLE}
-%     \centering
-%     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
-% \end{frame}
 
-% To create a slide with two columns, use the following:
-% \begin{frame}{TITLE}
-%     \begin{columns}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 1 BODY
-%         \end{column}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 2 BODY
-%         \end{column}
-%     \end{columns}
-% \end{frame}
+% (plot twist) the soundscape data is drastically different from our training data
+\begin{frame}{}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/xeno.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/soundscape.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+
+% Actions taken to improve model performance on soundscape data
+\begin{frame}{How do we improve?}
+    \begin{itemize}
+        \item Data Augmentation
+        \item Model Ensembling
+        \item Modified CNN with updated kernel for audio
+        \item and likely many more
+    \end{itemize}
+\end{frame}
+
+%
+% TODO Leave this part for surangana, GUI
+\begin{frame}{Goals for summer 2024}
+    \textbf{1. Build a Desktop application}
+\end{frame}
+\begin{frame}{Purpose of this Desktop Application}
+    \centering  \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/bird.jpeg}
+\end{frame}
+\begin{frame}{Application Overview}
+    \centering  \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/diagram.jpeg}
+\end{frame}
+
+\begin{frame}{EGCI and Domain Shift}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/egci.png}
+\end{frame}
+
+% ending slide, I will talk about the labelling party and how it will guide our summer research
+\begin{frame}{So what now?}
+    \begin{itemize}
+        \item labeling party
+        \item Model Development based on party
+        \item Sean, Ludwig, TQ, Jonathan
+        \item GUI Development for collaborators
+        \item Sean, Surangana
+    \end{itemize}
+\end{frame}
