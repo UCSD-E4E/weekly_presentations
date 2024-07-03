@@ -1,6 +1,6 @@
 projects:
   RobustSciML:
-    name: RobustSciML
+    name: Robust Scientific Machine Learning
     latex: project_rsm
     branch: robustsciml
     assignees:
