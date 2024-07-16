@@ -1,30 +1,22 @@
 % Slides for 2024-07-16
-% To create a slide, use the following:
-% \begin{frame}{TITLE}
-%     BODY
-% \end{frame}
-
-
-% To create a slide with a bullet list, use the following:
-
 \begin{frame}{Results: Labelling Party - ROC Curve}
     \centering
-    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/ROC_Curve_original_grid.png}   
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/ROC_Curve_original_grid.png}
 \end{frame}
 
 \begin{frame}{Results: Labelling Party - AUC vs Time}
     \centering
-    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/AUC.png}   
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/AUC.png}
 \end{frame}
 
 \begin{frame}{Results: Same model with strong Data Augmentation}
     \centering
-    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/ROC_Curve_DA.png}   
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/ROC_Curve_DA.png}
 \end{frame}
 
 \begin{frame}{Results: Same model with strong Data Augmentation}
     \centering
-    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/distribution_DA.png}   
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/distribution_DA.png}
 \end{frame}
 
 
@@ -33,20 +25,20 @@
     \begin{itemize}
         \item Class Correlation Matrix
         \item ITEM 2
-    \end{itemize}    
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Class Correlation Matrix}
     \begin{itemize}
         \item Compute R for every pair of classes across all instances
         \item Goal: Find correlations (confusions)
-    \end{itemize}    
+    \end{itemize}
 \end{frame}
 
 % picture of matrix, without filtering the zeros
 \begin{frame}{Results: Class Correlation Matrix}
     \centering
-    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/no_filter.png}   
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/no_filter.png}
 \end{frame}
 
 % picture of matrix, with filtering the zeros
@@ -54,11 +46,11 @@
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
-            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/conf_filter_explanation.jpeg}   
+            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/conf_filter_explanation.jpeg}
         \end{column}
         \begin{column}{0.5\textwidth}
             \centering
-            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/confidence_filter.png} 
+            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/confidence_filter.png}
         \end{column}
     \end{columns}
 \end{frame}
@@ -70,13 +62,13 @@
     White = Not enough datapoints
     \\
     \centering
-    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/occurance_filter.png}   
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/occurance_filter.png}
 \end{frame}
 
 % picture of matrix, with filtering the number of datapoints
 \begin{frame}{Results: Class Correlation Matrix}
     \centering
-    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/night.png}   
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/night.png}
 \end{frame}
 
 % Initial analysis: night vs. day & similar species
@@ -85,11 +77,11 @@
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
-            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/sim1.png}   
+            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/sim1.png}
         \end{column}
         \begin{column}{0.5\textwidth}
             \centering
-            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/sim2.png} 
+            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/sim2.png}
         \end{column}
     \end{columns}
 \end{frame}
@@ -138,79 +130,54 @@
         \item See where it's getting confused
     \end{itemize}
 \end{frame}
-
-% To create a slide with numbered list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{enumerate}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{enumerate}
-% \end{frame}
-
-% To create a slide with a graphic:
-% 1. Add the graphic to this folder (named picture.png)
-% 2. Use the following:
-% \begin{frame}{TITLE}
-%     \centering
-%     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
-% \end{frame}
-
-% To create a slide with two columns, use the following:
-% \begin{frame}{TITLE}
-%     \begin{columns}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 1 BODY
-%         \end{column}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 2 BODY
-%         \end{column}
-%     \end{columns}
-% \end{frame}
-
 %surangana's part
 
-\begin{frame}{Past week}  
+\begin{frame}{Past week}
     \begin{itemize}
         \item Data Analysis
     \end{itemize}
     \centering
-    \includegraphics[width=0.6\textwidth]{images/data analysis.png}  
+    \includegraphics[width=0.6\textwidth]{images/data analysis.png}
 \end{frame}
 
-\begin{frame}{Past week} 
+\begin{frame}{Past week}
     \begin{itemize}
         \item Created Sample UI Designs
-    \end{itemize}  
+    \end{itemize}
     \centering
-    \includegraphics[width=0.6\textwidth]{images/sampleui1.png}  
+    \includegraphics[width=0.6\textwidth]{images/sampleui1.png}
 \end{frame}
 
-\begin{frame}{Past week} 
+\begin{frame}{Past week}
     \begin{minipage}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{images/sampleui2.png}  
+        \includegraphics[width=\textwidth]{images/sampleui2.png}
     \end{minipage}
     \hspace{0.05\textwidth}
     \begin{minipage}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{images/sampleui5.png} 
+        \includegraphics[width=\textwidth]{images/sampleui5.png}
     \end{minipage}
 \end{frame}
 
-\begin{frame}{Past week} 
+\begin{frame}{Past week}
     \begin{minipage}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{images/sampleui4.png}  
+        \includegraphics[width=\textwidth]{images/sampleui4.png}
     \end{minipage}%
     \hspace{0.05\textwidth}
     \begin{minipage}[b]{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{images/sampleui3.png}  
+        \includegraphics[width=\textwidth]{images/sampleui3.png}
     \end{minipage}
 \end{frame}
 
-\begin{frame}{Upcoming week} 
+\begin{frame}{Upcoming week}
     \begin{itemize}
-        \item Iterate the designs 
-    \end{itemize}  
+        \item Iterate Desktop designs
+        \item Desktop Development start
+        \item Use CCM to identify simliar species
+        \item Verify clips from new model
+        \item Look deeper into cnn+transformer
+    \end{itemize}
 \end{frame}
