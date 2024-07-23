@@ -1,67 +1,174 @@
-% introduction on bird species conservation, and how aucoustic monitoring is done
-\begin{frame}{Passive Acouistic Monitoring}
+% Slides for 2024-07-16
+\begin{frame}{Results: Labelling Party - ROC Curve}
     \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/pam.jpeg}
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/ROC_Curve_original_grid.png}
 \end{frame}
 
-
-% Explanation on how deep learning can be applied to audio data through spectrograms (seems easy!)
-\begin{frame}{Spectrogram}
+\begin{frame}{Results: Labelling Party - AUC vs Time}
     \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/xeno.png}
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/AUC.png}
 \end{frame}
 
+\begin{frame}{Results: Same model with strong Data Augmentation}
+    \centering
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/ROC_Curve_DA.png}
+\end{frame}
 
-% (plot twist) the soundscape data is drastically different from our training data
-\begin{frame}{}
+\begin{frame}{Results: Same model with strong Data Augmentation}
+    \centering
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/distribution_DA.png}
+\end{frame}
+
+\begin{frame}{Class Correlation Matrix}
+    \begin{itemize}
+        \item Compute R for every pair of classes across all instances
+        \item Goal: Find correlations (confusions)
+    \end{itemize}
+\end{frame}
+
+% picture of matrix, without filtering the zeros
+\begin{frame}{Results: Class Correlation Matrix}
+    \centering
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/no_filter.png}
+\end{frame}
+
+% picture of matrix, with filtering the zeros
+\begin{frame}{Added filtering to remove correlation from near zero}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
-            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/xeno.png}
+            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/conf_filter_explanation.jpeg}
         \end{column}
         \begin{column}{0.5\textwidth}
             \centering
-            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/soundscape.png}
+            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/confidence_filter.png}
         \end{column}
     \end{columns}
 \end{frame}
 
 
+% picture of matrix, with filtering the number of datapoints
+\begin{frame}{Results: Class Correlation Matrix}
+    \centering
+    White = Not enough datapoints
+    \\
+    \centering
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/occurance_filter.png}
+\end{frame}
 
-% Actions taken to improve model performance on soundscape data
-\begin{frame}{How do we improve?}
+% picture of matrix, with filtering the number of datapoints
+\begin{frame}{Results: Class Correlation Matrix}
+    \centering
+    \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/night.png}
+\end{frame}
+
+% Initial analysis: night vs. day & similar species
+% To create a slide with two columns, use the following:
+\begin{frame}{Examples of Related Species}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/sim1.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/sim2.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Begin TQ's section
+\begin{frame}{Correlation Graph}
+    \centering Idea: Use correlations as adjacency
+\end{frame}
+
+\begin{frame}{Interactive Graph Visualization}
+    \includegraphics[height=0.9\textheight, width=0.9\textwidth]{images/asid_corr_graphvis.png}
+\end{frame}
+
+\begin{frame}{Groups Make Sense}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.7\textheight, width=1\textwidth]{images/antthrush_tinamou.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Black-faced Antthrush: \href{https://xeno-canto.org/712297}{https://xeno-canto.org/712297}
+                \item Little Tinamou: \href{https://xeno-canto.org/821655}{https://xeno-canto.org/821655}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Groups Make Sense}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.7\textheight, width=1\textwidth]{images/owl_owl.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Tawny-bellied Screech Owl: \href{https://xeno-canto.org/862344}{https://xeno-canto.org/862344}
+                \item Ferruginous Pygmy Owl: \href{https://xeno-canto.org/914412}{https://xeno-canto.org/914412}
+                \item \emph{Differ only in frequency!}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Interpretation/Future application}
     \begin{itemize}
-        \item Data Augmentation
-        \item Model Ensembling
-        \item Modified CNN with updated kernel for audio
-        \item and likely many more
+        \item Model confusion makes sense
+        \item See where it's getting confused
     \end{itemize}
 \end{frame}
+%surangana's part
 
-%
-% TODO Leave this part for surangana, GUI
-\begin{frame}{Goals for summer 2024}
-    \textbf{1. Build a Desktop application}
-\end{frame}
-\begin{frame}{Purpose of this Desktop Application}
-    \centering  \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/bird.jpeg}
-\end{frame}
-\begin{frame}{Application Overview}
-    \centering  \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/diagram.jpeg}
-\end{frame}
-
-\begin{frame}{EGCI and Domain Shift}
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/egci.png}
-\end{frame}
-
-% ending slide, I will talk about the labelling party and how it will guide our summer research
-\begin{frame}{So what now?}
+\begin{frame}{Past week}
     \begin{itemize}
-        \item labeling party
-        \item Model Development based on party
-        \item Sean, Ludwig, TQ, Jonathan
-        \item GUI Development for collaborators
-        \item Sean, Surangana
+        \item Data Analysis
+    \end{itemize}
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/data analysis.png}
+\end{frame}
+
+\begin{frame}{Past week}
+    \begin{itemize}
+        \item Created Sample UI Designs
+    \end{itemize}
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/sampleui1.png}
+\end{frame}
+
+\begin{frame}{Past week}
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/sampleui2.png}
+    \end{minipage}
+    \hspace{0.05\textwidth}
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/sampleui5.png}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Past week}
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/sampleui4.png}
+    \end{minipage}%
+    \hspace{0.05\textwidth}
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/sampleui3.png}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Upcoming week}
+    \begin{itemize}
+        \item Iterate Desktop designs
+        \item Desktop Development start
+        \item Use CCM to identify simliar species
+        \item Verify clips from new model
+        \item Look deeper into cnn+transformer
     \end{itemize}
 \end{frame}
