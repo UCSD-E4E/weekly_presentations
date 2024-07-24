@@ -2,7 +2,7 @@ name: Weekly Build
 
 on:
   schedule:
-    - cron: '00 16 23 07 *' # This in UTC, execute Tuesday 07/23 at 09:00 UTC-07:00
+    - cron: '00 16 30 07 *' # This in UTC, execute Tuesday 07/30 at 09:00 UTC-07:00
   workflow_dispatch: 
   push: 
 
