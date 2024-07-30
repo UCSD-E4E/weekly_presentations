@@ -1,3 +1,4 @@
+% Slides for 2024-07-30
 % To create a slide, use the following:
 % \begin{frame}{TITLE}
 %     BODY
@@ -38,3 +39,137 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+\begin{frame}{State of ASID}
+    Model Weaknesses:
+    \begin{itemize}
+        \item No frequency encoding
+        \item No temporal context
+    \end{itemize}
+    Desktop app progress!
+\end{frame}
+
+\begin{frame}{Leaf: A Learnable Frontend}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.9\textwidth,keepaspectratio]{images/leaf_demo.png}
+\end{frame}
+    
+% \begin{frame}{Leaf: A Learnable Frontend}
+%     \centering
+%     \includegraphics[height=0.7\textheight,width=0.9\textwidth,keepaspectratio]{images/leaf_results_paper.png}
+% \end{frame}
+
+\begin{frame}{Complications}
+    \begin{itemize}
+        \item tf.keras.utils.audio\_dataset\_from\_directory()
+        \item Tensorflow Datasets
+        \item Some files causing ffmpeg errors
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Current progress}
+    \begin{itemize}
+        \item Generated dataset using XC data
+        \item Training their model to test viability
+    \end{itemize}
+\end{frame}
+
+% jonathan
+
+\begin{frame}{Audio Spectrogram Transformer}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.9\textwidth,keepaspectratio]{images/ast.png}
+\end{frame}
+
+\begin{frame}{Progress}
+    \centering
+    \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item Our Model: Timm Models
+                    \item Our Dataset: PyTorch
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{itemize}
+                    \item AST: Custom training pipeline (script provided)
+                    \item Script dataset: HuggingFace
+                \end{itemize}
+            \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Conversion:}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.9\textwidth,keepaspectratio]{images/converter.png}
+    \begin{itemize}
+        \item Problem: a lot of bugs :(
+        \item label assignment
+        \item extract audio from pipeline instead of spectrogram
+    \end{itemize}
+\end{frame}
+
+%Ludwig
+\begin{frame}{CNN Tranformer Hybrid AVES}
+    \centering
+    \includegraphics[height=0.8\textheight,width=1\textwidth,keepaspectratio]{images/Aves_architecture.png}  
+\end{frame}
+
+\begin{frame}{BirdAVES}
+    \centering
+    \includegraphics[height=0.7\textheight,width=1\textwidth,keepaspectratio]{images/BirdAves.png}  
+\end{frame}
+
+\begin{frame}{Current progress}
+    \begin{itemize}
+        \item Created CustomModel class in our pipeline
+        \item Adjusted Train script and Dataset Loader (3D$ \,\to\, $2D)
+        \item Currently training base model$ \,\to\, $evaluate
+        \item Then will train BirdAVES model
+    \end{itemize}
+\end{frame}
+
+%surangana
+
+\begin{frame}{Created a Framework for the Home Page}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{homepage.png}  
+\end{frame}
+
+\begin{frame}{Created a Framework for the Database Page}
+       \centering
+       \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{database1.png}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            \includegraphics[width=\linewidth]{database2.png}
+        \end{minipage}  
+\end{frame}
+
+\begin{frame}{Created a Framework for the Database Page}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{database3.png}  
+\end{frame}
+
+\begin{frame}{Work in Progress}
+    \begin{enumerate}
+       \item Complete the Database Page
+       \item Start working on the Labeling Page
+   \end{enumerate}
+\end{frame}
+
+\begin{frame}{Recap}
+    ML:
+    \begin{itemize}
+        \item Investigated weaknesses
+        \item Found solutions
+    \end{itemize}
+    Desktop App:
+    \begin{itemize}
+        \item Started development from mock-ups
+        \item Created frameworks for Home, DB pages
+    \end{itemize}
+\end{frame}
