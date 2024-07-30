@@ -1,41 +1,72 @@
-% Slides for 2024-07-30
-% To create a slide, use the following:
-% \begin{frame}{TITLE}
-%     BODY
-% \end{frame}
+\begin{frame}{Baboon MMB VISO Video 1 Pareto Fronts}
+    \centering
+    \includegraphics[width=1\textwidth,height=0.85\textheight,keepaspectratio]{images/bom/d5f18f73-3f1c-4386-8efa-9f25a41693f0.png}
+\end{frame}
 
-% To create a slide with a bullet list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{itemize}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{itemize}    
-% \end{frame}
+\begin{frame}{What's the Issue?}
+    \begin{itemize}
+        \item Hyperparameter space is likely too large
+        \item Matlab's $gamultiobj()$ function cannot be constrained by functions
+        \item Invalid inputs are treated as 0 detections
+        \item Specific constraints:
+              \begin{itemize}
+                  \item $0 \leq \text{AREA\_MIN} \leq \text{AREA\_MAX} \leq 100$
+                  \item $0 \leq \text{ASPECT\_RATIO\_MIN} \leq \text{ASPECT\_RATIO\_MAX} \leq 10$
+                  \item $1 \leq H \leq \text{PIPELINE LENGTH} \leq 10$
+                  \item $1 \leq \text{GAMMA1\_PARAM} \leq \text{GAMMA2\_PARAM} \leq 1$
+              \end{itemize}
+    \end{itemize}
+\end{frame}
 
-% To create a slide with numbered list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{enumerate}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{enumerate}
-% \end{frame}
+\begin{frame}{How many Invalid Inputs?}
+    \centering
+    \includegraphics[width=1\textwidth,height=0.85\textheight,keepaspectratio]{images/bom/152441d1-c714-4f49-aca6-3d0d750f50a4.png}
+\end{frame}
 
-% To create a slide with a graphic:
-% 1. Add the graphic to this folder (named picture.png)
-% 2. Use the following:
-% \begin{frame}{TITLE}
-%     \centering
-%     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
-% \end{frame}
+\begin{frame}{Time Spent on Invalid Runs}
+    \begin{itemize}
+        \item Estimated run times:
+              \begin{itemize}
+                  \item Invalid: $\approx 1$ second
+                  \item Valid (F1 $\geq$ 0): $\approx 20$ minutes
+              \end{itemize}
+        \item Total runs: 67,911 (63,472 invalid, 4,439 valid)
+        \item Time on invalid runs: $63,472 \times 1\text{ s} \approx 17.6\text{ hours}$
+        \item \textbf{Equivalent to about 53 valid runs}
+        \item Grossly estimated; hard to tell because parellize
+    \end{itemize}
+\end{frame}
 
-% To create a slide with two columns, use the following:
-% \begin{frame}{TITLE}
-%     \begin{columns}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 1 BODY
-%         \end{column}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 2 BODY
-%         \end{column}
-%     \end{columns}
-% \end{frame}
+\begin{frame}{Optimization Learning Progress}
+    \centering
+    \includegraphics[width=\textwidth,height=0.85\textheight,keepaspectratio]{images/bom/16dae317-9da8-4032-bf1c-8ef11995233e.png}
+\end{frame}
+
+\begin{frame}{What's Next?}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{Option 1: Continue As Is}
+            \begin{itemize}
+                \item Pro: Comprehensive search
+                \item Cons:
+                      \begin{itemize}
+                          \item Time-consuming
+                          \item Uncertain convergence
+                          \item Inefficient (invalid runs)
+                      \end{itemize}
+                \item Note: Max iterations is set to 1e6.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \textbf{Option 2: Refine Approach}
+            \begin{itemize}
+                \item Stop current run
+                \item Prevent invalid inputs
+                \item Expand data collection
+                \item Pro: Faster convergence
+                \item Con: May miss some combinations
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
