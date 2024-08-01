@@ -1,22 +1,20 @@
 
-\begin{frame}{Foundational Model}
+\begin{frame}{Satellite Foundational Models}
     \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/mm_resnet_compare.png}
+    \begin{itemize}
+        \item Same performance as ImageNet
+    \end{itemize}  
+    \includegraphics[height=0.6\textheight,width=0.6\textwidth,keepaspectratio]{images/mm_sat_imagenet_loss.png}
+    \includegraphics[height=0.6\textheight,width=0.6\textwidth,keepaspectratio]{images/mm_sat_imagenet_performance.png}
 \end{frame}
 
-\begin{frame}{Super Resolution Model}
+\begin{frame}{BCE vs Jaccard Loss}
     \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/mm_Latent_diffuse.png}
-\end{frame}
-
-\begin{frame}{Forward Diffusion}
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/mm_forward.jpeg}
-\end{frame}
-
-\begin{frame}{Reverse Diffusion}
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/mm_reverse.jpeg}
+    \begin{itemize}
+        \item Performace improvement with Jaccard Loss
+    \end{itemize}  
+    \includegraphics[height=0.6\textheight,width=0.6\textwidth,keepaspectratio]{images/mm_BCE_Jaccard_loss.png}
+    \includegraphics[height=0.6\textheight,width=0.6\textwidth,keepaspectratio]{images/mm_BCE_Jaccard_performance.png}
 \end{frame}
 
 \begin{frame}{Old AWS System Architecture}
