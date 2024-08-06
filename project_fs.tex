@@ -16,7 +16,7 @@
     \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/fs_homography_warped.png}
 \end{frame}
 
-\begin{frame}{Feature extraction and matching - results} 
+\begin{frame}{Feature extraction and matching - results}
     \begin{columns}
         \begin{column}{0.3\textwidth}
             Performance:
@@ -55,4 +55,55 @@
             \includegraphics[height=1.3\textheight,width=1.3\textwidth,keepaspectratio]{images/FailedImageGallery.png}
         \end{column}
     \end{columns}
+\end{frame}
+
+\begin{frame}{FishSense Segmentation}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_seg_pipeline1.png}
+
+\end{frame}
+
+\begin{frame}{FishSense Segmentation}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Why using Vision Transformers?
+                \item Self-attention mechanism in ViT
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            Visualization of ViT's attention
+            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_seg_vit_1.png}
+            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_seg_vit_2.png}
+        \end{column}
+    \end{columns}
+
+
+\end{frame}
+
+\begin{frame}{FishSense Segmentation}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Does image enhancement help?
+                \item Reduce noise
+                \item Recent works deploy MLPs for enhancement
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_seg_vit_3.png}
+        \end{column}
+    \end{columns}
+
+
+\end{frame}
+
+\begin{frame}{FishSense Segmentation}
+    Data preparation
+    \begin{itemize}
+        \item Modified USIS10k: 9662 labeled fishes
+        \item Deepfish: 310 labeled images
+    \end{itemize}
+
+
 \end{frame}
