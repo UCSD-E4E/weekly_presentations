@@ -1,8 +1,39 @@
+% Slides for 2024-08-06
 % To create a slide, use the following:
-% \begin{frame}{TITLE}
-%     BODY
-% \end{frame}
+\begin{frame}{Approach :(}
+    \begin{itemize}
+        \item colab 
+              A100, L4, T4, TPU
+        \item nautilus 
+              Kubernetes 
+              NVIDIA-GeForce-RTX-2080-Ti, NVIDIA-L40, NVIDIA-GeForce-RTX-3090
+    \end{itemize}
+\end{frame}
 
+\begin{frame}{Refactor}
+    \begin{itemize}
+        \item
+              adjust size
+        \item
+              remove the ray.tune
+        \item
+              fixed hyper-param: LR - (1e-4, 2e-4) 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Refactor}
+    \begin{figure} 
+        \centering
+        \includegraphics[width=0.2\linewidth]{images/IMG_4668.jpeg} 
+    \end{figure}
+\end{frame}
+
+\begin{frame}{To-do}
+    \begin{itemize}
+        \item try 0\%, 25\%, 50\% noise for testing
+        \item try 0\%, 25\%, 50\% noise for training and testing
+    \end{itemize}
+\end{frame}
 % To create a slide with a bullet list, use the following:
 % \begin{frame}{TITLE}
 %     \begin{itemize}
