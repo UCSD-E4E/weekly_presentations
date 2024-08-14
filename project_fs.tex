@@ -1,109 +1,40 @@
-% Slides for 2024-08-06
-\begin{frame}{Feature extraction and matching - success}
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_success1.JPG}
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_success2.JPG}
-\end{frame}
+% To create a slide, use the following:
+% \begin{frame}{TITLE}
+%     BODY
+% \end{frame}
 
-\begin{frame}{Feature extraction and matching - fail}
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_fail1.JPG}
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_fail2.JPG}
-\end{frame}
+% To create a slide with a bullet list, use the following:
+% \begin{frame}{TITLE}
+%     \begin{itemize}
+%         \item ITEM 1
+%         \item ITEM 2
+%     \end{itemize}    
+% \end{frame}
 
-\begin{frame}{Feature extraction and matching - example use}
-    \centering
-    \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/fs_homography_warped.png}
-\end{frame}
+% To create a slide with numbered list, use the following:
+% \begin{frame}{TITLE}
+%     \begin{enumerate}
+%         \item ITEM 1
+%         \item ITEM 2
+%     \end{enumerate}
+% \end{frame}
 
-\begin{frame}{Feature extraction and matching - results}
-    \begin{columns}
-        \begin{column}{0.3\textwidth}
-            Performance:
-            \begin{itemize}
-                \item 62/77 algorithm
-                \item 57/77 real
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.3\textwidth}
-            Without last 10:
-            \begin{itemize}
-                \item 62/67 algorithm
-                \item 57/67 real
-            \end{itemize}
-        \end{column}
-    \end{columns}
-\end{frame}
+% To create a slide with a graphic:
+% 1. Add the graphic to this folder (named picture.png)
+% 2. Use the following:
+% \begin{frame}{TITLE}
+%     \centering
+%     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
+% \end{frame}
 
-\begin{frame}{FishSense Mobile - Database}
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/DBLog.png}
-\end{frame}
-
-\begin{frame}{FishSense Mobile - Recently}
-    \begin{columns}
-        \begin{column}{0.3\textwidth}
-            Location
-            \centering
-            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/DB_ID15.png}
-            \centering
-            \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/DB_ID16.png}
-        \end{column}
-        \begin{column}{0.3\textwidth}
-            Debugging...
-            \centering
-            \includegraphics[height=1.3\textheight,width=1.3\textwidth,keepaspectratio]{images/FailedImageGallery.png}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{FishSense Segmentation}
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_seg_pipeline1.png}
-
-\end{frame}
-
-\begin{frame}{FishSense Segmentation}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item Why using Vision Transformers?
-                \item Self-attention mechanism in ViT
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            Visualization of ViT's attention
-            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_seg_vit_1.png}
-            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_seg_vit_2.png}
-        \end{column}
-    \end{columns}
-
-
-\end{frame}
-
-\begin{frame}{FishSense Segmentation}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item Does image enhancement help?
-                \item Reduce noise
-                \item Recent works deploy MLPs for enhancement
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/fs_seg_vit_3.png}
-        \end{column}
-    \end{columns}
-
-
-\end{frame}
-
-\begin{frame}{FishSense Segmentation}
-    Data preparation
-    \begin{itemize}
-        \item Modified USIS10k: 9662 labeled fishes
-        \item Deepfish: 310 labeled images
-    \end{itemize}
-
-
-\end{frame}
+% To create a slide with two columns, use the following:
+% \begin{frame}{TITLE}
+%     \begin{columns}
+%         \begin{column}{0.5\textwidth}
+%             COLUMN 1 BODY
+%         \end{column}
+%         \begin{column}{0.5\textwidth}
+%             COLUMN 2 BODY
+%         \end{column}
+%     \end{columns}
+% \end{frame}
