@@ -139,9 +139,9 @@ schedule:
     - fishsense # 3
     - grouper_moon # 1
     - smartfin # 4
-    - volt # 1
     - RobustSciML # 1
   "2024-08-27T09:30-07:00": # SU24 9
     - mangrove_monitoring # 4
     - acoustic_species_id # 5
     - baboons_on_the_move # 1
+    - volt # 1
