@@ -135,15 +135,14 @@ def _set_next_execute_date(presentation_date: Optional[dt.date]):
     )
 
 
-def _set_cron_string(file_to_modify, execute_time):
+def _set_cron_string(file_to_modify, execute_time: dt.datetime):
     if not execute_time:
         new_cron_string = '59 23 29 4 6'
         desc = 'This is basically never'
     else:
         utc_dt: dt.date = execute_time.astimezone(pytz.utc)
         new_cron_string = utc_dt.strftime('%M %H %d %m *')
-        desc = execute_time.strftime(
-            'This in UTC, execute %A %m/%d at %H:%M %Z')
+        desc = f'Executes at {execute_time.isoformat()}'
 
     with open(file_to_modify, 'r', encoding='utf-8') as handle:
         file_contents = ''.join(handle.readlines())

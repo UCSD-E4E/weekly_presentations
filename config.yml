@@ -1,22 +1,4 @@
 projects:
-  RobustSciML:
-    name: Robust Scientific Machine Learning
-    latex: project_rsm
-    branch: robustsciml
-    assignees:
-      - Cecilia7717
-  volt:
-    name: Vehicle for Observing Lagrangian Transport
-    latex: project_volt
-    branch: volt
-    assignees:
-      - derickcoder44
-  mesh_simplification:
-    name: Simplification of Special Meshes
-    latex: project_sms
-    branch: mesh_simplification
-    assignees:
-      - karislew
   mangrove_monitoring:
     name: Mangrove Monitoring
     latex: project_mm
@@ -24,8 +6,6 @@ projects:
     assignees:
       # - Jasonnyang
       - zclawr
-      - Aaryanpanthi
-      - rahualrai
       - gagewrye
   acoustic_species_id:
     name: Acoustic Species ID
@@ -33,11 +13,8 @@ projects:
     branch: acoustic_species_id
     assignees:
       - Sean1572
-      # - sprestrelski
       - Ludwigvsch
       - tqzhang04
-      - suranganaaryal123
-      - hejonathan
   baboons_on_the_move:
     name: Baboons on the Move
     latex: project_bom
@@ -52,96 +29,68 @@ projects:
     assignees:
       - ccrutchf
       - AelizBiz
-      - bmccalmon
-      - original-doc
-      # - falafel72
-      # - avikg511
-  grouper_moon:
-    name: Grouper Moon
-    latex: project_gm
-    branch: grouper_moon
+      - avikg511
+  radio_telemetry_tracker:
+    name: Radio Telemetry Tracker
+    latex: project_rtt
+    branch: radio_telemetry_tracker
     assignees:
-      - cyang406
-  # radio_telemetry_tracker:
-  #   name: Radio Telemetry Tracker
-  #   latex: project_rtt
-  #   branch: radio_telemetry_tracker
-  #   assignees:
-  # - TylerFlar
+      - TylerFlar
   smartfin:
     name: Smartfin
     latex: project_sf
     branch: smartfin
     assignees:
       - ntlhui
-      - antara-chugh
-      - MAnn223
-      - HannahCutler
-  # hardware:
-  #   name: Hardware Development Group
-  #   latex: project_hw
-  #   branch: hardware
-  #   assignees:
-  #     - ntlhui
-  # website:
-  #   name: Website
-  #   latex: project_web
-  #   branch: web
-  #   assignees:
-  #     - ntlhui
-  #     - Sean1572
+  website:
+    name: Website
+    latex: project_web
+    branch: web
+    assignees:
+      - ntlhui
+      - Sean1572
 schedule:
   # Keyed by Date of presentation
-  "2024-07-02T09:30-07:00": # SU24 1
-    - fishsense
-    - grouper_moon
+  "2024-09-30T12:00-07:00": # FA24 1
     - mangrove_monitoring
     - acoustic_species_id
-    - baboons_on_the_move
     - smartfin
-    - volt
-    - mesh_simplification
-    - RobustSciML
-  "2024-07-09T09:30-07:00": # SU24 2
-    - fishsense # 3
-    - grouper_moon # 1
-    - smartfin # 4
-    - volt # 1
-    - RobustSciML # 1
-  "2024-07-16T09:30-07:00": # SU24 3
-    - mangrove_monitoring # 4
-    - acoustic_species_id # 5
-    - baboons_on_the_move # 1
-    - mesh_simplification # 1
-  "2024-07-23T09:30-07:00": # SU24 4
-    - fishsense # 3
-    - grouper_moon # 1
-    - smartfin # 4
-    - volt # 1
-    - RobustSciML # 1
-  "2024-07-30T09:30-07:00": # SU24 5
-    - mangrove_monitoring # 4
-    - acoustic_species_id # 5
-    - baboons_on_the_move # 1
-    - mesh_simplification # 1
-  "2024-08-06T09:30-07:00": # SU24 6
-    - fishsense # 3
-    - grouper_moon # 1
-    - smartfin # 4
-    - volt # 1
-    - RobustSciML # 1
-  "2024-08-13T09:30-07:00": # SU24 7
-    - mangrove_monitoring # 4
-    - acoustic_species_id # 5
-    - baboons_on_the_move # 1
-    - mesh_simplification # 1
-  "2024-08-20T09:30-07:00": # SU24 8
-    - fishsense # 3
-    - grouper_moon # 1
-    - smartfin # 4
-    - RobustSciML # 1
-  "2024-08-27T09:30-07:00": # SU24 9
-    - mangrove_monitoring # 4
-    - acoustic_species_id # 5
-    - baboons_on_the_move # 1
-    - volt # 1
+    - radio_telemetry_tracker
+    - baboons_on_the_move
+    - fishsense
+  "2024-10-07T12:00-07:00": # FA24 2
+    - radio_telemetry_tracker
+    - baboons_on_the_move
+    - fishsense
+  "2024-10-14T12:00-07:00": # FA24 3
+    - mangrove_monitoring
+    - acoustic_species_id
+    - smartfin
+  "2024-10-21T12:00-07:00": # FA24 4
+    - baboons_on_the_move
+    - fishsense
+    - radio_telemetry_tracker
+  "2024-10-28T12:00-07:00": # FA24 5
+    - mangrove_monitoring
+    - acoustic_species_id
+    - smartfin
+  "2024-11-04T12:00-08:00": # FA24 6
+    - baboons_on_the_move
+    - fishsense
+    - radio_telemetry_tracker
+  "2024-11-14T12:00-08:00": # FA24 7
+    - mangrove_monitoring
+    - acoustic_species_id
+    - smartfin
+  "2024-11-18T12:00-08:00": # FA24 8
+    - baboons_on_the_move
+    - fishsense
+    - radio_telemetry_tracker
+  "2024-11-25T12:00-08:00": # FA24 9
+    - mangrove_monitoring
+    - acoustic_species_id
+    - smartfin
+  "2024-12-02T12:00-08:00": # FA24 10
+    - baboons_on_the_move
+    - fishsense
+    - radio_telemetry_tracker
