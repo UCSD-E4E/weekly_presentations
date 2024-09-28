@@ -39,3 +39,73 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+% New slide for summer update
+\begin{frame}{Over Summer Update: Fleming College}
+    \begin{itemize}
+        \item Fleming College received parts for turtle tracking
+        \item No further communication from Fleming College
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Over Summer Update: Project Assessment}
+    \begin{itemize}
+        \item Can't elegantly combine tower and drone software.
+        \item Seperate FDS, COMMs, and GCS. Shared DSP.
+        \item Focus on drone for quarter.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Drone Field Device Software (and Hardware)}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.7\textheight,width=\textwidth,keepaspectratio]{images/rtt/Screenshot 2024-09-27 165936.jpg}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Software and hardware core works
+                \item Next steps:
+                \begin{itemize}
+                    \item Implement LoRa communication
+                    \item Create new drone payload casing
+                    \item Solder parts together
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Drone Ground Control Software}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.7\textheight,width=\textwidth,keepaspectratio]{images/rtt/Screenshot 2024-09-27 170105.jpg}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Swich from QGIS to Folium
+                \item Reasons:
+                \begin{itemize}
+                    \item Folium can be dockerized easier
+                    \item Access to Flask instead of Qt
+                    \item May be approach for tower server
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Drone Path Planner (if time permits)}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.7\textheight,width=\textwidth,keepaspectratio]{images/rtt/rob22017-fig-0005-m.jpg}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Develop a flight simulator
+                \item Figure out best flight path using DSP/localization
+                \item Useful tool for future projects
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
