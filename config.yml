@@ -33,12 +33,16 @@ projects:
     name: FishSense Core
     latex: project_fs_core
     branch: fs_core
-    assignees: []
+    assignees:
+      - ccrutchf
+      - bmccalmon
   fs_user:
     name: FishSense User
     latex: project_fs_user
     branch: fs_user
-    assignees: []
+    assignees:
+      - ccrutchf
+      - hnvultimate123
   radio_telemetry_tracker:
     name: Radio Telemetry Tracker
     latex: project_rtt
