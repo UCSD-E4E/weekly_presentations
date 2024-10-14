@@ -43,6 +43,7 @@ projects:
     assignees:
       - ccrutchf
       - hnvultimate123
+      - Kylehtran
   radio_telemetry_tracker:
     name: Radio Telemetry Tracker
     latex: project_rtt
