@@ -2,7 +2,7 @@ name: Weekly Build
 
 on:
   schedule:
-    - cron: '30 18 14 10 *' # Executes at 2024-10-14T11:30:00-07:00
+    - cron: '30 18 21 10 *' # Executes at 2024-10-21T11:30:00-07:00
   workflow_dispatch: 
   push: 
 
