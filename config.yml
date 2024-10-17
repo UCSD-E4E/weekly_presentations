@@ -1,6 +1,6 @@
 projects:
   maya_vr:
-    name: Maya Archaeology
+    name: Maya VR
     latex: project_maya
     branch: maya_vr
     assignees:
