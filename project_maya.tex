@@ -1,47 +1,10 @@
-% To create a slide, use the following:
-% \begin{frame}{TITLE}
-%     BODY
-% \end{frame}
+\documentclass{beamer}
+\usepackage{graphicx} % For including graphics
 
-% To create a slide with a bullet list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{itemize}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{itemize}    
-% \end{frame}
-
-% To create a slide with numbered list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{enumerate}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{enumerate}
-% \end{frame}
-
-% To create a slide with a graphic:
-% 1. Add the graphic to this folder (named picture.png)
-% 2. Use the following:
-% \begin{frame}{TITLE}
-%     \centering
-%     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
-% \end{frame}
-
-% To create a slide with two columns, use the following:
-% \begin{frame}{TITLE}
-%     \begin{columns}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 1 BODY
-%         \end{column}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 2 BODY
-%         \end{column}
-%     \end{columns}
-% \end{frame}
-
+\begin{document}
 
 \begin{frame}{Current Progress}
-     \begin{itemize}
+    \begin{itemize}
         \item Cleaned up assets in CloudCompare
         \item Worked on pre-aligned Tikal tunnel point clouds in RealityCapture
         \item Subsampled the point cloud and generated meshes through PoissonRecon
@@ -51,32 +14,34 @@
 
 \begin{frame}{Renders}
     \begin{columns}
-       \begin{column}{0.3\textwidth}
-        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/maya/capture.bmp}
-       \end{column}
-       \begin{column}{0.3\textwidth}
-        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/maya/capture2.bmp}
-       \end{column}
-       \begin{column}{0.3\textwidth}
-        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/maya/capture5.bmp}
-       \end{column}
-   \end{columns}
+        \begin{column}{0.33\textwidth}
+            \includegraphics[height=0.7\textheight, keepaspectratio]{images/maya/capture.png}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \includegraphics[height=0.7\textheight, keepaspectratio]{images/maya/capture2.png}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \includegraphics[height=0.7\textheight, keepaspectratio]{images/maya/capture5.png}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Renders}
     \begin{columns}
-       \begin{column}{0.5\textwidth}
-        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/maya/capture4.bmp}
-       \end{column}
-       \begin{column}{0.5\textwidth}
-        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/maya/render.png}
-       \end{column}
-   \end{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.7\textheight, keepaspectratio]{images/maya/capture4.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=0.7\textheight, keepaspectratio]{images/maya/render.png}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Next}
     \begin{itemize}
-       \item Further refine and complete the asset in ZBrush.
-       \item Sort the completely unsorted point clouds and align them in RealityCapture
-   \end{itemize}    
+        \item Further refine and complete the asset in ZBrush.
+        \item Sort the completely unsorted point clouds and align them in RealityCapture
+    \end{itemize}    
 \end{frame}
+
+\end{document}
