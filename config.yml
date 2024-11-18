@@ -106,25 +106,25 @@ schedule:
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2024-11-14T12:00-08:00": # FA24 7
+  "2024-11-18T12:00-08:00": # FA24 7
     - a3d_eng
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
     - maya_vr
-  "2024-11-18T12:00-08:00": # FA24 8
+  "2024-11-25T12:00-08:00": # FA24 8
     - baboons_on_the_move
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2024-11-25T12:00-08:00": # FA24 9
+  "2024-12-02T12:00-08:00": # FA24 9
     - a3d_eng
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
     - maya_vr
-  "2024-12-02T12:00-08:00": # FA24 10
-    - baboons_on_the_move
-    - fs_core
-    - fs_user
-    - radio_telemetry_tracker
+  # "2024-12-02T12:00-08:00": # FA24 10
+  #   - baboons_on_the_move
+  #   - fs_core
+  #   - fs_user
+  #   - radio_telemetry_tracker
