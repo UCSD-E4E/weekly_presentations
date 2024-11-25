@@ -1,3 +1,4 @@
+% Slides for 2024-11-25
 % To create a slide, use the following:
 % \begin{frame}{TITLE}
 %     BODY
@@ -38,3 +39,50 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+% To create a slide with a bullet list, use the following:
+\begin{frame}{Drone Field Device Software Revamp}
+    \begin{itemize}
+        \item Removed Docker/Docker-Compose
+        \item Ping finder config dynamically loaded from USB stick
+        \item Logs saved onto USB stick
+        \item Other misc improvements
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{Drone Ground Control Station Update}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item New UI design and layout
+                \item GeoTIFF/GEOJSON support works
+                \item Selecting COMMs device works
+                \item Adding functions to display info on map
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio]{images/rtt/gcs.jpg}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Drone Payload Casing}
+    \begin{itemize}
+        \item Trying to support different devices
+        \item Working on sketch
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{Tower Hardware Ready to Review}
+    \begin{itemize}
+        \item Includes:
+        \item \begin{itemize}
+            \item MOSFET, Fuse, Converters, Resistors, Connectors
+            \item STM Nucleo Board
+            \item Battery
+            \item Solar Panel, Charge Controller
+        \end{itemize}
+        \item Each item has quantity and price
+    \end{itemize}    
+\end{frame}
