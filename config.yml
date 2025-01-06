@@ -71,60 +71,56 @@ projects:
       - Sean1572
 schedule:
   # Keyed by Date of presentation
-  "2024-09-30T12:00-07:00": # FA24 1
-    - mangrove_monitoring
-    - acoustic_species_id
-    - smartfin
-    - radio_telemetry_tracker
+  "2025-01-06T10:00-08:00': # WI25 1
     - baboons_on_the_move
     - a3d_eng
     - fs_core
     - fs_user
-  "2024-10-07T12:00-07:00": # FA24 2
     - radio_telemetry_tracker
-    - baboons_on_the_move
-    - fs_core
-    - fs_user
-  "2024-10-14T12:00-07:00": # FA24 3
-    - a3d_eng
-    - mangrove_monitoring
-    - acoustic_species_id
-    - smartfin
-  "2024-10-21T12:00-07:00": # FA24 4
-    - baboons_on_the_move
-    - fs_core
-    - fs_user
-    - radio_telemetry_tracker
-  "2024-10-28T12:00-07:00": # FA24 5
-    - a3d_eng
-    - mangrove_monitoring
-    - acoustic_species_id
-    - smartfin
     - maya_vr
-  "2024-11-04T12:00-08:00": # FA24 6
-    - baboons_on_the_move
-    - fs_core
-    - fs_user
-    - radio_telemetry_tracker
-  "2024-11-18T12:00-08:00": # FA24 7
-    - a3d_eng
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-    - maya_vr
-  "2024-11-25T12:00-08:00": # FA24 8
+  "2025-01-13T10:00-08:00': # WI25 2
     - baboons_on_the_move
+    - a3d_eng
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2024-12-02T12:00-08:00": # FA24 9
-    - a3d_eng
+  "2025-01-27T10:00-08:00': # WI25 4
+    - maya_vr
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
+  "2025-02-03T10:00-08:00': # WI25 5
+    - baboons_on_the_move
+    - a3d_eng
+    - fs_core
+    - fs_user
+    - radio_telemetry_tracker
+  "2025-02-10T10:00-08:00': # WI25 6
     - maya_vr
-  # "2024-12-02T12:00-08:00": # FA24 10
-  #   - baboons_on_the_move
-  #   - fs_core
-  #   - fs_user
-  #   - radio_telemetry_tracker
+    - mangrove_monitoring
+    - acoustic_species_id
+    - smartfin
+  "2025-02-24T10:00-08:00': # WI25 8
+    - baboons_on_the_move
+    - a3d_eng
+    - fs_core
+    - fs_user
+    - radio_telemetry_tracker
+  "2025-03-03T10:00-08:00': # WI25 9
+    - maya_vr
+    - mangrove_monitoring
+    - acoustic_species_id
+    - smartfin
+  "2025-03-10T10:00-08:00': # WI25 10 - 199/299?
+    - baboons_on_the_move
+    - a3d_eng
+    - fs_core
+    - fs_user
+    - radio_telemetry_tracker
+    - maya_vr
+    - mangrove_monitoring
+    - acoustic_species_id
+    - smartfin
