@@ -1,38 +1,22 @@
-\begin{frame}{Current Progress}
+\begin{frame}{Focus Area: Improving Existing Pipeline}
     \begin{itemize}
-        \item Cleaned up trench 1 of La Cuernavilla in RealityCapture
-        \item Created initial mesh and subsampled it (90M to 5.5M)
-        \item Cleaned it up in ZBrush (100,000 tris now)
+        \item Enhance the processing stages of the pipeline rather than building new scanning or VR technologies.
+        \item Use a new ML-Based feature detector which works well for low-light, low-texture environments.
     \end{itemize}    
 \end{frame}
 
-\begin{frame}{Renders}
-    \begin{columns}[T] % Align columns at the top
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\textwidth, keepaspectratio]{images/maya/image1.png}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\textwidth, keepaspectratio]{images/maya/image2.png}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Additional Renders}
-    \begin{columns}[T] % Align columns at the top
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\textwidth, keepaspectratio]{images/maya/image3.png}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \includegraphics[width=\textwidth, keepaspectratio]{images/maya/image4.png}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{Next Steps}
+\begin{frame}{Research and Testing}
     \begin{itemize}
-        \item Divide the model into smaller polygroups for easier management
-        \item Retopologize
-        \item Start mapping textures
-        \item Subdivide the mesh to restore detail
+        \item Conduct a comprehensive review of current SOTA SLAM technologies for low-light, GPS-denied environments.
+        \item Compare existing approaches with alternatives found.
+        \item Evaluate using metrics like loop closure error, accuracy, and processing time which were tested in the original paper.
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{Action Plan}
+    \begin{itemize}
+        \item Obtain and Inspect Existing Docker Pipeline
+        \item Begin testing and integrating new feature detectors.
+        \item Maybe switch to iPhones for scanning.
     \end{itemize}    
 \end{frame}
