@@ -71,7 +71,7 @@ projects:
       - Sean1572
 schedule:
   # Keyed by Date of presentation
-  "2025-01-06T10:00-08:00': # WI25 1
+  "2025-01-06T10:00-08:00": # WI25 1
     - baboons_on_the_move
     - a3d_eng
     - fs_core
@@ -81,40 +81,40 @@ schedule:
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-  "2025-01-13T10:00-08:00': # WI25 2
+  "2025-01-13T10:00-08:00": # WI25 2
     - baboons_on_the_move
     - a3d_eng
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2025-01-27T10:00-08:00': # WI25 4
+  "2025-01-27T10:00-08:00": # WI25 4
     - maya_vr
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-  "2025-02-03T10:00-08:00': # WI25 5
+  "2025-02-03T10:00-08:00": # WI25 5
     - baboons_on_the_move
     - a3d_eng
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2025-02-10T10:00-08:00': # WI25 6
+  "2025-02-10T10:00-08:00": # WI25 6
     - maya_vr
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-  "2025-02-24T10:00-08:00': # WI25 8
+  "2025-02-24T10:00-08:00": # WI25 8
     - baboons_on_the_move
     - a3d_eng
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2025-03-03T10:00-08:00': # WI25 9
+  "2025-03-03T10:00-08:00": # WI25 9
     - maya_vr
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-  "2025-03-10T10:00-08:00': # WI25 10 - 199/299?
+  "2025-03-10T10:00-08:00": # WI25 10 - 199/299?
     - baboons_on_the_move
     - a3d_eng
     - fs_core
