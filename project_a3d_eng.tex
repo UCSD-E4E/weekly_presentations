@@ -1,3 +1,41 @@
+\begin{frame}{SeaThru}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/crutchfield_final.jpg}
+\end{frame}
+
+\begin{frame}{SeaThru}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/crutchfield2_final.png}
+\end{frame}
+
+\begin{frame}{SeaThru}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/crutchfield_perry_final.png}
+\end{frame}
+
+\begin{frame}{Attenuation Map Optimization}
+    $$min_{a,b,c,d} || z - \frac{-\log{\hat{E}_c}}{ae^{bz} + ce^{dz}} ||$$
+    subject to
+    $$a \geq 0; b \leq 0; c \geq 0; d \leq 0$$
+\end{frame}
+
+\begin{frame}{Non Linear Least Squares Fitting}
+    $$\hat{B}_c = B_c^{\infty}(1-e^{-\beta_c^B z})+J'_c e^{-\beta_c^{D'} z}$$
+    subject to
+    $$0 \leq B^\infty_c \geq 1; 0 \leq \beta_c^B \geq B; 0 \leq J'_c \geq 1; 0 \leq \beta_c^{D'}$$
+\end{frame}
+
+\begin{frame}{Label Studio}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/a3d_labelstudio.png}
+\end{frame}
+
+
+\begin{frame}{Attenuation Map Optimization}
+    \href{https://github.com/UCSD-E4E/label-studio/pkgs/container/label-studio/335825750?tag=20250113.162625-develop-6c02a29}{Released Docker Image}
+\end{frame}
+
+% Slides for 2025-01-13
 % To create a slide, use the following:
 % \begin{frame}{TITLE}
 %     BODY
