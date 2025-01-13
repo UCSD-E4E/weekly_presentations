@@ -10,7 +10,7 @@ projects:
     latex: project_mm
     branch: mangrove_monitoring
     assignees:
-      # - Jasonnyang
+      - Jasonnyang
       - zclawr
       - gagewrye
   acoustic_species_id:
