@@ -18,6 +18,24 @@
     \includegraphics[height=0.5\textheight,width=0.6\textwidth,keepaspectratio]{images/Upsample_compare.png}
 \end{frame}
 
+\begin{frame}{Terraform Implementation}
+    Divided across team AWS component-wise:
+    \begin{itemize}
+        \item EC2 Instance
+        \item ECS Cluster
+        \item ECR Repo
+        \item S3 Bucket
+        \item VPC (+ misc. odds and ends)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{AWS Infrastructure Changes}
+    \begin{itemize}
+        \item Image preprocessing and classification moving to Kastner-ML
+        \item TLS Authentication from Webserver to Kastner-ML
+    \end{itemize}
+\end{frame}
+
 % To create a slide, use the following:
 % \begin{frame}{TITLE}
 %     BODY
