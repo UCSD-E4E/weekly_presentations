@@ -35,13 +35,22 @@ projects:
     assignees:
       - ccrutchf
       - avikg511
-  fs_core:
-    name: FishSense Core
-    latex: project_fs_core
-    branch: fs_core
+  # fs_core:
+  #   name: FishSense Core
+  #   latex: project_fs_core
+  #   branch: fs_core
+  #   assignees:
+  #     - ccrutchf
+  #     - bmccalmon
+  act_learn:
+    name: Active Learning
+    latex: project_act_learn
+    branch: act_learn
     assignees:
       - ccrutchf
-      - bmccalmon
+      - Sean1572
+      - WesleyJWu
+      - mathslayer-compe #Akhil Nallacheruvu
   fs_user:
     name: FishSense User
     latex: project_fs_user
@@ -117,7 +126,8 @@ schedule:
   "2025-03-10T10:00-08:00": # WI25 10 - 199/299?
     - baboons_on_the_move
     - a3d_eng
-    - fs_core
+    #- fs_core
+    - act_learn
     - fs_user
     - radio_telemetry_tracker
     - maya_vr
