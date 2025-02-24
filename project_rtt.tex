@@ -39,3 +39,53 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+
+
+\begin{frame}{TDOA Localization Investigation: Tower Placement}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,keepaspectratio]{images/rtt/random_towers.jpg}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,keepaspectratio]{images/rtt/optimal_towers.jpg}
+        \end{column}
+    \end{columns}
+    \vspace{0.5cm}
+    \begin{itemize}
+        \item Random Towers: Error = 59.77 ± 465.38 m, Radius = 1761.70 ± 2133.72 m
+        \item Optimal Towers: Error = 0.00 ± 0.00 m, Radius = 550.41 ± 179.68 m
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{GPS vs. Time Accuracy Sensitivity}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/rtt/gpstime.png}
+    \vspace{0.5cm}
+    \begin{itemize}
+        \item Need for GPS-disciplined oscillator... possibly good enough GPS. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{USRP B200}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/rtt/usrp.jpg}
+    \vspace{0.5cm}
+    \begin{itemize}
+        \item Takes care of GPSDO, GPS coordinates, and SDR.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{ATLAS}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/rtt/atlas-hardware.jpg}
+    \vspace{0.5cm}
+    \begin{itemize}
+        \item ATLAS is a TDOA localization system.
+        \item Good reference for hardware/software design.
+        \item Uses TCP/IP for communication and Vildehaye tags. 
+    \end{itemize}
+\end{frame}
