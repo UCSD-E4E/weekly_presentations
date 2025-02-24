@@ -28,20 +28,20 @@ projects:
     assignees:
       # - ccrutchf
       - TylerFlar
-  a3d_eng:
-    name: Aqua3D Engineering
-    latex: project_a3d_eng
-    branch: a3d_eng
-    assignees:
-      - ccrutchf
-      - avikg511
-  # fs_core:
-  #   name: FishSense Core
-  #   latex: project_fs_core
-  #   branch: fs_core
+  # a3d_eng:
+  #   name: Aqua3D Engineering
+  #   latex: project_a3d_eng
+  #   branch: a3d_eng
   #   assignees:
   #     - ccrutchf
-  #     - bmccalmon
+  #     - avikg511
+  fs_core:
+    name: FishSense Core
+    latex: project_fs_core
+    branch: fs_core
+    assignees:
+      - ccrutchf
+      - bmccalmon
   act_learn:
     name: Active Learning
     latex: project_act_learn
@@ -125,8 +125,7 @@ schedule:
     - smartfin
   "2025-03-10T10:00-08:00": # WI25 10 - 199/299?
     - baboons_on_the_move
-    - a3d_eng
-    #- fs_core
+    - fs_core
     - act_learn
     - fs_user
     - radio_telemetry_tracker
