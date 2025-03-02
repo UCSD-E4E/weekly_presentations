@@ -4,7 +4,7 @@ projects:
     latex: project_maya
     branch: maya_vr
     assignees:
-      - UrAboveAvgGitUser
+      - AviralAgrwal
   mangrove_monitoring:
     name: Mangrove Monitoring
     latex: project_mm
