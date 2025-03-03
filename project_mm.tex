@@ -1,3 +1,36 @@
+% Slides for 2025-03-03
+
+\begin{frame}{Deployment to Kastner-ML}
+    \begin{itemize}
+        \item ~5 min inference
+        \item GPU under-utilized
+        \item Need Grafana access for next deployment
+    \end{itemize} 
+\end{frame}
+
+\begin{frame}{Terraform Testing}
+    Using LocalStack, ECR to ECS to EC2 tested and functional with mock docker container
+\end{frame}
+
+\begin{frame}{Next Major Deployment}
+    \begin{itemize}
+        \item Frontend and webserver living on EC2
+        \item Webserver uses TLS authentication to reach IP service
+        \item IP service living on Kastner-ML
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Deployment Blockers}
+    AWS Authentication: OIDC or IAM Role?
+\end{frame}
+
+\begin{frame}{Leadership Transition}
+    \begin{itemize}
+        \item Evan Wu
+        \item Kiruthika Marikumaran
+    \end{itemize}
+\end{frame}
+
 % To create a slide, use the following:
 % \begin{frame}{TITLE}
 %     BODY
