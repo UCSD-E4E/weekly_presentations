@@ -82,7 +82,7 @@ schedule:
   # Keyed by Date of presentation
   "2025-03-31T10:30-07:00": # SP25 1
     - baboons_on_the_move
-    - a3d_eng
+    - act_learn
     - fs_core
     - fs_user
     - radio_telemetry_tracker
@@ -97,7 +97,7 @@ schedule:
     - smartfin
   "2025-04-14T10:30-07:00": # SP25 3
     - baboons_on_the_move
-    - a3d_eng
+    - act_learn
     - fs_core
     - fs_user
     - radio_telemetry_tracker
@@ -108,7 +108,7 @@ schedule:
     - smartfin
   "2025-04-28T10:30-07:00": # WI25 5
     - baboons_on_the_move
-    - a3d_eng
+    - act_learn
     - fs_core
     - fs_user
     - radio_telemetry_tracker
@@ -119,7 +119,7 @@ schedule:
     - smartfin
   "2025-05-12T10:30-07:00": # WI25 7
     - baboons_on_the_move
-    - a3d_eng
+    - act_learn
     - fs_core
     - fs_user
     - radio_telemetry_tracker
