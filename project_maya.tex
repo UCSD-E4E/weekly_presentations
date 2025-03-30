@@ -39,3 +39,27 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+
+\begin{frame}{Direction for this quarter}
+    \begin{itemize}
+        \item Create a modular pipeline which inputs a rough point cloud, refines it, creates a mesh with acceptable detail and gives a VR-compatible Unity project.
+        \item Should be accessible to an archeologist without technical expertise.
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{Progress so far}
+    \begin{itemize}
+        \item Set up a preliminary Docker build of CloudCompare using Ubuntu 22.04 as the base image.
+        \item Wrote a powershell script to run the docker image.
+        \item Successfully performed spatial subsampling on some test data with CloudCompare without GUI.
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}{Further}
+    \begin{itemize}
+        \item Incorporate more CloudCompare operations and test different data for finding the optimal parameters.
+        \item Evaluate whether to continue using CloudCompare or switch to Open3D’s TSDF for mesh construction.
+        \item Begin integrating the output mesh into Unity with basic VR compatibility.
+    \end{itemize}    
+\end{frame}
