@@ -90,42 +90,48 @@ schedule:
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-  "2025-04-07T10:30-07:00": # SP25 2
+  "2025-04-08T14:00-07:00": # SP25 2
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
     - maya_vr
-  "2025-04-14T10:30-07:00": # SP25 3
+  "2025-04-15T14:00-07:00": # SP25 3
     - baboons_on_the_move
     - act_learn
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2025-04-21T10:30-07:00": # SP25 4
+  "2025-04-22T14:00-07:00": # SP25 4
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
     - maya_vr
-  "2025-04-28T10:30-07:00": # WI25 5
+  "2025-04-29T14:00-07:00": # WI25 5
     - baboons_on_the_move
     - act_learn
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2025-05-05T10:30-07:00": # WI25 6
+  "2025-05-06T14:00-07:00": # WI25 6
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
     - maya_vr
-  "2025-05-12T10:30-07:00": # WI25 7
+  "2025-05-13T14:00-07:00": # WI25 7
     - baboons_on_the_move
     - act_learn
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2025-05-19T10:30-08:00": # SP25 8
+  "2025-05-20T14:00-07:00": # SP25 8
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
     - maya_vr
-  "2025-06-09T10:30-07:00": [] # SP25 10 199/299
+  "2025-05-27T14:00-07:00":
+    - baboons_on_the_move
+    - act_learn
+    - fs_core
+    - fs_user
+    - radio_telemetry_tracker
+  "2025-06-03T14:00-07:00": [] # SP25 10 199/299
