@@ -41,15 +41,33 @@
 % \end{frame}
 
 \begin{frame}{Data Aug: BG Noise}
-    \centering
-    \begin{tabular}{c | c}
-        $\alpha$ range & cmap \\
-        \hline
-        No aug & 0.3746 \\
-        [0.01, 0.02] & 0.3663 \\
-        [0.1, 0.2] & 0.3771 \\
-        [0.2, 0.3] & 0.3492 \\
-        \dots & \dots \\
-        [0.9, 0.99] & 0.051
-    \end{tabular}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \begin{tabular}{c|c}
+                alpha range & cmap \\
+                \hline \\
+                No aug & 0.3746 \\
+                0.01-0.02 & 0.3663 \\
+            \textbf{0.1-0.2} & \textbf{0.3771} \\
+                0.2-0.3 & 0.3492 \\
+                \dots & \dots \\
+                0.9-0.99 & 0.051
+            \end{tabular}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\textwidth]{images/cmap_by_bgnoise.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Pipeline Redesign}
+    \begin{itemize}
+        \item Current pipeline has many errors
+        \item Difficult to use
+        \item Issues with data preprocessing
+    \end{itemize}
+    \begin{center}
+        \textbf{Goal: Motivate and guide redesign with experiments}
+    \end{center}
 \end{frame}
