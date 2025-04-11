@@ -43,6 +43,9 @@ projects:
     assignees:
       - ccrutchf
       - bmccalmon
+      # 199
+      - Shuzhengz
+      - SRaswan
   act_learn:
     name: Active Learning
     latex: project_act_learn
