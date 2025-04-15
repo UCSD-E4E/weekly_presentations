@@ -10,9 +10,10 @@ projects:
     latex: project_mm
     branch: mangrove_monitoring
     assignees:
-      - Jasonnyang
       - zclawr
       - gagewrye
+      # 199
+      - TWintersww
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
@@ -42,6 +43,9 @@ projects:
     assignees:
       - ccrutchf
       - bmccalmon
+      # 199
+      - Shuzhengz
+      - SRaswan
   act_learn:
     name: Active Learning
     latex: project_act_learn
