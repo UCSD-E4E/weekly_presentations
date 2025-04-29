@@ -58,3 +58,11 @@
         \item Compare distinction with old python pipeline
     \end{enumerate}
 \end{frame}
+
+\begin{frame}{Underwater Renderer}
+    \begin{enumerate}
+	    \item Done: Testing FP32 and 64. Expects around 200 in 1 million calculations to have more than 0.1 percent error, and 10 to have more than 1 percent
+			\item Re-evaluate Platforms: FP64 suffers very heavy performance penalty on all consumer GPUs, still heavy penalty on NVIDIA server GPUs
+			\item Consideration for building program for MI210 as no FP64 penalty, and by extension switching to ROCm/HIP
+    \end{enumerate}
+\end{frame}
