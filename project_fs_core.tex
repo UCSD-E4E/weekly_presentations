@@ -1,4 +1,3 @@
-% Slides for 2025-04-29
 % To create a slide, use the following:
 % \begin{frame}{TITLE}
 %     BODY
@@ -39,57 +38,3 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
-
-\begin{frame}{Rust Pipeline}
-  \begin{columns}[c]
-      \column{0.48\textwidth}
-        \centering
-        \textbf{Tail Correct}\\[1ex]
-        \includegraphics[height=0.48\textheight,keepaspectratio]{./images/fish2_out.png}
-  
-      \column{0.48\textwidth}
-        \centering
-        \textbf{Tail/Head Distinction}\\[1ex]
-        \includegraphics[height=0.48\textheight,keepaspectratio]{./images/fish6_out.png}
-  \end{columns}
-      \begin{enumerate}
-        \item Head correction
-        \item Test different radius thresholds
-        \item Compare distinction with old python pipeline
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}{Underwater Renderer}
-    \begin{enumerate}
-	    \item Done: Testing FP32 and 64. Expects around 200 in 1 million calculations to have more than 0.1 percent error, and 10 to have more than 1 percent
-			\item Re-evaluate Platforms: FP64 suffers very heavy performance penalty on all consumer GPUs, still heavy penalty on NVIDIA server GPUs
-			\item Consideration for building program for MI210 has no FP64 penalty, and by extension switching to ROCm/HIP
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}{Chris - Underwater Renderer}
-	\begin{enumerate}
- 		\item Started designing fan shroud to try to use the AMD GPUs
-   \item Evaluating platforms for Simulator
- 	\end{enumerate}
-\end{frame}
-
-\begin{frame}{Chris - Grouper Moon}
-Usually I train a couple models and compare which works best, but so far I've just done this one baseline. There's a couple things that could be done on it to improve results (below). AP for the models is in the .70s
-
-\begin{enumerate}
-\item compare YOLO vs Mask RCNN vs CFRNN vs others (e.g. including motion) for detection
-\item have a separate classifier for determining background vs foreground instead of building that into the detector like I did here
-\item training on your dataset in addition to others for improved robustness
-\item re-training the tracker model on your data, not just the detector
-\item have the classifier component consider image resolution - by default FG / BG classification is a different problem than species classification
-\end{enumerate}
-\end{frame}
-
-
-\begin{frame}{Chris - Depthwise Color Constancy}
-\begin{enumerate}
-\item Did some benchmarking on the Jetson Orin.  Think we are hitting thermal throttling
-\item Need to do some debugging
-\end{enumerate}
-\end{frame}
