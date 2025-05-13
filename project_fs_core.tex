@@ -63,3 +63,14 @@
         \item Look into hipify-perl converting Mitsuba + Dr.Jit CUDA code to HIP
     \end{enumerate}
 \end{frame}
+
+\begin{frame}{Tom - Underwater Renderer}
+    \begin{enumerate}
+	    \item Attempted implement simple FP64 gelu with CubeCL in rust
+      \item Discovered that FP64 achieved by converting to FP32, doing calculation, then sale back to FP64; loses accuracy
+      \item CubeCL HIP seems to be the only HIP binding for rust; AMD GPU only, requires rocWMMA or WMMA Intrinsics (FP16 only); also unsafe since raw bindings
+      \item Switching to C++ as Rust has limited support and benifit because of the unsafe GPU calls
+      \item Reading PBRT book, looking into drjit-core and HIPIFY. Possible simple renderer from the ground up?
+      \item rocWMMA requires MI1/2/300 series for FP64 runs, unable to test running code on GPU yet
+    \end{enumerate}
+\end{frame}
