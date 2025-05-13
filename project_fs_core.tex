@@ -62,7 +62,7 @@
 
 \begin{frame}{Tom - Underwater Renderer}
     \begin{enumerate}
-	    \item Attempted implement simple FP64 gelu with CubeCL in rust
+      \item Attempted implement simple FP64 gelu with CubeCL in rust
       \item Discovered that FP64 achieved by converting to FP32, doing calculation, then sale back to FP64; loses accuracy
       \item CubeCL HIP seems to be the only HIP binding for rust; AMD GPU only, requires rocWMMA or WMMA Intrinsics (FP16 only); also unsafe since raw bindings
       \item Switching to C++ as Rust has limited support and benifit because of the unsafe GPU calls
