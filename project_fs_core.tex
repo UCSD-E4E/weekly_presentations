@@ -42,19 +42,20 @@
 
 \begin{frame}{Rust Pipeline}
   \begin{columns}[c]
-      \column{0.48\textwidth}
+      \column{0.30\textwidth}
         \centering
-        \textbf{Tail Correct}\\[1ex]
-        \includegraphics[height=0.48\textheight,keepaspectratio]{./images/fish2_out.png}
+        \includegraphics[height=0.45\textheight,keepaspectratio]{./images/img1.png}
   
-      \column{0.48\textwidth}
+      \column{0.44\textwidth}
         \centering
-        \textbf{Tail/Head Distinction}\\[1ex]
-        \includegraphics[height=0.48\textheight,keepaspectratio]{./images/fish6_out.png}
+        \includegraphics[height=0.45\textheight,keepaspectratio]{./images/img3.png}
+      \column{0.30\textwidth}
+        \centering
+        \includegraphics[height=0.45\textheight,keepaspectratio]{./images/img2.png}
   \end{columns}
       \begin{enumerate}
-        \item Head correction
-        \item Test different radius thresholds
-        \item Compare distinction with old python pipeline
+        \item Segment around 100 test images with truths
+        \item Compare normalized pixel difference from truths (with old python pipeline)
+        \item Look into hipify-perl converting Mitsuba + Dr.Jit CUDA code to HIP
     \end{enumerate}
 \end{frame}
