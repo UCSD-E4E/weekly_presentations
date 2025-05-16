@@ -127,15 +127,16 @@ schedule:
     - fs_core
     - fs_user
     - radio_telemetry_tracker
-  "2025-05-20T14:00-07:00": # SP25 8
+  "2025-06-20T14:00-07:00": [] # SP25 8
+  "2025-05-27T14:00-07:00": # SP25 9
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
     - maya_vr
-  "2025-05-27T14:00-07:00":
-    - baboons_on_the_move
-    - act_learn
-    - fs_core
-    - fs_user
-    - radio_telemetry_tracker
+  # "2025-05-27T14:00-07:00":
+  #   - baboons_on_the_move
+  #   - act_learn
+  #   - fs_core
+  #   - fs_user
+  #   - radio_telemetry_tracker
   "2025-06-03T14:00-07:00": [] # SP25 10 199/299
