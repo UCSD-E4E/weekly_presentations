@@ -82,61 +82,122 @@ projects:
     assignees:
       - ntlhui
       - Sean1572
+  junkyard_computing:
+    name: Junkyard Computing
+    latex: project_junkyard
+    branch: junkyard
+    assignees:
+      - ccrutchf #TODO Add Jen
+      - jfswitzer
 schedule:
-  # Keyed by Date of presentation
-  "2025-03-31T10:30-07:00": # SP25 1
-    - baboons_on_the_move
-    - act_learn
+  "2025-07-01T10:30-07:00": # Week 2 REU
     - fs_core
-    - fs_user
-    - radio_telemetry_tracker
-    - maya_vr
-    - mangrove_monitoring
-    - acoustic_species_id
     - smartfin
-  "2025-04-08T14:00-07:00": # SP25 2
-    - mangrove_monitoring
     - acoustic_species_id
-    - smartfin
-    - maya_vr
-  "2025-04-15T14:00-07:00": # SP25 3
-    - baboons_on_the_move
-    - act_learn
+    - junkyard_computing
+    - mangrove_monitoring
+  "2025-07-08T10:30-07:00": # Week 3 REU
     - fs_core
-    - fs_user
-    - radio_telemetry_tracker
-  "2025-04-22T14:00-07:00": # SP25 4
-    - mangrove_monitoring
-    - acoustic_species_id
     - smartfin
-    - maya_vr
-  "2025-04-29T14:00-07:00": # WI25 5
-    - baboons_on_the_move
-    - act_learn
+    - acoustic_species_id
+    - junkyard_computing
+    - mangrove_monitoring
+  "2025-07-15T10:30-07:00": # Week 4 REU
     - fs_core
-    - fs_user
-    - radio_telemetry_tracker
-  "2025-05-06T14:00-07:00": # WI25 6
-    - mangrove_monitoring
-    - acoustic_species_id
     - smartfin
-    - maya_vr
-  "2025-05-13T14:00-07:00": # WI25 7
-    - baboons_on_the_move
-    - act_learn
+    - acoustic_species_id
+    - junkyard_computing
+    - mangrove_monitoring
+  "2025-07-22T10:30-07:00": # Week 5 REU
     - fs_core
-    - fs_user
-    - radio_telemetry_tracker
-  "2025-06-20T14:00-07:00": [] # SP25 8
-  "2025-05-27T14:00-07:00": # SP25 9
-    - mangrove_monitoring
-    - acoustic_species_id
     - smartfin
-    - maya_vr
-  # "2025-05-27T14:00-07:00":
+    - acoustic_species_id
+    - junkyard_computing
+    - mangrove_monitoring
+  "2025-07-29T10:30-07:00": # Week 6 REU
+    - fs_core
+    - smartfin
+    - acoustic_species_id
+    - junkyard_computing
+    - mangrove_monitoring
+  "2025-08-05T10:30-07:00": # Week 7 REU
+    - fs_core
+    - smartfin
+    - acoustic_species_id
+    - junkyard_computing
+    - mangrove_monitoring
+  "2025-08-12T10:30-07:00": # Week 8 REU
+    - fs_core
+    - smartfin
+    - acoustic_species_id
+    - junkyard_computing
+    - mangrove_monitoring
+  "2025-08-19T10:30-07:00": # Week 9 REU
+    - fs_core
+    - smartfin
+    - acoustic_species_id
+    - junkyard_computing
+    - mangrove_monitoring
+  "2025-08-26T10:30-07:00": # Week 10 REU
+    - fs_core
+    - smartfin
+    - acoustic_species_id
+    - junkyard_computing
+    - mangrove_monitoring
+  # # Keyed by Date of presentation
+  # "2025-03-31T10:30-07:00": # SP25 1
   #   - baboons_on_the_move
   #   - act_learn
   #   - fs_core
   #   - fs_user
   #   - radio_telemetry_tracker
-  "2025-06-03T14:00-07:00": [] # SP25 10 199/299
+  #   - maya_vr
+  #   - mangrove_monitoring
+  #   - acoustic_species_id
+  #   - smartfin
+  # "2025-04-08T14:00-07:00": # SP25 2
+  #   - mangrove_monitoring
+  #   - acoustic_species_id
+  #   - smartfin
+  #   - maya_vr
+  # "2025-04-15T14:00-07:00": # SP25 3
+  #   - baboons_on_the_move
+  #   - act_learn
+  #   - fs_core
+  #   - fs_user
+  #   - radio_telemetry_tracker
+  # "2025-04-22T14:00-07:00": # SP25 4
+  #   - mangrove_monitoring
+  #   - acoustic_species_id
+  #   - smartfin
+  #   - maya_vr
+  # "2025-04-29T14:00-07:00": # WI25 5
+  #   - baboons_on_the_move
+  #   - act_learn
+  #   - fs_core
+  #   - fs_user
+  #   - radio_telemetry_tracker
+  # "2025-05-06T14:00-07:00": # WI25 6
+  #   - mangrove_monitoring
+  #   - acoustic_species_id
+  #   - smartfin
+  #   - maya_vr
+  # "2025-05-13T14:00-07:00": # WI25 7
+  #   - baboons_on_the_move
+  #   - act_learn
+  #   - fs_core
+  #   - fs_user
+  #   - radio_telemetry_tracker
+  # "2025-06-20T14:00-07:00": [] # SP25 8
+  # "2025-05-27T14:00-07:00": # SP25 9
+  #   - mangrove_monitoring
+  #   - acoustic_species_id
+  #   - smartfin
+  #   - maya_vr
+  # # "2025-05-27T14:00-07:00":
+  # #   - baboons_on_the_move
+  # #   - act_learn
+  # #   - fs_core
+  # #   - fs_user
+  # #   - radio_telemetry_tracker
+  # "2025-06-03T14:00-07:00": [] # SP25 10 199/299
