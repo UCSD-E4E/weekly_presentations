@@ -1,34 +1,31 @@
 projects:
-  maya_vr:
-    name: Maya VR
-    latex: project_maya
-    branch: maya_vr
-    assignees:
-      - AviralAgrwal
+  # maya_vr:
+  #   name: Maya VR
+  #   latex: project_maya
+  #   branch: maya_vr
+  #   assignees:
+  #     - AviralAgrwal
   mangrove_monitoring:
     name: Mangrove Monitoring
     latex: project_mm
     branch: mangrove_monitoring
     assignees:
-      - zclawr
       - gagewrye
-      # 199
-      - TWintersww
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
     branch: acoustic_species_id
     assignees:
       - Sean1572
-      - Ludwigvsch
-      - tqzhang04
-  baboons_on_the_move:
-    name: Baboons on the Move
-    latex: project_bom
-    branch: baboons_on_the_move
-    assignees:
-      # - ccrutchf
-      - TylerFlar
+      # - Ludwigvsch
+      # - tqzhang04
+  # baboons_on_the_move:
+  #   name: Baboons on the Move
+  #   latex: project_bom
+  #   branch: baboons_on_the_move
+  #   assignees:
+  #     # - ccrutchf
+  #     - TylerFlar
   # a3d_eng:
   #   name: Aqua3D Engineering
   #   latex: project_a3d_eng
@@ -42,101 +39,69 @@ projects:
     branch: fs_core
     assignees:
       - ccrutchf
-      - bmccalmon
-      # 199
-      - Shuzhengz
-      - SRaswan
-  act_learn:
-    name: Active Learning
-    latex: project_act_learn
-    branch: act_learn
-    assignees:
-      - ccrutchf
-      - Sean1572
-      - WesleyJWu
-      - mathslayer-compe #Akhil Nallacheruvu
+      # - bmccalmon
+  # act_learn:
+  #   name: Active Learning
+  #   latex: project_act_learn
+  #   branch: act_learn
+  #   assignees:
+  #     - ccrutchf
+  #     - Sean1572
+  #     - WesleyJWu
+  #     - mathslayer-compe #Akhil Nallacheruvu
   fs_user:
     name: FishSense User
     latex: project_fs_user
     branch: fs_user
     assignees:
       - ccrutchf
-      - hnvultimate123
-      - Kylehtran
-  radio_telemetry_tracker:
-    name: Radio Telemetry Tracker
-    latex: project_rtt
-    branch: radio_telemetry_tracker
-    assignees:
-      - TylerFlar
+  # radio_telemetry_tracker:
+  #   name: Radio Telemetry Tracker
+  #   latex: project_rtt
+  #   branch: radio_telemetry_tracker
+  #   assignees:
+  #     - TylerFlar
   smartfin:
     name: Smartfin
     latex: project_sf
     branch: smartfin
     assignees:
-      - ntlhui
   website:
     name: Website
     latex: project_web
     branch: web
     assignees:
-      - ntlhui
       - Sean1572
 schedule:
   # Keyed by Date of presentation
-  "2025-03-31T10:30-07:00": # SP25 1
-    - baboons_on_the_move
-    - act_learn
+  "2025-07-01T10:30-07:00": # Week 1
     - fs_core
     - fs_user
-    - radio_telemetry_tracker
-    - maya_vr
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-  "2025-04-08T14:00-07:00": # SP25 2
+  "2025-07-08T10:30-07:00": # Week 2
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-    - maya_vr
-  "2025-04-15T14:00-07:00": # SP25 3
-    - baboons_on_the_move
-    - act_learn
+  "2025-07-15T10:30-07:00": # Week 3
     - fs_core
     - fs_user
-    - radio_telemetry_tracker
-  "2025-04-22T14:00-07:00": # SP25 4
+  "2025-07-22T10:30-07:00": # Week 4
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-    - maya_vr
-  "2025-04-29T14:00-07:00": # WI25 5
-    - baboons_on_the_move
-    - act_learn
+  "2025-07-29T10:30-07:00": # Week 5
     - fs_core
     - fs_user
-    - radio_telemetry_tracker
-  "2025-05-06T14:00-07:00": # WI25 6
+  "2025-08-05T10:30-07:00": # Week 6
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
     - maya_vr
-  "2025-05-13T14:00-07:00": # WI25 7
-    - baboons_on_the_move
-    - act_learn
+  "2025-08-12T10:30-07:00": # Week 7
     - fs_core
     - fs_user
-    - radio_telemetry_tracker
-  "2025-06-20T14:00-07:00": [] # SP25 8
-  "2025-05-27T14:00-07:00": # SP25 9
-    - mangrove_monitoring
-    - acoustic_species_id
-    - smartfin
-    - maya_vr
-  # "2025-05-27T14:00-07:00":
-  #   - baboons_on_the_move
-  #   - act_learn
-  #   - fs_core
-  #   - fs_user
-  #   - radio_telemetry_tracker
-  "2025-06-03T14:00-07:00": [] # SP25 10 199/299
+  "2025-08-19T10:30-07:00": [] # Week 8
+  "2025-08-26T10:30-07:00": # Week 9
+
