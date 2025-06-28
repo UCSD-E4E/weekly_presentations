@@ -11,12 +11,21 @@ projects:
     branch: mangrove_monitoring
     assignees:
       - gagewrye
+      - TWintersww
+      - AJajodia
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
     branch: acoustic_species_id
     assignees:
       - Sean1572
+      - MiloAkerman
+      - AJajodia
+      - AnMeiDP
+      - d-tom75
+      - Firazaba0369
+      - Hdosseh1 
+      - SiyaKamboj
       # - Ludwigvsch
       # - tqzhang04
   # baboons_on_the_move:
@@ -39,6 +48,12 @@ projects:
     branch: fs_core
     assignees:
       - ccrutchf
+      - Shuzhengz
+      - Nykolas1100
+      - aayushkananu
+      - annabchen 
+      - tdarcima
+      - brendonamw  
       # - bmccalmon
   # act_learn:
   #   name: Active Learning
@@ -55,6 +70,8 @@ projects:
     branch: fs_user
     assignees:
       - ccrutchf
+      - brendonamw 
+      - annabchen
   # radio_telemetry_tracker:
   #   name: Radio Telemetry Tracker
   #   latex: project_rtt
@@ -66,6 +83,8 @@ projects:
     latex: project_sf
     branch: smartfin
     assignees:
+      - aayushkananu 
+      - ntlhui
   website:
     name: Website
     latex: project_web
@@ -102,6 +121,12 @@ schedule:
   "2025-08-12T10:30-07:00": # Week 7
     - fs_core
     - fs_user
-  "2025-08-19T10:30-07:00": [] # Week 8
+  "2025-08-19T10:30-07:00": # Week 8
+    - mangrove_monitoring
+    - acoustic_species_id
+    - smartfin
+    - maya_vr
   "2025-08-26T10:30-07:00": # Week 9
+    - fs_core
+    - fs_user
 
