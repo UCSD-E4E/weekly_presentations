@@ -129,4 +129,3 @@ schedule:
   "2025-08-26T10:30-07:00": # Week 9
     - fs_core
     - fs_user
-
