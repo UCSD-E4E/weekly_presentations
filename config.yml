@@ -117,7 +117,6 @@ schedule:
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-    - maya_vr
   "2025-08-12T10:30-07:00": # Week 7
     - fs_core
     - fs_user
@@ -125,7 +124,6 @@ schedule:
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
-    - maya_vr
   "2025-08-26T10:30-07:00": # Week 9
     - fs_core
     - fs_user
