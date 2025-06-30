@@ -92,6 +92,7 @@ projects:
     branch: hall_pass
     assignees:
       - Hdosseh1 
+      - apryllt
 
   website:
     name: Website
