@@ -85,6 +85,14 @@ projects:
     assignees:
       - aayushkananu 
       - ntlhui
+
+  hall_pass:
+    name: Hall Pass
+    latex: project_hall_pass
+    branch: hall_pass
+    assignees:
+      - Hdosseh1 
+
   website:
     name: Website
     latex: project_web
@@ -99,6 +107,7 @@ schedule:
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
+    - hall_pass
   "2025-07-08T10:30-07:00": # Week 2
     - mangrove_monitoring
     - acoustic_species_id
@@ -106,6 +115,7 @@ schedule:
   "2025-07-15T10:30-07:00": # Week 3
     - fs_core
     - fs_user
+    - hall_pass
   "2025-07-22T10:30-07:00": # Week 4
     - mangrove_monitoring
     - acoustic_species_id
@@ -113,6 +123,7 @@ schedule:
   "2025-07-29T10:30-07:00": # Week 5
     - fs_core
     - fs_user
+    - hall_pass
   "2025-08-05T10:30-07:00": # Week 6
     - mangrove_monitoring
     - acoustic_species_id
@@ -120,6 +131,7 @@ schedule:
   "2025-08-12T10:30-07:00": # Week 7
     - fs_core
     - fs_user
+    - hall_pass
   "2025-08-19T10:30-07:00": # Week 8
     - mangrove_monitoring
     - acoustic_species_id
@@ -127,3 +139,4 @@ schedule:
   "2025-08-26T10:30-07:00": # Week 9
     - fs_core
     - fs_user
+    - hall_pass
