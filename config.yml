@@ -42,10 +42,10 @@ projects:
   #   assignees:
   #     - ccrutchf
   #     - avikg511
-  fs_core:
-    name: FishSense Core
-    latex: project_fs_core
-    branch: fs_core
+  fs:
+    name: FishSense
+    latex: project_fs
+    branch: fs
     assignees:
       - ccrutchf
       - Shuzhengz
@@ -53,6 +53,7 @@ projects:
       - aayushkananu
       - annabchen 
       - tdarcima
+      - shrsijan
       - brendonamw  
       # - bmccalmon
   # act_learn:
@@ -64,14 +65,6 @@ projects:
   #     - Sean1572
   #     - WesleyJWu
   #     - mathslayer-compe #Akhil Nallacheruvu
-  fs_user:
-    name: FishSense User
-    latex: project_fs_user
-    branch: fs_user
-    assignees:
-      - ccrutchf
-      - brendonamw 
-      - annabchen
   # radio_telemetry_tracker:
   #   name: Radio Telemetry Tracker
   #   latex: project_rtt
@@ -103,8 +96,7 @@ projects:
 schedule:
   # Keyed by Date of presentation
   "2025-07-01T10:30-07:00": # Week 1
-    - fs_core
-    - fs_user
+    - fs
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
@@ -114,30 +106,26 @@ schedule:
     - acoustic_species_id
     - smartfin
   "2025-07-15T10:30-07:00": # Week 3
-    - fs_core
-    - fs_user
+    - fs
     - hall_pass
   "2025-07-22T10:30-07:00": # Week 4
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
   "2025-07-29T10:30-07:00": # Week 5
-    - fs_core
-    - fs_user
+    - fs
     - hall_pass
   "2025-08-05T10:30-07:00": # Week 6
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
   "2025-08-12T10:30-07:00": # Week 7
-    - fs_core
-    - fs_user
+    - fs
     - hall_pass
   "2025-08-19T10:30-07:00": # Week 8
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
   "2025-08-26T10:30-07:00": # Week 9
-    - fs_core
-    - fs_user
+    - fs
     - hall_pass
