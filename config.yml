@@ -42,10 +42,10 @@ projects:
   #   assignees:
   #     - ccrutchf
   #     - avikg511
-  fs_core:
-    name: FishSense Core
-    latex: project_fs_core
-    branch: fs_core
+  fs:
+    name: FishSense
+    latex: project_fs
+    branch: fs
     assignees:
       - ccrutchf
       - Shuzhengz
@@ -53,6 +53,7 @@ projects:
       - aayushkananu
       - annabchen 
       - tdarcima
+      - shrsijan
       - brendonamw  
       # - bmccalmon
   # act_learn:
@@ -64,14 +65,6 @@ projects:
   #     - Sean1572
   #     - WesleyJWu
   #     - mathslayer-compe #Akhil Nallacheruvu
-  fs_user:
-    name: FishSense User
-    latex: project_fs_user
-    branch: fs_user
-    assignees:
-      - ccrutchf
-      - brendonamw 
-      - annabchen
   # radio_telemetry_tracker:
   #   name: Radio Telemetry Tracker
   #   latex: project_rtt
