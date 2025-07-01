@@ -1,3 +1,3 @@
 {
-    "image": "ghcr.io/xu-cheng/texlive-small:latest"
+    "image": "ghcr.io/xu-cheng/texlive-full:latest"
 }
