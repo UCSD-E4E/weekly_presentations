@@ -96,8 +96,7 @@ projects:
 schedule:
   # Keyed by Date of presentation
   "2025-07-01T10:30-07:00": # Week 1
-    - fs_core
-    - fs_user
+    - fs
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
@@ -107,30 +106,26 @@ schedule:
     - acoustic_species_id
     - smartfin
   "2025-07-15T10:30-07:00": # Week 3
-    - fs_core
-    - fs_user
+    - fs
     - hall_pass
   "2025-07-22T10:30-07:00": # Week 4
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
   "2025-07-29T10:30-07:00": # Week 5
-    - fs_core
-    - fs_user
+    - fs
     - hall_pass
   "2025-08-05T10:30-07:00": # Week 6
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
   "2025-08-12T10:30-07:00": # Week 7
-    - fs_core
-    - fs_user
+    - fs
     - hall_pass
   "2025-08-19T10:30-07:00": # Week 8
     - mangrove_monitoring
     - acoustic_species_id
     - smartfin
   "2025-08-26T10:30-07:00": # Week 9
-    - fs_core
-    - fs_user
+    - fs
     - hall_pass
