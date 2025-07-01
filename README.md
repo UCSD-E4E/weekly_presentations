@@ -2,7 +2,7 @@
 
 # Code Spaces Setup Instructions
 This repo supports running in Code Spaces. The charges for this repo are assigned to your personal GitHub account.  You have 60 hours allocated by GitHub for Code Spaces.
-1. Under the "Clone" button, select Code Spaces
+1. Under the "Code" button, select Code Spaces
 2. Create a new Code Space (note: this might take a while)
 3. Install the recommended extensions:
     - `james-yu.latex-workshop`
