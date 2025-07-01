@@ -1,11 +1,49 @@
+
+% To create a slide with a bullet list, use the following:
+% \begin{frame}{TITLE}
+%     \begin{itemize}
+%         \item ITEM 1
+%         \item ITEM 2
+%     \end{itemize}    
+% \end{frame}
+
+% To create a slide with numbered list, use the following:
+% \begin{frame}{TITLE}
+%     \begin{enumerate}
+%         \item ITEM 1
+%         \item ITEM 2
+%     \end{enumerate}
+% \end{frame}
+
+% To create a slide with a graphic:
+% 1. Add the graphic to this folder (named picture.png)
+% 2. Use the following:
+% \begin{frame}{TITLE}
+%     \centering
+%     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
+% \end{frame}
+
+% To create a slide with two columns, use the following:
+% \begin{frame}{TITLE}
+%     \begin{columns}
+%         \begin{column}{0.5\textwidth}
+%             COLUMN 1 BODY
+%         \end{column}
+%         \begin{column}{0.5\textwidth}
+%             COLUMN 2 BODY
+%         \end{column}
+%     \end{columns}
+% \end{frame}
+
+=======
 \begin{frame}{SmartFin}
-    \begin{columns}[c] % The 'c' option vertically centers the content in the columns
+    \begin{columns}[c] 
         \begin{column}{0.5\textwidth}
             \centering
             \includegraphics[width=0.9\linewidth]{images/smartfin_picture.jpg}
         \end{column}
         \begin{column}{0.5\textwidth}
-            \justifying % Justifies the text in this column
+            \justifying
             Smartfin is an oceanographic sensor-equipped surfboard fin used by surfers and paddlers in surf zone and nearshore regions.
         \end{column}
     \end{columns}
@@ -47,13 +85,12 @@
             \small
             \textbf{Key Variables to Analyze:}
             \begin{itemize}
-                \item \textbf{Temperature:} Accuracy, Precision, Rise/Fall Time
+                \item Temperature
                 \item Wet/Dry Threshold
-                \item \textbf{GPS:} Change of Position/Time
-                \item \textbf{Accelerometer:} Accuracy, Precision, Orthogonality
-                \item Gyroscope, Magnetometer
+                \item GPS
+                \item Accelerometer, Gyroscope, Magnetometer
             \end{itemize}
-            IMU data helps calculate attitude, angular rates, and motion relative to Earth.
+        \vspace{1em}           
         \end{column}
     \end{columns}
 \end{frame}
@@ -73,3 +110,4 @@
         \small Sensor validation using SST accuracy and static IMU tests in controlled environments.
     \end{center}
 \end{frame}
+>>>>>>> f5b6d032a916cc0132b2653bdc3d9dbbd777a08d
