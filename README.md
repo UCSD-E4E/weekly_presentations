@@ -1,6 +1,21 @@
 # E4E Weekly Presentations
 
-# Setup Instructions
+# Code Spaces Setup Instructions
+This repo supports running in Code Spaces. The charges for this repo are assigned to your personal GitHub account.  You have 60 hours allocated by GitHub for Code Spaces.
+1. Under the "Clone" button, select Code Spaces
+2. Create a new Code Space (note: this might take a while)
+3. Install the recommended extensions:
+    - `james-yu.latex-workshop`
+4. When completed, ensure you return to GitHub and delete the Code Space to avoid being overcharged.  Idle containers are cleaned up after 30 minutes by default.
+
+# Dev Container Setup Instructions
+1. Ensure that your machine is configured for Remote Containers: https://code.visualstudio.com/docs/devcontainers/containers
+2. Open the repository in Visual Studio Code.
+3. When prompted, select the "Reopen in Container" button (note: this might take a while)
+4. Install the recommended extensions:
+    - `james-yu.latex-workshop`
+
+# Local Setup Instructions
 1. Install TexLive: https://www.tug.org/texlive/ (note: this might take a while)
 2. Install VS Code
 3. Clone `git@github.com:UCSD-E4E/weekly_presentations.git`
