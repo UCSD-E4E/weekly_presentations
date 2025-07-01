@@ -39,3 +39,54 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+\begin{frame}{MM ML - What We Have So Far}
+    \begin{itemize}
+        \item ResNet-UNet model performs binary segmentation on 3-channeled RGB high resolution drone imagery
+    \end{itemize}
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/unet}
+\end{frame}
+
+\begin{frame}{High Level Goals For Summer}
+  \begin{itemize}
+      \item Create diffusion dataset consisting of drone image TO label TO satellite image tile triplets
+      \item Expand diffusion dataset with publically available high-resolution geospatial imagery
+      \item Train diffusion model on latent space
+      \item Train ResNet-UNet-Diffusion model, benchmark results
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{ResNet-UNet-Diffusion}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/unet-diffusion}
+\end{frame}
+
+\begin{frame}{Drone VS Satellite}
+  \centering
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth,keepaspectratio]{images/chunk-tif}
+    \textbf{Drone}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=\textwidth,keepaspectratio]{images/satellite-tif}
+    \textbf{Satellite}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Satellite Bands}
+  \centering
+  \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/satellite-bands.png}
+\end{frame}
+
+\begin{frame}{Next Week}
+  \begin{itemize}
+      \item Dataset creation workflow. Get satellite imagery through Sentinel Hub API
+      \item Search online for additional high-resolution geospatial data
+      \item Rescale and tile image files
+      \item Get data on NAS
+  \end{itemize}
+\end{frame}
+
