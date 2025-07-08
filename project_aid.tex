@@ -38,11 +38,28 @@
 \end{frame}
 
 \begin{frame}{Vector Databases}
-    
+    \begin{itemize}
+        \item Generated vector embeddings \& inserted into LanceDB, a vector database
+        \item \textbf{Next Steps:} Explore TimeScale DB, a vector db with temporal and geospatial indexing
+    \end{itemize}
+    \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{images/aid_lancedb_1.png}
+    \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{images/aid_lancedb_2.png}
 \end{frame}
 
 \begin{frame}{Binary Classifier}
-    
+    \begin{itemize}
+        \item Ran pre-existing multilabel classifier to determine degraded or non degraded reef
+        \item Training Results:
+    \end{itemize}
+    \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{images/aid_training_results.jpg}
+    \begin{itemize}
+        \item Testing Results: 
+        \begin{itemize}
+            \item cMAP: 0.99883
+            \item ROCAUC: 0.999433
+        \end{itemize}
+        \item \textbf{Next Steps:} GradCAM, to visualize model predictions  
+    \end{itemize}  
 \end{frame}
 
 \begin{frame}{Collar Team Agenda}
@@ -63,10 +80,9 @@
 
 \begin{frame}{Integration Status}
     \begin{itemize}
-        \item Delayed integration due to environment setup
-        \item Work separated into microphone, inference, and mel-spectrogram
-        \item Remove unnecessary code from directory
-    \end{itemize}
+        \item Slight delays in integration due to environment setup
+        \item Work seperated into microphone, inference, and mel-spectrogram
+    \end{itemize}   
 \end{frame}
 
 \begin{frame}{Power Studies}
