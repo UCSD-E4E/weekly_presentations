@@ -6,15 +6,12 @@
 
 \begin{frame}{ML Team Agenda}
     \begin{itemize}
+        \item Literature Search for Public data
         \item EGCI Work
-        \item Literature Search for Public Data
         \item Vector Databases
         \item Binary Classifier
+        \item Next Steps
     \end{itemize}
-\end{frame}
-
-\begin{frame}{EGCI}
-    
 \end{frame}
 
 \begin{frame}{Literature Search}
@@ -35,6 +32,14 @@
     \end{itemize}
     \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{images/aid_1.jpg}
     \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{images/aid_2.jpg}
+\end{frame}
+
+\begin{frame}{EGCI Results}
+    88\% accuracy $\rightarrow$ high degree of separation even with a simple model (KNN)
+    \begin{figure}
+        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/egci.png}
+        \caption{Complexity vs Entropy with labeled data}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{Vector Databases}
@@ -60,6 +65,31 @@
         \end{itemize}
         \item \textbf{Next Steps:} GradCAM, to visualize model predictions  
     \end{itemize}  
+\end{frame}
+
+\begin{frame}{Knowledge Discovery}
+    \textbf{Idea:} Identify characteristic features of a healthy vs unhealthy coral reef
+        \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \center
+            \textbf{Embeddings} \\
+            \textit{BirdNET, PERCH, Patching/AST}
+            \includegraphics[height=0.33\textheight,width=0.7\textwidth,keepaspectratio]{images/spectrogram.png}
+            
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \center
+            \textbf{Clustering} \\
+            \textit{LAMDA, cosine similarity, sound separation}
+            \includegraphics[height=0.33\textheight,width=0.7\textwidth,keepaspectratio]{images/clustering.png}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \center
+            \textbf{Knowledge Graphs}
+            \textit{Seeding, temporal/spatial, graph neural networks}
+            \includegraphics[height=0.33\textheight,width=0.7\textwidth,keepaspectratio]{images/knowledge.png}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Collar Team Agenda}
