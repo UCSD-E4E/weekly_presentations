@@ -64,43 +64,79 @@
 
 \begin{frame}{Collar Team Agenda}
     \begin{itemize}
-        \item Environment Configurations
-        \item Integration Status
         \item Power Studies
+        \begin{itemize}
+            \item Power Study Overview
+            \item Test Setup 
+            \item In-rush Current Measurements
+            \item Run Mode Configuration Measurements
+            \item Measurement Issues and Solutions
+        \end{itemize}
+        \item Data Loss
+        \begin{itemize}
+            \item 
+        \end{itemize}
+        \item Future Plans
+    \end{itemize}
+\end{frame}
+     
+\begin{frame}{Power Study Overview}
+    \begin{itemize}
+        \item Understand power behaviour of STM32H747I-DISCO chip
+        \item Measure various runtime domains for collar design metrics
+        \item Combine measurements for a total power consumption estimation
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Environment Configurations}
+\begin{frame}{Test Setup}
     \begin{itemize}
-        \item CMSIS Library, BSP Package, and X-Cube-AI installations
-        \item Individual environment setup configurations
-        \item New Github repository for better organization
+        \item Measurements taken using current clamp and pico oscilloscope
+        \item Power configurations tested: Run, Sleep, Standby, Dstandby
+        \item Drift issue encountered → added 10 Ohms shunt resistor in parallel with IDD
+        \item Current calculated using Vdrop across resistor / 10 Ohms
+    \end{itemize}  
+    % add image of test setup
+    % \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{images/.png}
+    % add image of setup schematic
+    % \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{images/.png}
+\end{frame}
+
+\begin{frame}{In-Rush Current Measurements}
+\begin{columns}
+
+    % Left column: image
+    \begin{column}{0.5\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/inrush_1core_baseline.png}
+        %\caption{In-rush current spike at startup}
+    \end{column}
+
+    % Right column: table
+    \begin{column}{0.5\textwidth}
+        \centering
+        \begin{tabular}{|l|c|}
+            \hline
+            \textbf{Metric} & \textbf{Value} \\
+            \hline
+            Avg Peak Current & 65.3 mA \\
+            Max Current      & 71.2 mA \\
+            Avg Duration     & 1.21 ms \\
+            Method           & Current Clamp \\
+            Trials           & 5 \\
+            \hline
+        \end{tabular}
+    \end{column}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}{Power Studies Data}
+    \begin{itemize}
+        \item 
     \end{itemize}
+    \includegraphics[height=0.5\textheight,width=0.9\textwidth,keepaspectratio]{images/run_modes.png}
 \end{frame}
-
-\begin{frame}{Integration Status}
-    \begin{itemize}
-        \item Slight delays in integration due to environment setup
-        \item Work seperated into microphone, inference, and mel-spectrogram
-        \item Removed unnecessary testing code
-    \end{itemize}   
-\end{frame}
-
-\begin{frame}{Power Studies}
-    \begin{itemize}
-        \item Researching power optimization techniques
-        \item Analyzing power consumption patterns
-        \item Identifying opportunities for optimization
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Agenda for this Week}
-    \begin{itemize}
-        \item Resolve environment setup issues
-        \item Obtain output from audio buffer tests (PCM)
-        \item Integration with inference AI model
-    \end{itemize}    
-\end{frame}
+    
 % To create a slide with a bullet list, use the following:
 % \begin{frame}{TITLE}
 %     \begin{itemize}
