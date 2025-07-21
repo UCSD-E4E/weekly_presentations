@@ -234,7 +234,12 @@
 \end{frame}
 
 \begin{frame}{Maintaining Data Integrity}
-    \centering
+    Managing data loss on three levels:
+    \begin{itemize}
+        \item \textbf{Hardware:} Use of ECC (Error-Correcting Code)
+        \item \textbf{File System:} Use of error checking file systems eg. ZFS, ext4
+        \item \textbf{File/Page:} Use of checksums and hashes
+    \end{itemize}
     % \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
 \end{frame}
 
