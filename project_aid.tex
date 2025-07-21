@@ -129,8 +129,23 @@
 
 \begin{frame}{Template Matching}
     \begin{itemize}
-        \item Can take a reference sound and compare it with the data to find recordings containing said sound
-        \item Implementing this with Muha's liked sounds
+        \item Can take a template sound and find similar sounds in a dataset
+        \item Works decently well, need to work on refinements
+        \item Red-eyed dove example:
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/dove_stft_spectrogram.png}
+                \end{figure}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \begin{figure}
+                    \centering
+                    \includegraphics[height=0.8\textheight,width=0.8\textwidth,keepaspectratio]{images/template_matching_ex.png}
+                \end{figure}
+            \end{column}
+        \end{columns}
     \end{itemize}
 \end{frame}
 
@@ -138,7 +153,9 @@
     \begin{itemize}
         \item Create interactive website for Muha with D3.js
         \item Further work on knowledge graphs (GNNs)
+        \item Evaluate options for Paola
         \item Continue with template matching work
+        \item Sound separation
     \end{itemize}
 \end{frame}
 
