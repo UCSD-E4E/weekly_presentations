@@ -45,7 +45,7 @@
         \item EGCI work
         \item Spectrogram visualization
         \item Grad-CAM
-        \item Williams et al. 2025
+        \item Williams et al., 2025
         \item Whale detection
         \item Template matching
         \item Next steps
@@ -90,19 +90,40 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Williams et al. 2025}
+\begin{frame}{Williams et al., 2025}
     \begin{itemize}
-        \item Using SurfPerch on Paola's data
+        \item SurfPerch trained on worldwide reef sounds, tackles domain shift
+        \item Using SurfPerch on Paola's data for knowledge discovery
     \end{itemize}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.8\textheight,width=0.8\textwidth,keepaspectratio]{images/Williams_et_al_2025.png}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.5\textheight,width=0.5\textwidth,keepaspectratio]{images/surf_perch_results.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
     % Williams et al. 2025: https://royalsocietypublishing.org/doi/10.1098/rstb.2024.0280
     % SurfPerch: https://www.kaggle.com/models/google/surfperch
 \end{frame}
 
 \begin{frame}{Whale Detection}
     \begin{itemize}
-        \item Can use multispecies-whale model to detect data containing whale vocalizations
-        \item These clips can then be filtered out
+        \item Can use multispecies-whale model to detect humpback whale vocalizations
+        \item Issues quantifying accuracy, lack of ground truth
+        \item 5\% of audio clips contain whale noises
     \end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.4\textheight,width=0.4\textwidth,keepaspectratio]{images/humpback_whale.jpg}
+        \caption{Humpback whale}
+    \end{figure}
     % multispecies-whale model: https://www.kaggle.com/models/google/multispecies-whale
 \end{frame}
 
@@ -115,8 +136,8 @@
 
 \begin{frame}{Next Steps}
     \begin{itemize}
-        \item Create interactive website for Muha
-        \item Work on knowledge graphs
+        \item Create interactive website for Muha with D3.js
+        \item Further work on knowledge graphs
         \item Continue with template matching work
     \end{itemize}
 \end{frame}
