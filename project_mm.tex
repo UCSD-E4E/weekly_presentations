@@ -39,3 +39,22 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+\begin{frame}{Diffusion Layer Training}
+  \begin{itemize}
+      \item x0: clean latent space. x1: noisy latent space. xt: intermediate latent space
+      \item training: predict noise vector x0 to xt
+      \item evaluation: iteratively backtrack from x1 to x0 to get \texttt{x0\_pred}
+      \item benchmarking: loss from \texttt{x0\_pred} and x0 should decrease through denoising process
+  \end{itemize}    
+\end{frame}
+
+\begin{frame}{Metrics}
+  \centering
+  \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/diff4_loss.png}
+\end{frame}
+
+\begin{frame}{Metrics}
+  \centering
+  \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/diff4_reconstruct.png}
+\end{frame}
