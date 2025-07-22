@@ -45,6 +45,7 @@
         \item EGCI work
         \item Spectrogram visualization
         \item Grad-CAM
+        \item LanceDB
         \item Williams et al., 2025
         \item Whale detection
         \item Template matching
@@ -68,25 +69,76 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Grad-CAM}
+\begin{frame}{Grad-CAM (Paola's Data Alone)}
+    Had a CMAP and ROCAUC of 0.99
     \begin{columns}
-        \begin{column}{0.5\textwidth}
-            Degraded Grad-CAM:
-            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/degraded_grad_cam.png}
+        \begin{column}{0.33\textwidth}
+            Degraded Reefs
+            \begin{figure}
+                \centering
+                \includegraphics[width=\linewidth,keepaspectratio]{images/degraded_grad_cam.png}
+                \caption{Focus on general blocks of data}
+            \end{figure}
         \end{column}
-        \begin{column}{0.5\textwidth}
-            Non-degraded Grad-CAM:
-            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/non_degraded_grad_cam.png}
+        
+        \begin{column}{0.33\textwidth}
+            Non-Degraded Reefs
+            \begin{figure}
+                \centering
+                \includegraphics[width=\linewidth,keepaspectratio]{images/non_degraded_grad_cam.png}
+                \caption{Focus on islands of data, indicating areas of action}
+            \end{figure}
+        \end{column}
+        
+        \begin{column}{0.33\textwidth}
+            Histogram
+            \begin{figure}
+                \centering
+                \includegraphics[width=\linewidth,keepaspectratio]{images/grad_cam_histogram.png}
+                \caption{Sample of 200 degraded and non-degraded audio clips}
+            \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
 
-\begin{frame}{Grad-CAM Results}
-    Sample of 200 degraded and non-degraded audio clips
+\begin{frame}{Grad-CAM (Paola + Williams, et al)}
+   Had a CMAP and ROCAUC of 0.66
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            Degraded Reefs
+            \begin{figure}
+                \centering
+                \includegraphics[width=\linewidth,keepaspectratio]{images/Degraded_grad_cam_et_all.png}
+            \end{figure}
+        \end{column}
+        
+        \begin{column}{0.33\textwidth}
+            Non-Degraded Reefs
+            \begin{figure}
+                \centering
+                \includegraphics[width=\linewidth,keepaspectratio]{images/Non_degraded_grad_cam_et_all.png}
+            \end{figure}
+        \end{column}
+        
+        \begin{column}{0.33\textwidth}
+            Histogram
+            \begin{figure}
+                \centering
+                \includegraphics[width=\linewidth,keepaspectratio]{images/Histogram_grad_cam_new.png}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    Future Plans:
+        \begin{itemize}
+            \item Use reefset dataset to improve model
+            \item Use SurfPerch to retrieve embeddings in the meanwhile
+        \end{itemize}
+\end{frame}
+
+\begin{frame}{LanceDB}
     \begin{figure}
         \centering
-        \includegraphics[height=0.6\textheight,width=0.6\textwidth,keepaspectratio]{images/grad_cam_histogram.png}
-        \caption{Grad-CAM histogram}
+        \includegraphics[width=\linewidth,height=0.8\textheight,keepaspectratio]{images/LanceDB workflow.jpg}
     \end{figure}
 \end{frame}
 
