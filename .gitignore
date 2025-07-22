@@ -646,3 +646,18 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,emacs,latex,linux,macos,windows,visualstudiocode,python
 presentation.pdf
+
+# Do not permit images in root
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.tif
+*.tiff
+# Allow in images
+!images/*.jpg
+!images/*.jpeg
+!images/*.png
+!images/*.gif
+!images/*.tif
+!images/*.tiff
