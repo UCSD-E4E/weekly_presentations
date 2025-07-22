@@ -1,40 +1,49 @@
-% To create a slide, use the following:
-% \begin{frame}{TITLE}
-%     BODY
-% \end{frame}
+% Slides for 2025-07-22
 
-% To create a slide with a bullet list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{itemize}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{itemize}    
-% \end{frame}
+\begin{frame}{SmartFin Update}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,keepaspectratio]{images/potting1.jpeg}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,keepaspectratio]{images/potting2.jpeg}
+        \end{column}
+    \end{columns}
+    \vspace{1em}
+    \centering
+    \textit{Potting of the new Smartfin at SIO Makers Space}
+\end{frame}
 
-% To create a slide with numbered list, use the following:
-% \begin{frame}{TITLE}
-%     \begin{enumerate}
-%         \item ITEM 1
-%         \item ITEM 2
-%     \end{enumerate}
-% \end{frame}
 
-% To create a slide with a graphic:
-% 1. Add the graphic to this folder (named picture.png)
-% 2. Use the following:
-% \begin{frame}{TITLE}
-%     \centering
-%     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
-% \end{frame}
+\begin{frame}{Using Smartfin tools}
+    \begin{columns}
+        \begin{column}{0.55\textwidth}
+            \raggedright
+            \begin{itemize}
+                \item Download with \texttt{\textcolor{blue}{sfDownloader}} (had errors with temp data)
+                \item Convert using \texttt{\textcolor{blue}{sfConvert}}
+                \item Plotting with \texttt{\textcolor{blue}{sfPlotter}}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.45\textwidth}
+            \vspace{-1em}
+            \hspace{-1em}
+            \centering
+            \includegraphics[width=0.7\linewidth,keepaspectratio]{images/smartfin-tools.jpg}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-% To create a slide with two columns, use the following:
-% \begin{frame}{TITLE}
-%     \begin{columns}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 1 BODY
-%         \end{column}
-%         \begin{column}{0.5\textwidth}
-%             COLUMN 2 BODY
-%         \end{column}
-%     \end{columns}
-% \end{frame}
+\begin{frame}{Next Steps}
+    \vspace{1em}
+    \centering
+    \includegraphics[width=0.7\textwidth,keepaspectratio]{images/orientation-boxplot.png}
+    \vspace{1em}
+    \begin{itemize}
+        \item Revisit and match graphs
+        \item Test temperature sensor accuracy and collect IMU data
+    \end{itemize}
+\end{frame}
+
