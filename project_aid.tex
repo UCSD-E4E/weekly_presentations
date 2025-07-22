@@ -55,8 +55,10 @@
 
 \begin{frame}{EGCI Work}
     \begin{figure}
-        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/muha_egci.png}
-        \caption{Plot of EGCI against entropy for Muha's data, labeled with time of day}
+        \includegraphics[width=0.49\textwidth,keepaspectratio]{images/muha_egci.png}
+        \includegraphics[width=0.49\textwidth,keepaspectratio]{images/paola_egci.png}
+
+        \caption{Plot of EGCI against entropy for Muha's data, labeled with time of day  and Paola's data, labeled with site}
     \end{figure}
 \end{frame}
 
@@ -70,7 +72,7 @@
 \end{frame}
 
 \begin{frame}{Grad-CAM (Paola's Data Alone)}
-    Had a CMAP and ROCAUC of 0.99
+    Had a CMAP and AUC of 0.99
     \begin{columns}
         \begin{column}{0.33\textwidth}
             Degraded Reefs
@@ -102,7 +104,7 @@
 \end{frame}
 
 \begin{frame}{Grad-CAM (Paola + Williams, et al)}
-   Had a CMAP and ROCAUC of 0.66
+   Had a class-wise mAP and ROCAUC of 0.66
     \begin{columns}
         \begin{column}{0.33\textwidth}
             Degraded Reefs
@@ -130,7 +132,7 @@
     \end{columns}
     Future Plans:
         \begin{itemize}
-            \item Use reefset dataset to improve model
+            \item Use ReefSet dataset to improve model
             \item Use SurfPerch to retrieve embeddings in the meanwhile
         \end{itemize}
 \end{frame}
