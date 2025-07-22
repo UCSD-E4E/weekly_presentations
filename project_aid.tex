@@ -162,17 +162,15 @@
 
 \begin{frame}{Power Study Overview}
     \begin{itemize}
-        \item Understand power behaviour of STM32H747I-DISCO chip
+        \item Understand power behaviour of STM32H747I-DISCO
         \item Measure various runtime domains for collar design metrics
-        \item Combine measurements for a total power consumption estimation
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Test Setup}
     \begin{itemize}
-        \item Measurements taken using current clamp and pico oscilloscope
-        \item Power configurations tested: Run, Sleep, Standby, Dstandby
-        \item Drift issue encountered → added 10 Ohms shunt resistor in parallel with IDD
+        \item Measurements taken using current clamp
+        \item Drift issue → 10 Ohms shunt resistor
         \item Current calculated using V\_high - V\_low / 10 Ohms
     \end{itemize}  
     \includegraphics[height=0.35\textheight,width=0.7\textwidth,keepaspectratio]{images/clamp_setup.png}
@@ -213,10 +211,8 @@
 \end{frame}
 
 \begin{frame}{Run Mode Configuration Measurements}
-    \begin{itemize}
-        \item 
-    \end{itemize}
-    \includegraphics[height=0.5\textheight,width=0.9\textwidth,keepaspectratio]{images/run_modes.png}
+    \centering
+    \includegraphics[height=0.8\textheight,width=1.0\textwidth,keepaspectratio]{images/run_modes.png}
 \end{frame}
 
 \begin{frame}{What is Bit Rot?}
