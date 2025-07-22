@@ -171,7 +171,11 @@
         \item Data Loss
         \begin{itemize}
             \item What is bit rot?
-            \item How can we quantify and minimize data loss?
+            \item Types of NAND flash
+            \item Maintaining data integrity
+            \item Fermi estimations
+            \item Lit Review: Possible solutions
+            \item What's next?
         \end{itemize}
         \item Future Plans
     \end{itemize}
@@ -249,25 +253,164 @@
 \begin{frame}{Maintaining Data Integrity}
     Managing data loss on three levels:
     \begin{itemize}
-        \item \textbf{Hardware:} Use of ECC (Error-Correcting Code)
+        \item \textbf{Hardware:} Use of ECC (Error-Correcting Code), choice of NAND flash type
         \item \textbf{File System:} Use of error checking file systems eg. ZFS, ext4
         \item \textbf{File/Page:} Use of checksums and hashes
     \end{itemize}
-    % \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
 \end{frame}
 
 \begin{frame}{Fermi Estimations}
-    \begin{itemize}
-        \item \textbf{SD card size:} will likely need something of the three digit magnitude or more
-        \item \textbf{Battery:} 3-4 lbs
-        \item Overhead to consider: compressing files to .flac, power fail safe
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.9\textheight,width=0.9\textwidth,keepaspectratio]{images/fermi_estimation.png}
+                \caption{Fermi estimation of storage and power requirements}
+            \end{figure}
+       \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+            \item \textbf{SD card size:} $\ge1*10^2$ GB
+            \item \textbf{Battery:} 3-4 lbs
+            \end{itemize}
+            *Overhead to consider: compressing files to .flac, power fail safe
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Lit Review: Possible Solutions}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \textbf{Error-Correcting Codes (ECC):} Detect and correct errors in data
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.5\textheight,width=0.6\textwidth,keepaspectratio]{images/ecc.png}
+                \caption{Ranking of ECC (based on lit review)}
+            \end{figure}
+        \end{column}
+    \end{columns}  
+\end{frame}
+
+\begin{frame}{Lit Review: Possible Solutions}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \textbf{Error-Correcting Codes (ECC):} Detect and correct errors in data
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.5\textheight,width=0.6\textwidth,keepaspectratio]{images/ecc_x.png}
+                \caption{Ranking of ECC (based on lit review)}
+            \end{figure}
+        \end{column}
+    \end{columns}  
+\end{frame}
+
+\begin{frame}{Lit Review: Possible Solutions}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \textbf{Error-Correcting Codes (ECC):} Detect and correct errors in data
+                \item \textbf{File System Integration:} Integrating SafeFAT or ZFS to manage data integrity
+           \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.4\textheight,width=0.5\textwidth,keepaspectratio]{images/ecc_x.png}
+                \caption{Ranking of ECC (based on lit review)}
+            \end{figure}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.5\textheight,width=0.6\textwidth,keepaspectratio]{images/safefat.png}
+                \caption{SafeFAT integration}
+            \end{figure}
+        \end{column}
+    \end{columns}  
+\end{frame}
+
+\begin{frame}{Lit Review: Possible Solutions}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \textbf{Error-Correcting Codes (ECC):} Detect and correct errors in data
+                \item \textbf{File System Integration:} Integrating SafeFAT or ZFS to manage data integrity
+           \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.4\textheight,width=0.5\textwidth,keepaspectratio]{images/ecc_x.png}
+                \caption{Ranking of ECC (based on lit review)}
+            \end{figure}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.4\textheight,width=0.5\textwidth,keepaspectratio]{images/safefat_x.png}
+                \caption{SafeFAT integration}
+            \end{figure}
+        \end{column}
+    \end{columns}  
+\end{frame}
+
+\begin{frame}{Lit Review: Possible Solutions}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \textbf{Error-Correcting Codes (ECC):} Detect and correct errors in data
+                \item \textbf{File System Integration:} Integrating SafeFAT or ZFS to manage data integrity
+                \item \textbf{Redundant Array of Independent Disks (RAID):} Use multiple disks to improve reliability
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.4\textheight,width=0.5\textwidth,keepaspectratio]{images/ecc_x.png}
+                \caption{Ranking of ECC (based on lit review)}
+            \end{figure}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.4\textheight,width=0.5\textwidth,keepaspectratio]{images/safefat_x.png}
+                \caption{SafeFAT integration}
+            \end{figure}
+        \end{column}
+    \end{columns}  
+\end{frame}
+
+\begin{frame}{Lit Review: Possible Solutions}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item \textbf{Error-Correcting Codes (ECC):} Detect and correct errors in data
+                \item \textbf{File System Integration:} Integrating SafeFAT or ZFS to manage data integrity
+                \item \textbf{Redundant Array of Independent Disks (RAID):} Use multiple disks to improve reliability
+                \item \textbf{File Level Checksums:} Checksums at file level(CRC32, SHA-256)
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.4\textheight,width=0.5\textwidth,keepaspectratio]{images/ecc_x.png}
+                \caption{Ranking of ECC (based on lit review)}
+            \end{figure}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.4\textheight,width=0.5\textwidth,keepaspectratio]{images/safefat_x.png}
+                \caption{SafeFAT integration}
+            \end{figure}
+        \end{column}
+    \end{columns}  
 \end{frame}
 
 \begin{frame}{What's next?}
     \begin{itemize}
-        \item Keep researching ways to minimize data loss
-        \item Get clarification from collaborators on what amount of data loss is acceptable and what type of data they want to collect
-        \item Write a script to visualize data loss rate
+        \item Keep researching ways to minimize data loss (file level)
+        \item Communicate with collaborators to clearly identify needs
+        \item Visualize data loss rate
     \end{itemize}
 \end{frame}
