@@ -221,6 +221,8 @@
             \item Test Setup 
             \item In-rush Current Measurements
             \item Run Mode Configuration Measurements
+            \item Integration Status
+            \item New Idea!
         \end{itemize}
         \item Data Loss
         \begin{itemize}
@@ -245,6 +247,7 @@
     \begin{itemize}
         \item Measurements taken using current clamp
         \item Drift issue → 10 Ohms shunt resistor
+        \item Current clamp for transient signals, resistor for runtime avg.
         \item Current calculated using V\_high - V\_low / 10 Ohms
     \end{itemize}  
     \includegraphics[height=0.35\textheight,width=0.7\textwidth,keepaspectratio]{images/clamp_setup.png}
@@ -284,9 +287,36 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{Run Mode Configuration Measurements}
-    \centering
-    \includegraphics[height=0.8\textheight,width=1.0\textwidth,keepaspectratio]{images/run_modes.png}
+\begin{frame}{Integration Status}
+    \begin{itemize}
+        \item Microphone: active, but signal always low
+        \item Inference: Runs, but results inadequate (bad output, 16mA)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{New Idea: Piezoelectric Sensor}
+     \centering
+    \begin{itemize}
+        \item Collar on throat exposed to throat vibrations
+        \item Idea 1: Wake-up Source
+        \item Idea 2: Two-channel inference
+    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/chuffingspec.png}
+                \caption{Spectrogram of Polar Bear Chuffing (20-2000Hz)}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.8\textheight,width=0.8\textwidth,keepaspectratio]{images/piezo.jpg}
+                \caption{Piezoelectric Sensor}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{What is Bit Rot?}
