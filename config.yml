@@ -116,16 +116,16 @@ schedule:
     - fs
     - hall_pass
   "2025-08-05T10:30-07:00": # Week 6
+    - smartfin
     - mangrove_monitoring
     - acoustic_species_id
-    - smartfin
   "2025-08-12T10:30-07:00": # Week 7
-    - fs
     - hall_pass
+    - fs
   "2025-08-19T10:30-07:00": # Week 8
+    - smartfin
     - mangrove_monitoring
     - acoustic_species_id
-    - smartfin
   "2025-08-26T10:30-07:00": # Week 9
     - fs
     - hall_pass
