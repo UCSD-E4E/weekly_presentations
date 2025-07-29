@@ -88,6 +88,35 @@
     \end{tabular}
 \end{frame}
 
+\begin{frame}{Getting the Data}
+    \begin{itemize}
+        \item Notes from CCFRP were digitized to generate labeled data points.
+        \item Calculated fish lengths were matched to ground truth measurements.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Getting Fish Lengths}
+    \begin{itemize}
+        \item Using annotations, depth maps, and camera intrinsics, fish lengths were calculated.
+    \end{itemize}
+    \vspace{1em}
+    \centering
+    \begin{tabular}{ccc}
+        \includegraphics[width=0.8\textwidth]{images/length_measurement_pipeline.png} &
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Getting Fish Lengths}
+    \centering
+    \begin{tabular}{ccc}
+        \includegraphics[width=0.3\textwidth]{images/rgb1.png} &
+        \includegraphics[width=0.3\textwidth]{images/depth1.png} &
+        \includegraphics[width=0.3\textwidth]{images/confidence1.png} \\
+        \small RGB Image & \small Depth Map & \small Confidence Map \\
+    \end{tabular}
+\end{frame}
+
+
 \begin{frame}{Let's Look at Some Results}
     \centering
     \begin{tabular}{@{}cc@{}}
