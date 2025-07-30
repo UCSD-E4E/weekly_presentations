@@ -2,7 +2,7 @@ name: Create Project Branches
 
 on:
   schedule:
-    - cron: '30 05 30 07 *' # Executes at 2025-07-29T22:30:00-07:00
+    - cron: '30 05 06 08 *' # Executes at 2025-08-05T22:30:00-07:00
   workflow_dispatch:
 
 permissions:
