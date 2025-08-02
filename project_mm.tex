@@ -39,3 +39,39 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+
+\begin{frame}{Feature Space Diffusion Blocker}
+  \begin{columns}[c]
+    % left column: image
+    \begin{column}{0.48\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{images/ls-diffuse.png}
+    \end{column}
+    % right column: bullets
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \item Trained diffusion layer yielded poor results for end-to-end segmentation run
+        \item Things I've Tried:
+        \begin{itemize}
+          \item Deeper network (add conv & relu layers)
+          \item W net (decode then encode again)
+          \item Transformers
+        \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Pivot: Image to Image Diffusion Model}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{i2i-diffuse.png}
+\end{frame}
+
+\begin{frame}{I2I Diffusion}
+    \begin{enumerate}
+        \item Runs on RGB bands of satellite image
+        \item Diffusion conditioned on gated multispectral features and timestep embedding
+        \item Completed train runner, train/eval steps, benchmark
+    \end{enumerate}
+\end{frame}
