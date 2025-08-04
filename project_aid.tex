@@ -85,10 +85,65 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Regression - Chi-Square Tests}
+\begin{frame}{Knowledge Graphs - Results}
+    \begin{columns}
+        \begin{column}{0.7\textwidth}
+            \centering
+            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/knowledge_graph_table.png}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            \centering
+            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/knowledge_graph_results_1.png}
+        \end{column}
+    \end{columns}
+    \hspace{1cm}
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \centering
+            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/knowledge_graph_results_2.png}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \centering
+            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/knowledge_graph_results_3.png}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \centering
+            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/knowledge_graph_results_4.png}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Knowledge Graphs - Future Work}
     \begin{itemize}
-        \item 
+        \item Ensure future links are:
+        \begin{itemize}
+            \item Semantically cohesive (i.e. not predicting Dry Season $\rightarrow$ Degradation)
+            \item Not a byproduct of a biased dataset
+            \item Add more data (Costa Rica)
+        \end{itemize}
+        \item Ensure the graph is computational efficient
+        \item Continue working on the binary classifier with Costa Rica data
+        \item Work on knowledge graph visualization
     \end{itemize}
+\end{frame}
+
+\begin{frame}{Regression - Chi-Square Tests}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.8\textheight,width=0.8\textwidth,keepaspectratio]{images/reefset_classes.png}
+        \caption{Occurrence of ReefSet classes in degraded and non-degraded reefs}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Regression - Chi-Square Tests}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.8\textheight,width=0.8\textwidth,keepaspectratio]{images/chi_square_test.png}
+        \caption{Classes with at least 30 occurrences in either degraded or non-degraded reefs}
+    \end{figure}
+    $\chi^2$: 523
+    \newline
+    P-value: $\sim$0
 \end{frame}
 
 \begin{frame}{Template Matching}
