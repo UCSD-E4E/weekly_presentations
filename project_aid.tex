@@ -133,6 +133,18 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Both Teams - Autoencoders}
+    \begin{itemize}
+        \item ML team: Can create embeddings for clustering without bias
+        \item Collar team: Can reduce the size of audio data for transmission
+    \end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/autoencoder.png}
+        \caption{Autoencoder architecture (Alaghbari et al., 2023)}
+    \end{figure}
+\end{frame}
+
 \begin{frame}{ML Team Agenda}
     \begin{itemize}
         \item Desktop App
@@ -241,7 +253,25 @@
 
 \begin{frame}{Template Matching}
     \begin{itemize}
-        \item 
+        \item Able to find patterns but not the correct ones
+            \begin{itemize}
+                \item Domain shift, long/noisy xeno-canto templates cause issues
+            \end{itemize}
+        \item Built full script for performing TM on data and visualizing results
+        \begin{figure}
+            \centering
+            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/template_matching.png}
+            \caption{Template matching results for the red-eyed dove (\textit{Streptopelia semitorquata})}
+        \end{figure}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Template Matching - Sound Separation}
+    \begin{itemize}
+        \item Exploring sound separation for better results
+            \begin{itemize}
+                \item Wisdom et al., 2020
+            \end{itemize}
     \end{itemize}
     \begin{figure}
         \centering
@@ -251,9 +281,46 @@
 \end{frame}
 
 \begin{frame}{Binary Classifier}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.75\textheight,width=0.75\textwidth,keepaspectratio]{images/degraded_gradcam.png}
+                \caption{Degraded Grad-CAM}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.75\textheight,width=0.75\textwidth,keepaspectratio]{images/non_degraded_gradcam.png}
+                \caption{Non-degraded Grad-CAM}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.5\textheight,width=0.5\textwidth,keepaspectratio]{images/gradcam_histogram.png}
+        \caption{Grad-CAM histogram over 200 degraded and non-degraded samples}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Binary Classifier}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_1.png}
+                \caption{Binary classifier training metrics}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_2.png}
+                \caption{Final binary classifier metrics}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Site Separation}
@@ -266,15 +333,4 @@
     \begin{itemize}
         \item 
     \end{itemize}
-\end{frame}
-
-\begin{frame}{Autoencoders (Both Teams)}
-    \begin{itemize}
-        \item 
-    \end{itemize}
-    \begin{figure}
-        \centering
-        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/autoencoder.png}
-        \caption{Autoencoder architecture (Alaghbari et al., 2023)}
-    \end{figure}
 \end{frame}
