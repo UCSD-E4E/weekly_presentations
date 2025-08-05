@@ -41,13 +41,20 @@
 % \end{frame}
 
 \begin{frame}{Collar Team Agenda}
-    \begin{itemize}
-        \item Full Integration (Ready \& Almost Ready)
-        \item Power Studies
-        \item Battery Calculator
-        \item Piezoelectric Sensor
-        \item Future of Acoustic Collar
-    \end{itemize}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Full Integration (Ready \& Almost Ready)
+                \item Power Studies
+                \item Battery Life Calculator
+                \item Piezoelectric Sensor
+                \item Future of Acoustic Collar
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[height=1\textheight,width=1\textwidth,keepaspectratio]{images/FullSystemDiagram.png}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Full Integration - Ready}
@@ -69,14 +76,49 @@
 
 \begin{frame}{Power Studies}
     \begin{itemize}
-        \item Sample
+        \item Measured current for inference and mel spec 
+        \item Measured current for writing .wav to SD
+        \item Measured wake-up time $\sim$ 7.5 milliseconds
+        \item Plan to remeasure all after full integration
     \end{itemize}
+    \begin{center}
+        \begin{table}[]
+        \begin{tabular}{llll}
+        \hline
+                & Nothing (mA) & Sleep (mA) & Standby (mA) \\ \hline
+        Baseline       & 13.43        & 10.83      & 2.9          \\
+        Mic            & 23.6         & 22.3       & 18.9         \\
+        Inf + Mel Spec & 16.0         & N/A        & N/A          \\
+        MicroSD        & 16.4         & N/A        & N/A          \\ \hline
+        \end{tabular}
+        \end{table}
+    \end{center}
+
 \end{frame}
 
-\begin{frame}{Battery Calculator}
+\begin{frame}{Battery Life Calculator}
     \begin{itemize}
-        \item Sample
+        \item Tool for callaborators to estimate battery life based on:
+        \begin{itemize}
+            \item Deployment Duration (months)
+            \item Inference Rate (inf/hr)
+        \end{itemize}
+        \item Charge graph (Ah) completed
+        \item Battery weight graph requires battery type selection option
+        \item Working on SD size graph (Last part of the tool)
     \end{itemize}
+    \begin{columns}
+        \begin{column}{0.70\textwidth}
+            \includegraphics[height=0.45\textheight,width=0.45\textwidth,keepaspectratio]{images/BatteryCharge.png}
+            \hfill
+            \includegraphics[height=0.45\textheight,width=0.48\textwidth,keepaspectratio]{images/BatteryWeight.png}
+        \end{column}
+
+        \begin{column}{0.30\textwidth}
+            \vspace*{-1cm}
+            \includegraphics[height=1\textheight,width=1\textwidth,keepaspectratio]{images/BatteryLifePrompt.png}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Piezoelectric Sensor}
