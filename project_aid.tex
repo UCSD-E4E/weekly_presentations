@@ -168,13 +168,13 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Desktop App}
-    \begin{figure}
-        \centering
-        \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/desktop_app_2.png}
-        \caption{Desktop App labeling interface}
-    \end{figure}
-\end{frame}
+% \begin{frame}{Desktop App}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/desktop_app_2.png}
+%         \caption{Desktop App labeling interface}
+%     \end{figure}
+% \end{frame}
 
 \begin{frame}{Knowledge Graphs - Input}
     \begin{columns}
@@ -222,12 +222,12 @@
     \begin{itemize}
         \item Ensure future links are:
         \begin{itemize}
-            \item Semantically cohesive (i.e. not predicting Dry Season $\rightarrow$ Degradation)
+            %\item Semantically cohesive (i.e. not predicting Dry Season $\rightarrow$ Degradation)
             \item Not a byproduct of a biased dataset
             \item Add more data (Costa Rica)
         \end{itemize}
-        \item Ensure the graph is computational efficient
-        \item Continue working on the binary classifier with Costa Rica data
+        %\item Ensure the graph is computational efficient
+        %\item Continue working on the binary classifier with Costa Rica data
         \item Work on knowledge graph visualization
     \end{itemize}
 \end{frame}
@@ -281,47 +281,51 @@
 \end{frame}
 
 \begin{frame}{Binary Classifier}
+    \begin{itemize}
+        \item Ran over Paola's Mexico data + Costa Rica data, and Williams' Indonesia
+        \item 92 percent CMAP and ROCAUC
+    \end{itemize}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[height=0.75\textheight,width=0.75\textwidth,keepaspectratio]{images/degraded_gradcam.png}
-                \caption{Degraded Grad-CAM}
+                \includegraphics[height=0.5\textheight,width=0.75\textwidth,keepaspectratio]{images/degraded_gradcam.png}
+                %\caption{Degraded Grad-CAM}
             \end{figure}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[height=0.75\textheight,width=0.75\textwidth,keepaspectratio]{images/non_degraded_gradcam.png}
-                \caption{Non-degraded Grad-CAM}
+                \includegraphics[height=0.5\textheight,width=0.75\textwidth,keepaspectratio]{images/non_degraded_gradcam.png}
+                %\caption{Non-degraded Grad-CAM}
             \end{figure}
         \end{column}
     \end{columns}
     \begin{figure}
         \centering
-        \includegraphics[height=0.5\textheight,width=0.5\textwidth,keepaspectratio]{images/gradcam_histogram.png}
+        \includegraphics[height=0.3\textheight,width=0.5\textwidth,keepaspectratio]{images/gradcam_histogram.png}
         \caption{Grad-CAM histogram over 200 degraded and non-degraded samples}
     \end{figure}
 \end{frame}
 
-\begin{frame}{Binary Classifier}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_1.png}
-                \caption{Binary classifier training metrics}
-            \end{figure}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_2.png}
-                \caption{Final binary classifier metrics}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+% \begin{frame}{Binary Classifier}
+%     \begin{columns}
+%         \begin{column}{0.5\textwidth}
+%             \begin{figure}
+%                 \centering
+%                 \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_1.png}
+%                 \caption{Binary classifier training metrics}
+%             \end{figure}
+%         \end{column}
+%         \begin{column}{0.5\textwidth}
+%             \begin{figure}
+%                 \centering
+%                 \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_2.png}
+%                 \caption{Final binary classifier metrics}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
 
 \begin{frame}{Site Separation}
     \begin{itemize}
