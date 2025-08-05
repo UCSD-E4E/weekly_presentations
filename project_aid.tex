@@ -187,6 +187,18 @@
     \end{figure}
 \end{frame}
 
+\begin{frame}{Compressing Audio Data for transmission over LoRa}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.45\textheight,width=0.5\textwidth,keepaspectratio]{images/LoRa_diagram.png}
+        \caption{LoRa Workflow (LoRa Documentation, 2018)}
+    \end{figure}
+    \begin{itemize}
+        \item Data rate: 0.3 – 50 kbps
+        \item Neural audio codecs (Codec 2, SemantiCodec)
+    \end{itemize}    
+\end{frame}
+
 \begin{frame}{ML Team Agenda}
     \begin{itemize}
         \item Desktop App
@@ -210,13 +222,13 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{Desktop App}
-    \begin{figure}
-        \centering
-        \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/desktop_app_2.png}
-        \caption{Desktop App labeling interface}
-    \end{figure}
-\end{frame}
+% \begin{frame}{Desktop App}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/desktop_app_2.png}
+%         \caption{Desktop App labeling interface}
+%     \end{figure}
+% \end{frame}
 
 \begin{frame}{Knowledge Graphs - Input}
     \begin{columns}
@@ -264,33 +276,42 @@
     \begin{itemize}
         \item Ensure future links are:
         \begin{itemize}
-            \item Semantically cohesive (i.e. not predicting Dry Season $\rightarrow$ Degradation)
+            %\item Semantically cohesive (i.e. not predicting Dry Season $\rightarrow$ Degradation)
             \item Not a byproduct of a biased dataset
             \item Add more data (Costa Rica)
         \end{itemize}
-        \item Ensure the graph is computational efficient
-        \item Continue working on the binary classifier with Costa Rica data
+        %\item Ensure the graph is computational efficient
+        %\item Continue working on the binary classifier with Costa Rica data
         \item Work on knowledge graph visualization
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Regression - Chi-Square Tests}
+\begin{frame}{Chi-Square Test for Homogeneity}
     \begin{figure}
         \centering
-        \includegraphics[height=0.8\textheight,width=0.8\textwidth,keepaspectratio]{images/reefset_classes.png}
+        \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/reefset_classes.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/reefset_plot.png}
+        \end{column}
+    \end{columns}
         \caption{Occurrence of ReefSet classes in degraded and non-degraded reefs}
     \end{figure}
 \end{frame}
 
-\begin{frame}{Regression - Chi-Square Tests}
+\begin{frame}{Chi-Square Test for Homogeneity}
     \begin{figure}
         \centering
         \includegraphics[height=0.8\textheight,width=0.8\textwidth,keepaspectratio]{images/chi_square_test.png}
         \caption{Classes with at least 30 occurrences in either degraded or non-degraded reefs}
     \end{figure}
-    $\chi^2$: 523
+    $\chi^2$: 198.197
     \newline
-    P-value: $\sim$0
+    P-value: $6.903685659371124 \cdot 10^{-41}$
 \end{frame}
 
 \begin{frame}{Template Matching}
@@ -323,56 +344,87 @@
 \end{frame}
 
 \begin{frame}{Binary Classifier}
+    \begin{itemize}
+        \item Ran over Paola's Mexico data + Costa Rica data, and Williams' Indonesia
+        \item 92 percent CMAP and ROCAUC
+    \end{itemize}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[height=0.75\textheight,width=0.75\textwidth,keepaspectratio]{images/degraded_gradcam.png}
-                \caption{Degraded Grad-CAM}
+                \includegraphics[height=0.5\textheight,width=0.75\textwidth,keepaspectratio]{images/degraded_gradcam.png}
+                %\caption{Degraded Grad-CAM}
             \end{figure}
         \end{column}
         \begin{column}{0.5\textwidth}
             \begin{figure}
                 \centering
-                \includegraphics[height=0.75\textheight,width=0.75\textwidth,keepaspectratio]{images/non_degraded_gradcam.png}
-                \caption{Non-degraded Grad-CAM}
+                \includegraphics[height=0.5\textheight,width=0.75\textwidth,keepaspectratio]{images/non_degraded_gradcam.png}
+                %\caption{Non-degraded Grad-CAM}
             \end{figure}
         \end{column}
     \end{columns}
     \begin{figure}
         \centering
-        \includegraphics[height=0.5\textheight,width=0.5\textwidth,keepaspectratio]{images/gradcam_histogram.png}
+        \includegraphics[height=0.3\textheight,width=0.5\textwidth,keepaspectratio]{images/gradcam_histogram.png}
         \caption{Grad-CAM histogram over 200 degraded and non-degraded samples}
     \end{figure}
 \end{frame}
 
-\begin{frame}{Binary Classifier}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_1.png}
-                \caption{Binary classifier training metrics}
-            \end{figure}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_2.png}
-                \caption{Final binary classifier metrics}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
+% \begin{frame}{Binary Classifier}
+%     \begin{columns}
+%         \begin{column}{0.5\textwidth}
+%             \begin{figure}
+%                 \centering
+%                 \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_1.png}
+%                 \caption{Binary classifier training metrics}
+%             \end{figure}
+%         \end{column}
+%         \begin{column}{0.5\textwidth}
+%             \begin{figure}
+%                 \centering
+%                 \includegraphics[height=1.0\textheight,width=1.0\textwidth,keepaspectratio]{images/binary_classifier_metrics_2.png}
+%                 \caption{Final binary classifier metrics}
+%             \end{figure}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
 
 \begin{frame}{Site Separation}
     \begin{itemize}
-        \item 
+        \item Separate Paola's Mexico data + Costa Rica data, and Williams' Indonesia
+        \item 99 percent CMAP and ROCAUC
     \end{itemize}
+    \begin{columns}
+        \begin{column}{0.25\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.2\textheight,width=0.75\textwidth,keepaspectratio]{images/PaolaCostaRicaNonDegraded.png}
+                \caption{Paola, Costa Rica}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.2\textheight,width=0.75\textwidth,keepaspectratio]{images/PaolaMexicoNonDegraded.png}
+                \caption{Paola, Mexico}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.25\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height=0.2\textheight,width=0.75\textwidth,keepaspectratio]{images/WilliamsNonDegraded.png}
+                \caption{Williams}
+            \end{figure}
+        \end{column}
+    \end{columns}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.25\textheight,width=0.5\textwidth,keepaspectratio]{images/gradcamsitesep.jpg}
+        \caption{Grad-CAM histogram over three different sites}
+    \end{figure}
 \end{frame}
 
 \begin{frame}{D3.JS Visualization}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+    On Sean's computer hopefully, \href{graph}{} \href{spectrogram}{}
 \end{frame}
