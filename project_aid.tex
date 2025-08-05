@@ -133,9 +133,10 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Autoencoders (Both Teams)}
+\begin{frame}{Both Teams - Autoencoders}
     \begin{itemize}
-        \item 
+        \item ML team: Can create embeddings for clustering without bias
+        \item Collar team: Can reduce the size of audio data for transmission
     \end{itemize}
     \begin{figure}
         \centering
@@ -250,12 +251,18 @@
     P-value: $\sim$0
 \end{frame}
 
-\begin{frame}{Template Matching - Effectiveness}
+\begin{frame}{Template Matching}
     \begin{itemize}
         \item Able to find patterns but not the correct ones
             \begin{itemize}
                 \item Domain shift, long/noisy xeno-canto templates cause issues
             \end{itemize}
+        \item Built full script for performing TM on data and visualizing results
+        \begin{figure}
+            \centering
+            \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/template_matching.png}
+            \caption{Template matching results for the red-eyed dove (\textit{Streptopelia semitorquata})}
+        \end{figure}
     \end{itemize}
 \end{frame}
 
