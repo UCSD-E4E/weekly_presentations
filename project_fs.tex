@@ -60,6 +60,45 @@
    % \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{}
 \end{frame}
 
+\begin{frame}{SNRGAN For Noise Reduction}
+    \vspace{1em} 
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\linewidth,keepaspectratio]{images/psnr-test.png }
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\linewidth,keepaspectratio]{images/nmse-score.png}
+        \end{column}
+    \end{columns}
+
+    \vspace{0.1em} 
+    \begin{center}
+        $\mathrm{PSNR} > 30.0\,\mathrm{dB} \ \text{(and upward trend)} \quad \text{and} \quad \mathrm{NMSE} < 0.05$
+    \end{center}
+\end{frame}
+
+\begin{frame}{SNRGAN Image Outputs}
+    \vspace{0.3em} 
+    \begin{columns}
+        \begin{column}{0.33\textwidth}
+            \includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{images/img3.png}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{images/img2.png}
+        \end{column}
+        \begin{column}{0.33\textwidth}
+            \includegraphics[width=\linewidth,height=0.6\textheight,keepaspectratio]{images/img1.png}
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.1em} 
+    \begin{itemize}
+        \item Used publicly available image datasets (e.g., \textit{Oxford-IIIT Pets}, \textit{Flowers102})
+        \item \textbf{MuLA-GAN:} PSNR $\approx 25.59$ dB \textbf{SNRGAN:} PSNR $> 30$ dB
+        \item Next step: Use \textit{Underwater Image Enhancement Benchmark Dataset} and aim for lower NMSE and higher PSNR
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{Fishy Data}
     \begin{columns}
         \begin{column}{0.5\textwidth}
