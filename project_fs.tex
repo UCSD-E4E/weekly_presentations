@@ -39,3 +39,29 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+\begin{frame}{DWE on Rubik Pi}
+     \begin{enumerate}
+        \item Picture of Rubik Pi with DWE and maybe some results?
+    \end{enumerate}
+    % \centering
+    % \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{picture.png}
+\end{frame}
+
+\begin{frame}{GPU Acceleration Setup on Rubik Pi}
+   \begin{itemize}
+       \item \textbf{Challenge:} Rubik Pi+ Debian 13 lacking Adreno GPU userland drivers
+       \item \textbf{Solution:} Ubuntu chroot environment 
+       \item \textbf{Implementation:}
+           \begin{itemize}
+               \item Configured OpenCL and Vulkan for Adreno GPU support
+               \item Built diagnostic tools (\texttt{clinfo}, \texttt{vulkaninfo}) from source
+           \end{itemize}
+       \item \textbf{Next Step:} Benchmarking GPU performance
+   \end{itemize}
+   % \centering
+   % \includegraphics[height=0.4\textheight,width=0.7\textwidth,keepaspectratio]{}
+\end{frame}
+
+
+
