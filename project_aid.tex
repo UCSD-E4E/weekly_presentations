@@ -48,6 +48,63 @@
 
 \begin{frame}{Collar Team Agenda}
     \begin{itemize}
+        \item Integration
+        \item Inference Testing
+        \item Power Studies
+        \item Wake-up System
+        \item Auto Encoders       
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Integration}
+    \begin{itemize}
+        \item Real-Time Clock (RTC) configured
+        \item Configuring CM4 core to test power as wake-up system
+        \item Noise affecting model inferences → new mic/pipeline bypass
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Inference Testing}
+    \begin{itemize}
+        \item Domain shift from microphone 
+        \item Heavy noise in mel bands 20-30, 60, even after filtering
+    \end{itemize}
+    \includegraphics[height=0.7\textheight,width=0.5\textwidth,keepaspectratio]{images/melSpec.png}
+    \includegraphics[height=0.7\textheight,width=0.39\textwidth,keepaspectratio]{images/confusionMatrix.png}
+\end{frame}
+
+\begin{frame}{Power Studies}
+    \begin{itemize}
+        \item Testing CM4 core wake-up
+        \item Integrated system re-test
+        \item Future plans to measure LoRa
+    \end{itemize}
+    \begin{table}[]
+    \begin{tabular}{lll}
+    \hline
+                & Independent (mA) & Integrated System (mA) \\ \hline
+    Baseline       & 13.43            & 6.99                  \\
+    Mic            & 23.6             & 10.37                 \\
+    Inf + Mel Spec & 16.0             & 12.46                 \\
+    MicroSD        & 14.1             & 7.74                  \\
+    LoRa          & TBD              & TBD                     \\ \hline
+    \end{tabular}
+    \end{table}
+\end{frame}
+
+\begin{frame}{Wake-up System}
+    \begin{itemize}
+        \item Piezo integration proved infeasible
+        \item Testing dual-core wake-up system
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Auto Encoders}
+    \begin{itemize}
         \item 
     \end{itemize}
 \end{frame}
+
+
+
+
