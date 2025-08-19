@@ -55,17 +55,81 @@
         \item 
     \end{itemize}
 \end{frame}
-
 \begin{frame}{Autoencoders}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+    \centering
+    \begin{figure}
+        \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/architecture.png}
+        \caption{Model Architecture, adapted from Best et. al. 2023}
+    \end{figure} 
+\end{frame}
+            
+
+\begin{frame}{Autoencoders as Unlabeled Embedders}
+    \begin{figure}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/pre_mel.png}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/post_mel.png}
+            \end{column}
+        \end{columns}
+        \caption{Autoencoder melspectrogram pre (left) and post (right) processing }
+    \end{figure}
 \end{frame}
 
-\begin{frame}{Clustering}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+\begin{frame}{Autoencoder Clustering}
+    \centering
+    \begin{figure}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/auto_clustering_labeled.png}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/auto_clustering.png}
+            \end{column}
+        \end{columns}
+        \caption{AutoEncoder labeled (left) and with Gaussian Mixture clusterings (right)}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{The EGCI Problem}
+    \centering
+    \begin{figure}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/egci_problem_labeled.png}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/egci_solution.png}
+            \end{column}
+        \end{columns}
+        \caption{EGCI and banding (left), demonstrated solution (right)}
+    \end{figure}
+\end{frame}
+\begin{frame}{EGCI Clustering}
+    \centering
+    \begin{figure}
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/egci_clustering_labeled.png}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \includegraphics[height=\textheight,width=\textwidth,keepaspectratio]{images/egci_clustering.png}
+            \end{column}
+        \end{columns}
+        \caption{EGCI labeled (left) and with HDBSCAN clusterings (right). \textbf{Note:} the poor clustering, -1 indicates noise
+        }
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Clustering in the Graph}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/graph_clustering.png}
+        \caption{Simple graph with EGCI and autoencoder clustering}
+    \end{figure}
+    
 \end{frame}
 
 \begin{frame}{D3.JS Visualization}
