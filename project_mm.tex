@@ -39,3 +39,62 @@
 %         \end{column}
 %     \end{columns}
 % \end{frame}
+
+
+\begin{frame}{Summer Goal}
+    \centering
+    \begin{itemize}
+        \item Classifying mangroves using Satellite
+        \item Super-resolution from 10m/px to 1m/px
+\end{frame}
+
+\begin{frame}{Testing Feasability}
+    \centering
+    \begin{enumerate}
+        \item Problem Statement:
+            \begin{itemize}
+                \item What range of resolutions would be acceptable for the model?
+            \end{itemize}
+        \item Findings:
+            \begin{itemize}
+                \item We found that >0.5m/px gave bad classification metrics
+                \item A super-resolution model would need to achieve <0.5m/px
+            \end{itemize}
+        \end{enumerate}
+\end{frame}
+
+\begin{frame}{Resampling Data}
+    \centering
+    We needed to test on various resolutions to check the model's tolerance.
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/Resampling.png}
+\end{frame}
+
+\begin{frame}{Results}
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/og_multires_iou.png}
+\end{frame}
+
+\begin{frame}{Retraining Model on Multiple Resolutions}
+    Adding resampled data to training dataset improves performance across the board.
+    \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/og_vs_multires.png}
+\end{frame}
+
+\begin{frame}{Performance for Super-resolution Target}
+    Despite Gains in performance, the model is still not useful for 1m classification.
+\centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/1m_metrics.png}
+\end{frame}
+
+\begin{frame}{Conclusion}
+    Super-resolving from 10m to 1m will not be enough for our model.
+
+    \begin{itemize}
+        \item Possible Next Steps:
+        \begin{enumerate}
+            \item Build a super-res dataset from higher resolution satellites
+            \item Collect labeled data for 1m imagery
+            \item Give up on super-resolution
+        \end{enumerate}
+    \end{itemize}
+\end{frame}
