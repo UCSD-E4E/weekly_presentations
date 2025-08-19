@@ -58,6 +58,22 @@
     \end{figure} 
 \end{frame}
 
+\begin{frame}{Knowledge Graph w/ Temporal + Template Matching}
+    \centering
+    \begin{figure}
+        \includegraphics[scale=0.3]{images/TemporalResults.png}
+    \end{figure} 
+    \begin{itemize}
+        \item Most results were incorrect, due to discrepancies with template matching
+        \item Future Steps: 
+        \begin{itemize}
+            \item Treat template matching as a "characteristic sound"
+            \item Confirm that those "characteristic sounds" relationships are accurate
+            \item Incorporate labeled liked sounds into KG
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
 \begin{frame}{Autoencoders}
     \centering
     \begin{figure}
@@ -137,13 +153,25 @@
 
 \begin{frame}{D3.JS Visualization}
     \begin{itemize}
-        \item 
+        \item Many UI changes
+        \begin{itemize}
+            \item Hovering over nodes highlights their connections
+            \item Selecting a node lists its connections
+            \item Implemented node filtering
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Future Steps}
     \begin{itemize}
-        \item 
+        \item KG Experiments
+        \begin{itemize}
+            \item Verify results of KG
+            \item Use liked labeled sounds + other audio in KG
+            \item Insert autoencoder embeddings into KG
+        \end{itemize}
+        \item Continue D3.JS Visualization work
+        \item Long-Term: Create a python package with our pipeline
     \end{itemize}
 \end{frame}
 
