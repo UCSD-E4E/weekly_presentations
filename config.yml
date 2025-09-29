@@ -12,29 +12,22 @@ projects:
     assignees:
       - gagewrye
       - TWintersww
-      - AJajodia
   acoustic_species_id:
     name: Acoustic Species ID
     latex: project_aid
     branch: acoustic_species_id
     assignees:
       - Sean1572
-      - MiloAkerman
-      - AJajodia
-      - AnMeiDP
-      - d-tom75
-      - Firazaba0369
-      - Hdosseh1 
       - SiyaKamboj
-      # - Ludwigvsch
-      # - tqzhang04
-  # baboons_on_the_move:
-  #   name: Baboons on the Move
-  #   latex: project_bom
-  #   branch: baboons_on_the_move
-  #   assignees:
-  #     # - ccrutchf
-  #     - TylerFlar
+      - Ludwigvsch
+      - tqzhang04
+  baboons_on_the_move:
+    name: Baboons on the Move
+    latex: project_bom
+    branch: baboons_on_the_move
+    assignees:
+      # - ccrutchf
+      - TylerFlar
   # a3d_eng:
   #   name: Aqua3D Engineering
   #   latex: project_a3d_eng
@@ -56,21 +49,22 @@ projects:
       - shrsijan
       - brendonamw  
       # - bmccalmon
-  # act_learn:
-  #   name: Active Learning
-  #   latex: project_act_learn
-  #   branch: act_learn
-  #   assignees:
-  #     - ccrutchf
-  #     - Sean1572
-  #     - WesleyJWu
-  #     - mathslayer-compe #Akhil Nallacheruvu
-  # radio_telemetry_tracker:
-  #   name: Radio Telemetry Tracker
-  #   latex: project_rtt
-  #   branch: radio_telemetry_tracker
-  #   assignees:
-  #     - TylerFlar
+  act_learn:
+    name: Active Learning
+    latex: project_act_learn
+    branch: act_learn
+    assignees:
+      - ccrutchf
+      - Sean1572
+      - WesleyJWu
+      - mathslayer-compe #Akhil Nallacheruvu
+  radio_telemetry_tracker:
+    name: Radio Telemetry Tracker
+    latex: project_rtt
+    branch: radio_telemetry_tracker
+    assignees:
+      - TylerFlar
+  
   smartfin:
     name: Smartfin
     latex: project_sf
@@ -78,14 +72,6 @@ projects:
     assignees:
       - aayushkananu 
       - ntlhui
-
-  hall_pass:
-    name: Hall Pass
-    latex: project_hall_pass
-    branch: hall_pass
-    assignees:
-      - Hdosseh1 
-      - apryllt
 
   website:
     name: Website
@@ -95,37 +81,35 @@ projects:
       - Sean1572
 schedule:
   # Keyed by Date of presentation
-  "2025-07-01T10:30-07:00": # Week 1
+  "2025-10-06T09:30-07:00": # Week 2
+    - acoustic_species_id
+    - radio_telemetry_tracker
+    - mangrove_monitoring
+  "2025-10-13T09:30-07:00": # Week 3
     - fs
+    - smartfin
+    - act_learn
+  "2025-10-20T09:30-07:00": # Week 4
+    - radio_telemetry_tracker
     - mangrove_monitoring
     - acoustic_species_id
+  "2025-10-27T09:30-07:00": # Week 5
     - smartfin
-    - hall_pass
-  "2025-07-08T10:30-07:00": # Week 2
+    - fs 
+    - act_learn
+  "2025-11-03T09:30-07:00": # Week 6
     - mangrove_monitoring
     - acoustic_species_id
-    - smartfin
-  "2025-07-15T10:30-07:00": # Week 3
+    - radio_telemetry_tracker
+  "2025-11-10T09:30-07:00": # Week 7
     - fs
-    - hall_pass
-  "2025-07-22T10:30-07:00": # Week 4
-    - mangrove_monitoring
+    - act_learn
+    - smartfin
+  "2025-11-17T09:30-07:00": # Week 8
     - acoustic_species_id
-    - smartfin
-  "2025-07-29T10:30-07:00": # Week 5
-    - fs
-    - hall_pass
-  "2025-08-05T10:30-07:00": # Week 6
-    - smartfin
+    - radio_telemetry_tracker
     - mangrove_monitoring
-    - acoustic_species_id
-  "2025-08-12T10:30-07:00": # Week 7
-    - hall_pass
-    - fs
-  "2025-08-19T10:30-07:00": # Week 8
+  "2025-11-24T09:30-07:00": # Week 9
+    - act_learn
     - smartfin
-    - mangrove_monitoring
-    - acoustic_species_id
-  "2025-08-26T10:30-07:00": # Week 9
     - fs
-    - hall_pass
