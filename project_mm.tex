@@ -48,8 +48,15 @@
 \begin{frame}{End-to-End ML Pipeline Completed}
     \vspace{1em}
     \centering
-    GeoTiff -> Dataset Creation -> Model Training -> ArcGIS Deployment
+    GeoTiff $\rightarrow$ Dataset Creation $\rightarrow$ Model Training $\rightarrow$ ArcGIS Deployment
     \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/arcgis.png}
+\end{frame}
+
+\begin{frame}{Small Data Processing Optimization}
+    \begin{itemize}
+        \item Made optimization to GeoTiff $\rightarrow$ Dataset pipeline, improving asymptotic runtime from $O(n^2)$ to $O(n)$ for number of tiles $n$
+        \item Stores temporary, batch-wise image/label files and collects everything at the end instead of modifying the memory mapped array periodically
+    \end{itemize}
 \end{frame}
 
 \begin{frame}{Next Steps}
