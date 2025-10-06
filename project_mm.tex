@@ -40,62 +40,29 @@
 %     \end{columns}
 % \end{frame}
 
-
-\begin{frame}{Summer Goal}
+\begin{frame}{ArcGIS Tool}
     \centering
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/arcgis.png}
+\end{frame}
+
+\begin{frame}{End-to-End ML Pipeline Completed}
+    \vspace{1em}
+    \centering
+    GeoTiff $\rightarrow$ Dataset Creation $\rightarrow$ Model Training $\rightarrow$ ArcGIS Deployment
+    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/arcgis.png}
+\end{frame}
+
+\begin{frame}{Small Data Processing Optimization}
     \begin{itemize}
-        \item Classifying mangroves using Satellite
-        \item Super-resolution from 10m/px to 1m/px
+        \item Made optimization to GeoTiff $\rightarrow$ Dataset pipeline, improving asymptotic runtime from $O(n^2)$ to $O(n)$ for number of tiles $n$
+        \item Stores temporary, batch-wise image/label files and collects everything at the end instead of modifying the memory mapped array periodically
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Testing Feasability}
-    \centering
-    \begin{enumerate}
-        \item Problem Statement:
-            \begin{itemize}
-                \item What range of resolutions would be acceptable for the model?
-            \end{itemize}
-        \item Findings:
-            \begin{itemize}
-                \item We found that >0.5m/px gave bad classification metrics
-                \item A super-resolution model would need to achieve <0.5m/px
-            \end{itemize}
-    \end{enumerate}
-\end{frame}
-
-\begin{frame}{Resampling Data}
-    \centering
-    We needed to test on various resolutions to check the model's tolerance.
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/Resampling.png}
-\end{frame}
-
-\begin{frame}{Results}
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/og_multires_iou.png}
-\end{frame}
-
-\begin{frame}{Retraining Model on Multiple Resolutions}
-    Adding resampled data to training dataset improves performance across the board.
-    \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/og_vs_multires.png}
-\end{frame}
-
-\begin{frame}{Performance for Super-resolution Target}
-    Despite Gains in performance, the model is still not useful for 1m classification.
-\centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/1m_metrics.png}
-\end{frame}
-
-\begin{frame}{Conclusion}
-    Super-resolving from 10m to 1m will not be enough for our model.
-
+\begin{frame}{Next Steps}
     \begin{itemize}
-        \item Possible Next Steps:
-        \begin{enumerate}
-            \item Build a super-res dataset from higher resolution satellites
-            \item Collect labeled data for 1m imagery
-            \item Give up on super-resolution
-        \end{enumerate}
+        \item Show SIO team the ArcGIS tool
+        \item Get Feedback on models and tool
+        \item Create human infrastructure identification model
     \end{itemize}
 \end{frame}
