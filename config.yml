@@ -42,12 +42,6 @@ projects:
     assignees:
       - ccrutchf
       - Shuzhengz
-      - Nykolas1100
-      - aayushkananu
-      - annabchen 
-      - tdarcima
-      - shrsijan
-      - brendonamw  
       # - bmccalmon
   act_learn:
     name: Active Learning
