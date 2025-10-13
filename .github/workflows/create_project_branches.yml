@@ -1,6 +1,11 @@
 name: Create Project Branches
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'config.yml' # Replace with the actual file path
   schedule:
     - cron: '30 04 14 10 *' # Executes at 2025-10-13T21:30:00-07:00
   workflow_dispatch:
