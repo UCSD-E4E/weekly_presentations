@@ -21,28 +21,45 @@ projects:
       - SiyaKamboj
       - Ludwigvsch
       - tqzhang04
+  acoustic_collar:
+    name: Acoustic Collar
+    latex: project_aid_collar
+    branch: acoustic_collar
+    assignees:
+      - Ludwigvsch
+      - zclawr
   baboons_on_the_move:
     name: Baboons on the Move
     latex: project_bom
     branch: baboons_on_the_move
     assignees:
-      # - ccrutchf
+      - ccrutchf
       - TylerFlar
-  # a3d_eng:
-  #   name: Aqua3D Engineering
-  #   latex: project_a3d_eng
-  #   branch: a3d_eng
-  #   assignees:
-  #     - ccrutchf
-  #     - avikg511
-  fs:
-    name: FishSense
-    latex: project_fs
-    branch: fs
+  fs_lite:
+    name: FishSense Lite
+    latex: project_fs_lite
+    branch: fs_lite
     assignees:
       - ccrutchf
       - Shuzhengz
-      # - bmccalmon
+  fs_mobile:
+    name: FishSense Mobile
+    latex: project_fs_mobile
+    branch: fs_mobile
+    assignees:
+      - ccrutchf
+  fs_scout:
+    name: FishSense Scout
+    latex: project_fs_scout
+    branch: fs_scout
+    assignees:
+      - ccrutchf
+  fs_rnd:
+    name: FishSense RnD
+    latex: project_fs_rnd
+    branch: fs_rnd
+    assignees:
+      - ccrutchf
   act_learn:
     name: Active Learning
     latex: project_act_learn
@@ -50,7 +67,6 @@ projects:
     assignees:
       - ccrutchf
       - Sean1572
-      - WesleyJWu
       - mathslayer-compe #Akhil Nallacheruvu
   radio_telemetry_tracker:
     name: Radio Telemetry Tracker
@@ -64,8 +80,7 @@ projects:
     latex: project_sf
     branch: smartfin
     assignees:
-      - aayushkananu 
-      - ntlhui
+      - stevegtaylor
 
   website:
     name: Website
@@ -87,23 +102,35 @@ schedule:
     - radio_telemetry_tracker
     - mangrove_monitoring
     - acoustic_species_id
+    - acoustic_collar
   "2025-10-27T09:30-07:00": # Week 5
     - smartfin
-    - fs 
+    - fs_lite
+    - fs_mobile
+    - fs_scout
+    - fs_rnd
     - act_learn
   "2025-11-03T09:30-07:00": # Week 6
     - mangrove_monitoring
     - acoustic_species_id
+    - acoustic_collar
     - radio_telemetry_tracker
-  "2025-11-10T09:30-07:00": # Week 7
-    - fs
+  "2025-11-10T09:30-08:00": # Week 7
+    - fs_lite
+    - fs_mobile
+    - fs_scout
+    - fs_rnd
     - act_learn
     - smartfin
-  "2025-11-17T09:30-07:00": # Week 8
+  "2025-11-17T09:30-08:00": # Week 8
     - acoustic_species_id
+    - acoustic_collar
     - radio_telemetry_tracker
     - mangrove_monitoring
-  "2025-11-24T09:30-07:00": # Week 9
+  "2025-11-24T09:30-08:00": # Week 9
     - act_learn
     - smartfin
-    - fs
+    - fs_lite
+    - fs_mobile
+    - fs_scout
+    - fs_rnd
