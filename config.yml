@@ -60,6 +60,7 @@ projects:
     branch: fs_rnd
     assignees:
       - ccrutchf
+      - zhenchenglin
   act_learn:
     name: Active Learning
     latex: project_act_learn
