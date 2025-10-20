@@ -41,27 +41,33 @@
 
 \begin{frame}{ArcGIS Tool}
     \centering
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/arcgis.png}
-\end{frame}
-
-\begin{frame}{End-to-End ML Pipeline Completed}
-    \vspace{1em}
-    \centering
-    GeoTiff $\rightarrow$ Dataset Creation $\rightarrow$ Model Training $\rightarrow$ ArcGIS Deployment
-    \includegraphics[height=0.7\textheight,width=0.7\textwidth,keepaspectratio]{images/arcgis.png}
-\end{frame}
-
-\begin{frame}{Small Data Processing Optimization}
     \begin{itemize}
-        \item Made optimization to GeoTiff $\rightarrow$ Dataset pipeline, improving asymptotic runtime from $O(n^2)$ to $O(n)$ for number of tiles $n$
-        \item Stores temporary, batch-wise image/label files and collects everything at the end instead of modifying the memory mapped array periodically
+        \item Shared ArcGIS toolbox with SIO, initial reception seems good
+        \item Currently waiting for more feedback about it
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Team Onboarding}
+    \centering
+    \begin{itemize}
+        \item Interviewed around 15 people, splitting the team up into subproblems and subgroups
+        \item Mainly considering 6 different subproblems:
+        \begin{itemize}
+            \item Assembling datasets for human activity / infrastructure
+            \item Super-resolution on satellite imagery
+            \item End-to-end pipeline for pairing drone and satellite data
+            \item Architecture research and design for models
+            \item ArcGIS toolbox
+            \item Training utils / Data visualizations
+        \end{itemize}
+        \item Have made initial assignments and will see if this team assignment is logical
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Next Steps}
     \begin{itemize}
-        \item Show SIO team the ArcGIS tool
-        \item Get Feedback on models and tool
-        \item Create human infrastructure identification model
+        \item Get the team onboarded and develop cohesion within the team
+        \item Communicate further with SIO about further goals and steps
+        \item Make thorough progress on the 6 subproblems listed earlier
     \end{itemize}
 \end{frame}
