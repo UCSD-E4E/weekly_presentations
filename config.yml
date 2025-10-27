@@ -74,7 +74,8 @@ projects:
     latex: project_rtt
     branch: radio_telemetry_tracker
     assignees:
-      - TylerFlar
+      - vaibhavmaloo03
+      - kirustar14
   
   smartfin:
     name: Smartfin
